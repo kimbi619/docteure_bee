@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
+:root {
+  --primaryColor: #1e2834;
+  --secondaryColor: #204067;
+  --light-gray: #f5f5f5;
+  --mainRed: #fc5c65;
+  --mainGreen: #20bf6b;
+  --fs-xs: 0.875rem;
+  --fs-md: 1.3125rem;
+  --fs-lg: ;
+  --fs-xl: ;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+p {
+  color: var(--primaryColor);
+}
+input {
+  outline: none;
+  border: none;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--primaryColor);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+  text-transform: uppercase;
+  font-family: "montserrat light";
+  font-size: var(--fs-xs);
+}
+.container {
+  width: 95%;
+  margin: auto;
+  /* background-color: crimson; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #d5d5d5;
+  cursor: pointer;
+  display: block;
+  margin-top: 1%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+input[type="checkbox"]:after {
+  font-family: "font awesome 5 free";
+  font-weight: 600;
+  content: "\f00c";
+  font-size: var(--fs-xs);
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+input[type="checkbox"]:checked {
+  background: #0672ff;
+}
+input[type="checkbox"]:checked::after {
+  display: flex;
 }
 
-.App-link {
-  color: #61dafb;
+#preloader {
+  background: linear-gradient(to right, #95d5ff50, #95d5ff50, #95d5ff50),
+    url("./loader.gif") no-repeat center;
+  background-size: 90%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 2000;
+  display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.skeleton {
+  animation: skeleton-animation 1s infinite alternate;
+}
+@keyframes skeleton-animation {
+  0% {
+    background: hsl(199, 35%, 81%);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    background: hsl(199, 14%, 95%);
   }
 }

@@ -1,0 +1,202 @@
+.navList {
+  margin: 0;
+  padding: 0;
+}
+
+.navHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-block: 1rem 0.7rem;
+  width: 100%;
+}
+
+.search {
+  width: 60%;
+  max-width: 22.5rem;
+  height: 35px;
+  position: relative;
+  background: var(--light-gray);
+  border-radius: 100px;
+}
+
+.searchInput {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 2rem);
+  height: 100%;
+  padding-inline: 1rem;
+  background: transparent;
+  font-size: var(--fs-sm);
+}
+.searchIcon {
+  outline: none;
+  border: none;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  height: 100%;
+  font-size: var(--fs-sm);
+  padding: 0.4rem 0.8rem;
+  color: var(--secondaryColor);
+}
+
+.burgerMenu {
+  z-index: 100;
+}
+.menu {
+  pointer-events: none;
+}
+
+nav {
+  width: 100%;
+  background: var(--primaryColor);
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  z-index: 10;
+  color: white;
+  text-align: center;
+  font-family: "quicksand", sans-serif;
+  padding-top: 4rem;
+  transform: scale(0, 1);
+  transition: all 0.2s ease-in-out;
+  transform-origin: top left;
+}
+.logoCaption {
+  margin-block: 4rem;
+  font-size: var(--fs-md);
+}
+nav .caption {
+  margin: 1rem;
+}
+.navLink {
+  margin-top: 1.2rem;
+}
+.navLink a {
+  color: white;
+}
+
+.logout {
+  background: var(--secondaryColor);
+  padding: 2rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.showNav {
+  transform: scale(1, 1);
+  /* display: block; */
+}
+/* ====================================================================================== */
+/* ====================================================================================== */
+
+.caroselGrid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 0.4rem;
+  margin-block: 1rem;
+  overflow: hidden;
+}
+.carosel {
+  width: 100%;
+  height: 100%;
+  background: var(--primaryColor);
+  color: white;
+  border-radius: 8px;
+  font-size: var(--fs-xs);
+  text-transform: capitalize;
+  font-family: "quicksand", sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+.carosel p {
+  color: white;
+  z-index: 2;
+  position: sticky;
+  top: 70%;
+  left: 10%;
+}
+.categoryImage {
+  position: absolute;
+  height: 100%;
+}
+.rec.rec-arrow {
+  border-radius: 0;
+  display: none;
+}
+
+.carouselWrapper {
+  margin-top: 20px;
+}
+.viewAll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.viewAll p {
+  position: static;
+}
+/* ====================================================================================== */
+/* ====================================================================================== */
+/* ====================================================================================== */
+/* ====================================================================================== */
+/* ====================================================================================== */
+.new {
+  width: 400px;
+  height: 300px;
+}
+@media (min-width: 37.5rem) {
+  nav {
+    height: auto;
+    position: static;
+    padding: 1rem;
+    transform: scale(1, 1);
+  }
+  .logoCaption {
+    display: none;
+  }
+  .burgerMenu {
+    display: none;
+  }
+  .navList {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    margin: auto;
+  }
+  .navLink {
+    margin-top: 0;
+  }
+  .logout {
+    display: none;
+  }
+}
+@media (min-width: 50rem) {
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: auto;
+  }
+
+  nav {
+    background: transparent;
+    padding: 1.3rem 0rem;
+    margin-left: 2rem;
+  }
+
+  .navLink a {
+    color: var(--primaryColor);
+  }
+  .burgerMenu {
+    display: none;
+  }
+}

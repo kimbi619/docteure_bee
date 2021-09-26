@@ -1,0 +1,75 @@
+.product {
+  width: 100%;
+  border-bottom: 1.1rem;
+  margin-top: 1rem;
+}
+.productImgWrapper {
+  width: 100%;
+  height: 12.1875rem;
+  overflow: hidden;
+}
+
+.productImg {
+  width: 100%;
+}
+.productDesc {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 1rem;
+  font-size: var(--fs-xs);
+}
+
+.name {
+  display: inline;
+  margin-right: 0.4rem;
+}
+.price {
+  display: inline;
+  font-size: 0.75rem;
+  color: var(--secondaryColor);
+  font-style: italic;
+}
+
+.rating * {
+  cursor: pointer;
+}
+.dropDownWrapper {
+  position: relative;
+}
+.dropDown {
+  background: #c7c7c7;
+  padding: 0.5rem;
+  border-radius: 6px 6px 0rem 0rem;
+  display: flex;
+  flex-wrap: nowrap;
+  cursor: pointer;
+}
+.dropDownIndicator {
+  border-left: 1px solid gray;
+  margin-left: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.dropDownList {
+  box-shadow: 2px 3px 6px 2px rgba(0, 0, 0, 0.178);
+  padding: 0rem 0.5rem 0.3rem 0.5rem;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  background: white;
+  z-index: 1;
+  display: none;
+  /* display: none; */
+}
+.dropDownItem {
+  padding-block: 0.5rem;
+  font-size: var(--fs-xs);
+  border-bottom: 1px solid rgb(218, 218, 218);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.toggleDropDown {
+  display: block;
+}
