@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import googleLogo from './googleLogo.png'
 import { GoogleLogin } from 'react-google-login';
-import { FiArrowLeft, FiCheck } from 'react-icons/fi'
+import { FiArrowLeft } from 'react-icons/fi'
 import { MdClose } from 'react-icons/md'
 import { VscEye } from 'react-icons/vsc';
 
@@ -61,8 +61,8 @@ const Register = () => {
     const [userName, setUserName] = useState('');
     const [userMail, setUserMail] = useState('');
     const [userPassword, setUserPassword] = useState('');
-    const [privacyStatus, setPrivacyStatus] = useState(false);
-    console.log(privacyStatus);
+    // const [privacyStatus, setPrivacyStatus] = useState(false);
+    // console.log(privacyStatus);
     return (
         <div className="register">
         <div id="preloader"></div>

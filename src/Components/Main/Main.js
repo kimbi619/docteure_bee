@@ -3,29 +3,15 @@ import { Client } from '../../Client';
 import './Main.css';
 import Products from './Products/Products'
 
-export default class Main extends React.Component {
+const Main = ({ products })=> {
     
-    state = {
-        products: []
-    }
-
-    componentDidMount(){
-        Client.getEntries()
-        .then(res=>{{
-            this.setState({
-                products: res.items
-            })}
-        })
-        .catch(err=>console.log(err))
-    }
-    render(){
-        return (
-            <div>
-                <div className="container">
-                   <Products products={this.state.products} />
-                </div>
+    return (
+        <div>
+            <div className="container">
+               <Products products={products}  />
             </div>
-        )
-    }
+        </div>
+    )
 }
 
+export default Main;

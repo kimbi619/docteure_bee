@@ -1,6 +1,8 @@
 import React from 'react'
 import Item from './Item'
 import Carousel from 'react-elastic-carousel';
+import CarouselItem from './CarouselItem';
+
 
 const breakPoints = [
     { width: 1, itemsToShow: 3.3 },
@@ -11,7 +13,29 @@ const breakPoints = [
     { width: 1200, itemsToShow: 4 }
   ];
 
-const CategoryCarousel = () => {
+const CategoryCarousel = ({products, onFilter}) => {
+    const categories = [
+        {
+            name: "pills",
+            img: "https://source.unsplash.com/kfJkpeI6Lgc"
+        },
+        {
+            name: "glocks",
+            img: "https://source.unsplash.com/41SKIzYcFh0"
+        },
+        {
+            name: "weed",
+            img: "https://source.unsplash.com/qcCPIhhdgTw"
+        },
+        {
+            name: "category",
+            img: "https://source.unsplash.com//yWvzlSnSs3g"
+        },
+        {
+            name: "sandals",
+            img: "https://source.unsplash.com/random"
+        },
+    ]
     return (
         <>
             <Carousel 
@@ -27,51 +51,13 @@ const CategoryCarousel = () => {
                 
             >
 
-                <Item>
-                    <div className="carosel" draggable={true}>
-                        <div className="wrapper">
-                            <img className="categoryImage" src="https://source.unsplash.com/kfJkpeI6Lgc" alt="pills" />
-                        </div>
-                        <p>Pills</p>
-
-                    </div>
-                </Item>
-                <Item>
-                    <div className="carosel">
-                        <div className="wrapper">
-                            <img className="categoryImage" src="https://source.unsplash.com/41SKIzYcFh0" alt="glocks" />
-                        </div>
-                        <p>Glocks</p>
-
-                    </div>
-                </Item>
-                <Item>
-                    <div className="carosel" >
-                        <div className="wrapper">
-                            <img className="categoryImage" src="https://source.unsplash.com/qcCPIhhdgTw" alt="weed" />
-                        </div>
-                        <p>weed</p>
-
-                    </div>
-                </Item>
-                <Item>
-                    <div className="carosel" draggable="false">
-                        <div className="wrapper">
-                            <img className="categoryImage" src="https://source.unsplash.com//yWvzlSnSs3g" alt="category" />
-                        </div>
-                        <p>category</p>
-
-                    </div>
-                </Item>
-                <Item>
-                    <div className="carosel" draggable="false">
-                        <div className="wrapper">
-                            <img className="categoryImage" src="https://source.unsplash.com/random" alt="sandals" />
-                        </div>
-                        <p>sandals</p>
-
-                    </div>
-                </Item>
+            {
+                categories.map((cat, index) => (
+                    <Item key = {index}>
+                        <CarouselItem onFilter={onFilter} name={cat.name} img={cat.img} />
+                    </Item>
+                ))
+            }
                 <Item>
                     <div className="carosel viewAll" draggable="false" >
                         <p className="viewAllText">View all</p>
