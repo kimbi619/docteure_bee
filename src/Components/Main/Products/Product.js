@@ -51,11 +51,11 @@ const Product = ({ product }) => {
                             </div>
                             <div className="dropDownList">
                                 <p className="dropDownItem">
-                                    <a href="#">Add to cart</a>
+                                    <span>Add to cart</span>
                                     <span><IoCartOutline /></span>
                                 </p>
                                 <p className="dropDownItem">
-                                    <a href="#">Reserve</a>
+                                    <span>Reserve</span>
                                     <span><FiBookmark /></span>
                                 </p>
                             </div>

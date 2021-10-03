@@ -1,0 +1,12 @@
+.productFlexWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flexItem {
+  width: 48%;
+}
+.flexItem img {
+  /* height: 100%; */
+  width: 100%;
+}

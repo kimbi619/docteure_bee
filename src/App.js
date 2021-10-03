@@ -36,12 +36,12 @@ function App() {
   return (
     <div className="App">
       <Nav products={products} />
-      <CategoryCarousel onFilter={handleFilter} products={products} />
+      {/* <CategoryCarousel onFilter={handleFilter} products={products} /> */}
       <Main products={products} />
       
       <Switch>
         <Route path="/products" component={Main } />
-        <Route path="/signup" component={Register }  />
+        <Route path="/signup" component={Register}  />
       </Switch>
     </div>
   );
