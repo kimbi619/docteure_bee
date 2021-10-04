@@ -14,11 +14,7 @@ function App() {
 
 
   const [products, setProducts] = useLocalStorage('products', [])
-  useEffect(() => {
-    // return () => {
-    //   cleanup
-    // }
-    
+  useEffect(() => {  
     Client.getEntries()
     .then(res=>{
       setProducts(res.items);
@@ -36,12 +32,13 @@ function App() {
   return (
     <div className="App">
       <Nav products={products} />
-      {/* <CategoryCarousel onFilter={handleFilter} products={products} /> */}
+      <Route path="/" exact><CategoryCarousel onFilter={handleFilter} products={products} /></Route>
       <Main products={products} />
       
       <Switch>
-        <Route path="/products" component={Main } />
-        <Route path="/signup" component={Register}  />
+        {/* <Route path="/products" component={Main } /> */}
+        <Route path="/register/signup" component={Register}  />
+        <Route path="/register/login" component={Register}  />
       </Switch>
     </div>
   );

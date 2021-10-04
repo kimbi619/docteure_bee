@@ -68,8 +68,55 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
+  cursor: pointer;
 }
 
 .toggleDropDown {
   display: block;
+}
+
+.popup {
+  width: 80%;
+  max-width: 550px;
+  margin: auto;
+  position: fixed;
+  bottom: 0;
+  background: rgba(51, 52, 53, 0.795);
+  color: white;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 6px 6px 0 0;
+  padding: 0.5rem;
+  border: 2px solid black;
+  border-bottom: 0px solid white;
+  display: none;
+}
+.popup a {
+  color: #63a3f7;
+  text-decoration: underline;
+}
+.closePopup {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem;
+  color: black;
+}
+.closePopup * {
+  pointer-events: none;
+}
+@media (min-width: 35rem) {
+  .productGridWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+}
+@media (min-width: 50rem) {
+  .productGridWrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+    grid-gap: 1rem;
+  }
 }

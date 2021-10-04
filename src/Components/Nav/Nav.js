@@ -2,12 +2,9 @@ import React, { useState } from 'react'
 import { FcMenu } from 'react-icons/fc'
 import './Nav.css';
 import { FaSearch } from 'react-icons/fa';
-import CategoryCarousel from './CategoryCarousel';
 import { Link } from 'react-router-dom';
 
-const breakPoints = [
-    {width:1, itemsToShow: 1}
-]
+
 const Nav = ({ products }) => {
 
     const [searchItems, setSearchItems] = useState([])
@@ -17,6 +14,11 @@ const Nav = ({ products }) => {
        navigation.classList.toggle('showNav');
     }
 
+    const removeNav = (e)=>{
+        if(e.target.className === 'navLink'){
+            e.target.parentElement.parentElement.parentElement.classList.remove('showNav')
+        }
+    }
 
     // search function to find particular item using regular expressions
     const searchProducts=(e)=>{
@@ -28,11 +30,12 @@ const Nav = ({ products }) => {
         e.target.parentElement.parentElement.parentElement.parentElement.nextElementSibling.style.display="block";
         function filteredProducts(){
             return products.filter(product=>{
-                let {description, attributes} = product.fields
+                let {description} = product.fields
                 description = description.toLowerCase();
                 if(description.includes(searchValue)){
                     return product.fields;
                 }
+                return "";
 
             })
         }
@@ -74,17 +77,17 @@ const Nav = ({ products }) => {
                         }
                     </ul>
                 </div>
-                <nav>
+                <nav onClick={removeNav}>
                     <div className="logoCaption">
-                        <div className="logo">logo</div>
+                        <Link to= "/" exact><div className="logo">logo</div></Link>
                         <div className="caption">Fill with Caption</div>
                     </div>
                     <ul className="navList">
-                        <li className="navLink"><a href="#">Products</a></li>
-                        <li className="navLink"><a href="#">Contact us</a></li>
-                        <li className="navLink"><a href="#">About</a></li>
-                        <li className="navLink"><a href="#">Account</a></li>
-                        <li className="navLink"><a href="#">Cart</a></li>
+                        <Link to="/products" exact><li className="navLink">Products</li></Link>
+                        <Link to="/contact-us"><li className="navLink">Contact us</li></Link>
+                        <Link to="/about"><li className="navLink">About</li></Link>
+                        <Link to="/register/signup"><li className="navLink">Account</li></Link>
+                        <Link to="/cart"><li className="navLink">Cart</li></Link>
                     </ul>
                     <div className="logout">Log out</div>
                 </nav>

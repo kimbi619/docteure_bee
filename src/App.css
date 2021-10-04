@@ -70,7 +70,7 @@ input[type="checkbox"]:checked::after {
   display: flex;
 }
 
-#preloader {
+.preloader {
   background: linear-gradient(to right, #95d5ff50, #95d5ff50, #95d5ff50),
     url("./loader.gif") no-repeat center;
   background-size: 90%;
@@ -78,7 +78,8 @@ input[type="checkbox"]:checked::after {
   width: 100%;
   position: fixed;
   z-index: 2000;
-  display: none;
+  top: 0;
+  left: 0;
 }
 
 .skeleton {

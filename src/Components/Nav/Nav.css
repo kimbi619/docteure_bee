@@ -80,6 +80,9 @@
   width: 100%;
   height: 100%;
 } */
+.logo {
+  color: white;
+}
 .searchLinks {
   padding-block: 1rem;
   border-bottom: 1px solid #a6d1f8;
@@ -112,7 +115,7 @@ nav .caption {
 .navLink {
   margin-top: 1.2rem;
 }
-.navLink a {
+.navList a {
   color: white;
 }
 

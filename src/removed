@@ -1,0 +1,30 @@
+//====================colors and data used for ratings section
+    // const {name,price, productRatings,description} = product.fields; 
+    // const stars = Array(5).fill(0);
+    // const colors={
+    //     blue: "blue",
+    //     gray: "#a9a9a9"
+    // }
+
+
+
+ {/* 
+                    
+
+
+
+                    
+                    
+            
+                     */}
+
+
+
+
+                     let name = product.fields.name;
+    
+                     // const productImage = product.fields && product.fields.productImage;
+                     // productImage.forEach(elt => {
+                     //     medias.push(elt.fields.file.url);
+                     // });
+                 

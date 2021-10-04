@@ -4,26 +4,28 @@ import { IoCartOutline } from 'react-icons/io5'
 import { FiBookmark } from 'react-icons/fi'
 import { IoStarSharp } from 'react-icons/io5'
 
-const Product = ({ product }) => {
+const Product = ({ product, onAdd }) => {
 
-    const {name,price, productRatings, productImage} = product.fields;
+    const {name,price, productRatings} = product.fields;
     const stars = Array(5).fill(0);
     const colors={
         blue: "blue",
         gray: "#a9a9a9"
     }
-
+    const addProductToCart = (product,e)=>{
+        onAdd(product, e)
+    }
     const showDropDown = (e)=>{
         const dropDownList = e.target.parentElement.parentElement.nextElementSibling;
+        if(dropDownList === null){
+            return
+        }
         dropDownList.classList.toggle('toggleDropDown');
     }
-
+    
     return (
-        <div>
+        <>
             <div className="product">
-                <div className="productImgWrapper">
-                    {productImage &&<img className="productImg skeleton" src={productImage[0].fields.file.url} alt="sdfwe" />}
-                </div>
                 
                 <div className="productDesc">
                     <div className="price-rate">
@@ -51,7 +53,7 @@ const Product = ({ product }) => {
                             </div>
                             <div className="dropDownList">
                                 <p className="dropDownItem">
-                                    <span>Add to cart</span>
+                                    <span onClick={(e)=>addProductToCart(product, e)}>Add to cart</span>
                                     <span><IoCartOutline /></span>
                                 </p>
                                 <p className="dropDownItem">
@@ -64,7 +66,7 @@ const Product = ({ product }) => {
                 </div>
             </div>
 
-        </div>
+        </>
     )
 }
 

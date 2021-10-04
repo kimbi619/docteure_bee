@@ -1,9 +1,9 @@
 import React from 'react'
 
 const CarouselItem = ({ name, img, onFilter }) => {
-    const changeCat = e=>{
-        console.log(e.target);
-    }
+    // const changeCat = e=>{
+    //     console.log(e.target);
+    // }
     return (
         <>
            <div onClick={cat =>onFilter(cat)} data-cat={name} className="carosel" draggable={true}>

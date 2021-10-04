@@ -53,12 +53,16 @@
   font-family: "quicksand", sans-serif;
   margin: auto;
 }
+.changeRegisterBtn a {
+  color: white;
+  display: block;
+  width: 100%;
+}
 .registerBtn {
   width: 100%;
   text-align: center;
-  padding-bottom: 0.4rem;
+  padding: 0.4rem 1rem;
   border-bottom: 3px solid rgba(238, 251, 255, 0.863);
-  padding-inline: 1rem;
   cursor: pointer;
 }
 .active {
