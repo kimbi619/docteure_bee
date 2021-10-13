@@ -4,6 +4,7 @@ import { Link, Route, Switch} from 'react-router-dom'
 import './Register.css'
 import Signup from './Signup'
 import Login from './Login'
+import PasswordReset from './PasswordReset'
 
 const Register = () => {
     const exitRegister = (e)=>{
@@ -47,9 +48,9 @@ const Register = () => {
         <div className="register">
             <div id="preloader"></div>
             <div className="registerHeaderWrapper">
-                <div onClick={exitRegister} className="backBtn">
+                <Link to="/products"><div onClick={exitRegister} className="backBtn">
                     <span><FiArrowLeft /></span>
-                </div>
+                </div></Link>
                 <div className="signupHeader">
                     <h2 className="title">Let's get you signed in</h2>
                     <p className="caption">The information you provide will help us deliver your product safely</p>
@@ -59,10 +60,13 @@ const Register = () => {
                     <Link to="/register/login"><div className="registerBtn">LOGIN</div></Link>
                 </div>
             </div>
-            <Switch>
-                <Route to="/register/login" component={Login} />
-                <Route to="/register/signup" component={Signup} />
-            </Switch>
+            <div className="formControl">
+                <Switch>
+                    <Route path="/register/resetpassword" component={Signup} />
+                    <Route path="/register/signup" component={Signup} />
+                    <Route path="/register/login" component={Login} />
+                </Switch>
+            </div>
 
         </div>
     )

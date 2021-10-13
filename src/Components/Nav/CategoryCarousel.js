@@ -5,12 +5,16 @@ import CarouselItem from './CarouselItem';
 
 
 const breakPoints = [
-    { width: 1, itemsToShow: 3.3 },
-    { width: 320, itemsToShow: 4.5, itemsToScroll: 2 },
-    { width: 500, itemsToShow: 5.5 },
-    { width: 650, itemsToShow: 6.3 },
-    { width: 768, itemsToShow: 7 },
-    { width: 1200, itemsToShow: 4 }
+    { width: 1, itemsToShow: 2 },
+    { width: 200, itemsToShow: 2.5 },
+    { width: 240, itemsToShow: 2.9 },
+    { width: 270, itemsToShow: 3.3 },
+    { width: 320, itemsToShow: 3.7, itemsToScroll: 2 },
+    { width: 380, itemsToShow: 4.0 },
+    { width: 430, itemsToShow: 4.3 },
+    { width: 450, itemsToShow: 4.7 },
+    { width: 550, itemsToShow: 5.4 },
+    { width: 600, itemsToShow: 6 }
   ];
 
 const CategoryCarousel = ({products, onFilter}) => {

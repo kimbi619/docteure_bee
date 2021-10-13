@@ -1,10 +1,11 @@
-import React, { useRef } from 'react'
+import React, { useRef, useContext } from 'react'
 import { Link } from 'react-router-dom';
 import Product from './Product'
 import { FaTimes } from 'react-icons/fa'
+import { CartContext } from '../CartContext';
 
 const Products = ({ products }) => {
-    
+    const [cart, setCart] = useContext(CartContext)
     // const [starRating, setStarRating] = useState(4);
     // const [hoverRating, setHoverRating] = useState(undefined);
 
@@ -20,17 +21,17 @@ const Products = ({ products }) => {
 
     const popupRef  = useRef()
     const addToCart = (product, e)=>{
-        console.log(product);
+
+        setCart([...cart, {product:product}]);
+        // ==============display popup when add to chart is clicked=============
         popupRef.current.style.display="block";
-        setTimeout(()=>{
-            popupRef.current.style.display="none";
-        }, 2000);
     }
 
     // remove the popup alert from display
     const removePopup = (e)=>{
         e.target.parentElement.style.display="none";
     }
+   
     return (
         <div className="productGridWrapper">
             {

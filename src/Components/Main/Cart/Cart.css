@@ -1,0 +1,105 @@
+/* ====================================================================================== */
+/* =========================styling for cart items======================================= */
+/* ====================================================================================== */
+.cartItemWrapper {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  background: #f5f5f5;
+  height: 5.32rem;
+  padding-block: 0.625rem;
+  padding-right: 10px;
+}
+.cartImageWrapper {
+  padding-inline: 0.625rem;
+}
+.cartImageWrapper img {
+  width: 100%;
+  height: 100%;
+}
+.cartFlexItem {
+  flex-basis: 100%;
+}
+.cartDescription {
+  flex-basis: 200%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  font-size: 0.95rem;
+  font-family: "quicksand";
+  color: var(--secondaryColor);
+}
+.cartItemName,
+.totalPrice {
+  font-family: "quicksand", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--secondaryColor);
+}
+.cartControl {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: right;
+}
+.cartPrice {
+  visibility: hidden;
+}
+.cartBtn {
+  color: #a329ff;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+.cartSaveToLater {
+  margin-left: 1rem;
+}
+.remove {
+  display: none;
+}
+
+.cartCheckOutSection {
+  min-width: 300px;
+  max-width: 500px;
+}
+.cartCheckOutSection .checkout {
+  border-radius: 0px;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+.cartCheckOutSection .payDisable {
+  background: #20bf6aa9;
+  cursor: not-allowed;
+}
+
+/* ====================================================================================== */
+/* ====================================================================================== */
+
+@media (min-width: 35rem) {
+  .cartItemWrapper {
+    border: 1px solid #89ddf8;
+    background: white;
+    max-width: 46rem;
+    height: 7.06rem;
+  }
+  .cartMobilePrice {
+    display: none;
+  }
+  .cartPrice {
+    visibility: visible;
+  }
+  .remove {
+    display: block;
+  }
+  .cartBtnControl .remove {
+    display: inline;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 56.25rem) {
+  .cartPageWrapper {
+    display: flex;
+    justify-content: space-around;
+  }
+  .cartPageWrapper + div {
+    flex-basis: 100%;
+  }
+}

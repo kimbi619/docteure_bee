@@ -7,6 +7,7 @@ import Register from './Components/Registration/Register';
 import { Route, Switch } from 'react-router';
 import CategoryCarousel from './Components/Nav/CategoryCarousel';
 import useLocalStorage from './UseLocalStorage';
+import HomePage from './Components/HomePage';
 
 
 
@@ -32,13 +33,14 @@ function App() {
   return (
     <div className="App">
       <Nav products={products} />
-      <Route path="/" exact><CategoryCarousel onFilter={handleFilter} products={products} /></Route>
+      <Route path="/products" exact><CategoryCarousel onFilter={handleFilter} products={products} /></Route>
       <Main products={products} />
       
       <Switch>
         {/* <Route path="/products" component={Main } /> */}
         <Route path="/register/signup" component={Register}  />
         <Route path="/register/login" component={Register}  />
+        <Route to="/" exact><HomePage products={products} /></Route>
       </Switch>
     </div>
   );

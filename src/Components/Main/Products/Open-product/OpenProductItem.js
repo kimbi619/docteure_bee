@@ -7,5 +7,4 @@ export default styled.div`
     height: 320px;
     width: 100%;
     margin: 0px;
-    background: var(--primaryColor)
 `

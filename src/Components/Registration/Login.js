@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { MdClose } from 'react-icons/md'
 import { VscEye } from 'react-icons/vsc';
 import GoogleButton from './GoogleButton';
+import { Link } from 'react-router-dom';
 
 import './Register.css'
 
@@ -14,7 +15,7 @@ const Register = () => {
         const form = e.target.firstElementChild;
         const name = form;
         const email = form.nextElementSibling;
-        const password = email.nextElementSibling;
+        const password = email;
         
         
         
@@ -24,11 +25,9 @@ const Register = () => {
                 params.classList.remove('alert')
             }, 2500);
         }
+        console.log(userPassword);
     
-        if(userName.trim().length < 5){
-            handleName(name);
-        }
-        else if(userPassword.trim().length < 6){
+        if(userPassword.trim().length < 6){
             password.classList.add('alert');
             setTimeout(()=>{
                 password.classList.remove('alert')
@@ -51,7 +50,7 @@ const Register = () => {
             pwd.type = "password"
         }
     }
-    const [userName, setUserName] = useState('');
+    const [userMail, setUserMail] = useState('');
     const [userPassword, setUserPassword] = useState('');
     // const [privacyStatus, setPrivacyStatus] = useState(false);
     // console.log(privacyStatus);
@@ -59,10 +58,11 @@ const Register = () => {
         <div className="">
             
             <div className="formContainer">
+                <h1 className="registerTitleDesktop">Log In </h1>
                 <form onSubmit={handleSubmit}>
                     <div className="formInputWrapper">
-                        <input onChange={e=>setUserName(e.target.value)} type="text" className="formInputItem" placeholder="full name" />
-                        <div className="inputStatus"><span className="error">Name too short</span><MdClose /></div>
+                            <input onChange={e=>setUserMail(e.target.value)} type="email" className="formInputItem" placeholder="email" value={userMail} />
+                            <div className="inputStatus"><MdClose /></div>
                     </div>
                     <div className="formInputWrapper">
                         <input onChange={e=>setUserPassword(e.target.value)} type="password" className="formInputItem" placeholder="password" />
@@ -70,14 +70,19 @@ const Register = () => {
                     </div>
                     
                     <button className="submit" type="submit">Log in</button>
-                    {/* <button className="submit google" type="submit">Google</button> */}
                     <GoogleButton text="Login with google" />
+                    <p className="changeToLogin .logLogin">
+                        <Link to="/register/resetpassword" className="log">forgot password</Link>
+                    </p>
                     
                 </form>
                 <div className="stepPagination">
 
                 </div>
             </div>
+            <p className="changeToLogin .logLogin">Need an account
+                <Link to="/register/signup" className="log">click to sign up</Link>
+            </p>
 
         </div>
     )

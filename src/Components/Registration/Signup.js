@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { MdClose } from 'react-icons/md'
 import { VscEye } from 'react-icons/vsc';
 import GoogleButton from './GoogleButton';
+import {Link} from 'react-router-dom';
 
 import './Register.css'
 
@@ -20,30 +21,34 @@ const Register = () => {
         
         
         
+        
         const handleName=(params)=>{
             params.classList.add('alert');
             setTimeout(()=>{
                 params.classList.remove('alert')
             }, 2500);
         }
-    
+        
         if(userName.trim().length < 5){
             handleName(name);
         }
         else if(userPassword.trim().length < 6){
             password.classList.add('alert');
-            console.log(userMail);
             setTimeout(()=>{
                 password.classList.remove('alert')
             }, 2500);
             return;
 
+        }else if(check === false){
+            alert("You must agree to our policy")
         }
         // console.log(password);
         // handleNameInput(name);
         // handleEmailInput(email);
     }
-
+    const checkState = ()=>{
+        setCheck(!check);
+    }
     const toggleShowPassword = (e)=>{
         const pwd = e.target.previousElementSibling;
        
@@ -56,13 +61,14 @@ const Register = () => {
     }
     const [userName, setUserName] = useState('');
     const [userMail, setUserMail] = useState('');
+    const [check, setCheck] = useState(false)
     const [userPassword, setUserPassword] = useState('');
     // const [privacyStatus, setPrivacyStatus] = useState(false);
     // console.log(privacyStatus);
     return (
         <div className="">
-            
             <div className="formContainer">
+                <h1 className="registerTitleDesktop">Sign Up </h1>
                 <form onSubmit={handleSubmit}>
                     <div className="formInputWrapper">
                         <input onChange={e=>setUserName(e.target.value)} type="text" className="formInputItem" placeholder="full name" />
@@ -77,14 +83,16 @@ const Register = () => {
                         <div onClick={toggleShowPassword} className="inputStatus eye"><span className="error">invalid password</span><VscEye /></div>
                     </div>
                     <div className="formInputWrapper privacyPolicyWrapper">
-                        <input type="checkBox" id="privacy-policy" className="privacyPolicy" />
+                        <input onChange={checkState} type="checkBox" id="privacy-policy" className="privacyPolicy" />
                         <label htmlFor="privacy-policy" className="privacyText">I agree to the 
                             <a href="#terms$condition">terms and conditions</a>and 
                             <a href="#privacyPolicy">privacy policy</a>
                         </label>
                     </div>
+                    <p className="changeToLogin">Already have an account? 
+                        <Link to="/register/login" className="log">log in</Link>
+                    </p>
                     <button className="submit" type="submit">Sign up</button>
-                    {/* <button className="submit google" type="submit">Google</button> */}
                     <GoogleButton text="Sign up with Google" />
                     
                 </form>

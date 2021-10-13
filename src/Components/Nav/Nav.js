@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { FcMenu } from 'react-icons/fc'
 import './Nav.css';
 import { FaSearch } from 'react-icons/fa';
@@ -19,15 +19,15 @@ const Nav = ({ products }) => {
             e.target.parentElement.parentElement.parentElement.classList.remove('showNav')
         }
     }
-
+    const background = useRef('')
+    const searchItemList = useRef('')
+    const searchField = useRef('');
     // search function to find particular item using regular expressions
     const searchProducts=(e)=>{
         const searchValue = e.target.value.toLowerCase();
-        // setSearchItems(products=>{
-        //     return products.filter(product=>product)
-        //     // return products
-        // });
-        e.target.parentElement.parentElement.parentElement.parentElement.nextElementSibling.style.display="block";
+        background.current.style.display="block";
+        
+        searchItemList.current.style.display="block";
         function filteredProducts(){
             return products.filter(product=>{
                 let {description} = product.fields
@@ -43,18 +43,30 @@ const Nav = ({ products }) => {
         setSearchItems(filteredProducts())
     }
 
+
+    // remove filtered list on link select 
+    const removeList = (e)=>{
+        // background.current.style.display="none";
+    }
+    const removeSearch = (e)=>{
+        background.current.style.display="none";
+        searchItemList.current.style.display="none";
+        searchField.current.value=""
+    }
+
     return (
         <div>
+            <div onClick={removeSearch} ref={background} className="searchBackground"></div>
             <div className="nav">
                 <div className="container">
                     <div className="mobile navHeader">
-                        <div className="logo">
+                        <Link to="/" exact ><div className="logo">
                             <h2>Logo</ h2>
-                        </div>
+                        </div></Link>
 
                         <div className="search">
                             <form>
-                                <input onChange={event=>searchProducts(event)} type="text" className="searchInput" placeholder="search" />
+                                <input ref={searchField} onChange={event=>searchProducts(event)} type="text" className="searchInput" placeholder="search" />
                                 <button type="submit" className="icon searchIcon"><FaSearch /></button>
                             </form>
                         </div>
@@ -66,12 +78,12 @@ const Nav = ({ products }) => {
                 </div>
             
                 {/* Search form to filter user input and route to product page */}
-                <div className="searchFilter">
+                <div ref={searchItemList} className="searchFilter">
                     <ul>
                         {
                             searchItems.map((item, index)=>(
                                 <Link key={index} to={`/product/${item.sys.id}`}> 
-                                    <li className="searchLinks">{ item.fields.description }</li>
+                                    <li onClick={removeSearch} className="searchLinks">{ item.fields.description }</li>
                                 </Link>
                             ))
                         }

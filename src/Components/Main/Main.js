@@ -4,11 +4,13 @@ import Cart from './Cart/Cart';
 import './Main.css';
 import OpenProduct from './Products/Open-product/OpenProduct';
 import Products from './Products/Products'
+import { CartContextProvider } from './CartContext';
 
 const Main = ({ products })=> {
     
     return (
         <div>
+            <CartContextProvider>
             <div className="container">
                 <Switch>
                     <Route path="/product/:id" component={OpenProduct}/>
@@ -18,6 +20,7 @@ const Main = ({ products })=> {
                     <Route path="/cart" component={Cart} />
                 </Switch>
             </div>
+            </CartContextProvider>
         </div>
     )
 }

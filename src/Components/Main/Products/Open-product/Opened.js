@@ -41,7 +41,7 @@ const breakPoints = [
             <div className="flexItem">
             <div className="imgWrapper">
                     <Carousel 
-                        enableAutoPlay autoPlaySpeed={3500} 
+                        enableAutoPlay autoPlaySpeed={2500} 
                         breakPoints={breakPoints} 
                         alternate
                         renderPagination={({ pages, activePage, onClick }) => {

@@ -59,6 +59,7 @@
 .searchFilter {
   position: absolute;
   width: 95%;
+  max-width: 38rem;
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
@@ -133,6 +134,19 @@ nav .caption {
   /* display: block; */
 }
 
+/* ===================================================== */
+
+.searchBackground {
+  position: fixed;
+  top: 3.9rem;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 3.9rem);
+  background: #20406796;
+  z-index: 2;
+  display: none;
+}
+
 /* ====================================================================================== */
 /* ========================styling for CAROUSEL ITEMS==================================== */
 /* ====================================================================================== */
@@ -144,17 +158,19 @@ nav .caption {
   margin-block: 1rem;
   overflow: hidden;
 }
-.carosel {
+.carouselWrapper .carosel {
   width: 100%;
   height: 100%;
-  background: var(--primaryColor);
+  background: #002649a2;
   color: white;
   border-radius: 8px;
+  overflow: hidden;
   font-size: var(--fs-xs);
   text-transform: capitalize;
   font-family: "quicksand", sans-serif;
   overflow: hidden;
   position: relative;
+  margin-bottom: 2rem;
 }
 .carosel * {
   pointer-events: none;
@@ -169,14 +185,15 @@ nav .caption {
 .categoryImage {
   position: absolute;
   height: 100%;
+  width: 100%;
 }
 .rec.rec-arrow {
-  border-radius: 0;
   display: none;
 }
 
 .carouselWrapper {
-  margin-top: 20px;
+  margin-top: 1.25rem;
+  max-width: 42.75rem;
 }
 .viewAll {
   display: flex;
@@ -215,6 +232,9 @@ nav .caption {
     width: 95%;
     margin: auto;
   }
+  .logo {
+    color: var(--primaryColor);
+  }
   .navLink {
     margin-top: 0;
   }
@@ -230,7 +250,9 @@ nav .caption {
     width: 95%;
     margin: auto;
   }
-
+  .navList a {
+    color: var(--primaryColor);
+  }
   nav {
     background: transparent;
     padding: 1.3rem 0rem;

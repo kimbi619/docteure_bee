@@ -91,6 +91,7 @@
   border: 2px solid black;
   border-bottom: 0px solid white;
   display: none;
+  /* visibility: hidden; */
 }
 .popup a {
   color: #63a3f7;

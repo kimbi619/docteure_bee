@@ -7,12 +7,11 @@
   width: 100%;
 }
 .productPageImgWrapper {
-  height: 30vh;
   width: 100%;
+  height: 100%;
 }
 .flexItem img {
-  height: 100%;
-  /* width: 100%; */
+  width: 100%;
 }
 
 .buyBtn {

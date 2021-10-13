@@ -158,8 +158,9 @@
 }
 
 .googleImg {
-  height: 95%;
+  height: 70%;
   margin: auto 0.3rem;
+  margin-right: 1rem;
 }
 .alert * {
   color: var(--mainRed);
@@ -171,4 +172,60 @@
 .alert .inputStatus {
   display: flex;
   align-items: center;
+}
+.registerTitleDesktop {
+  display: none;
+  text-align: center;
+  font-family: "poppins", sans-serif;
+  font-weight: 300;
+  color: var(--primaryColor);
+}
+
+.changeToLogin {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-family: "quicksand", sans-serif;
+  display: none;
+}
+.logLogin {
+  margin: 0;
+}
+.log {
+  color: #0672ff;
+  text-decoration: underline;
+  padding-left: 0.5rem;
+}
+.blog {
+  display: block;
+}
+@media (min-width: 27rem) {
+  .formContainer {
+    border: 1px solid #0672ff;
+    padding: 1rem;
+  }
+  .register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .changeToLogin {
+    display: block;
+  }
+  .formControl {
+    min-width: 450px;
+  }
+  .registerHeaderWrapper {
+    display: none;
+  }
+  .formInputWrapper .formInputItem,
+  .submit {
+    border-radius: 0;
+  }
+  .registerTitleDesktop {
+    display: block;
+  }
+  .submit {
+    height: 3rem;
+  }
 }
