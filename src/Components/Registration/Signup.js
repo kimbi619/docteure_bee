@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { MdClose } from 'react-icons/md'
 import { VscEye } from 'react-icons/vsc';
 import GoogleButton from './GoogleButton';
 import {Link} from 'react-router-dom';
-
+import { useAuth } from '../../AppContext/AuthContext';
 import './Register.css'
 
 const Register = () => {
@@ -63,6 +63,10 @@ const Register = () => {
     const [userMail, setUserMail] = useState('');
     const [check, setCheck] = useState(false)
     const [userPassword, setUserPassword] = useState('');
+    const userNameRef = useRef('');
+    const userMailRef = useRef('');
+    const userPasswordRef = useRef('');
+    const privacyPolicyRef = useRef('');
     // const [privacyStatus, setPrivacyStatus] = useState(false);
     // console.log(privacyStatus);
     return (
@@ -71,19 +75,19 @@ const Register = () => {
                 <h1 className="registerTitleDesktop">Sign Up </h1>
                 <form onSubmit={handleSubmit}>
                     <div className="formInputWrapper">
-                        <input onChange={e=>setUserName(e.target.value)} type="text" className="formInputItem" placeholder="full name" />
+                        <input id="userName" ref={userNameRef} onChange={e=>setUserName(e.target.value)} type="text" className="formInputItem" placeholder="full name" />
                         <div className="inputStatus"><span className="error">Name too short</span><MdClose /></div>
                     </div>
                     <div className="formInputWrapper">
-                        <input onChange={e=>setUserMail(e.target.value)} type="email" className="formInputItem" placeholder="email" />
+                        <input id="userMail" ref={userMailRef} onChange={e=>setUserMail(e.target.value)} type="email" className="formInputItem" placeholder="email" />
                         <div className="inputStatus"><MdClose /></div>
                     </div>
                     <div className="formInputWrapper">
-                        <input onChange={e=>setUserPassword(e.target.value)} type="password" className="formInputItem" placeholder="password" />
+                        <input id="userPassword" ref={userPasswordRef} onChange={e=>setUserPassword(e.target.value)} type="password" className="formInputItem" placeholder="password" />
                         <div onClick={toggleShowPassword} className="inputStatus eye"><span className="error">invalid password</span><VscEye /></div>
                     </div>
                     <div className="formInputWrapper privacyPolicyWrapper">
-                        <input onChange={checkState} type="checkBox" id="privacy-policy" className="privacyPolicy" />
+                        <input id="privacyPolicy" ref={privacyPolicyRef} onChange={checkState} type="checkBox" id="privacy-policy" className="privacyPolicy" />
                         <label htmlFor="privacy-policy" className="privacyText">I agree to the 
                             <a href="#terms$condition">terms and conditions</a>and 
                             <a href="#privacyPolicy">privacy policy</a>

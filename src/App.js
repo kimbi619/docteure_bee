@@ -8,40 +8,41 @@ import { Route, Switch } from 'react-router';
 import CategoryCarousel from './Components/Nav/CategoryCarousel';
 import useLocalStorage from './UseLocalStorage';
 import HomePage from './Components/HomePage';
+import app from './fire'
 
 
 
 function App() {
+  console.log(app);
 
 
-  const [products, setProducts] = useLocalStorage('products', [])
-  useEffect(() => {  
-    Client.getEntries()
-    .then(res=>{
-      setProducts(res.items);
-    })
-    .catch(err=>console.log(err))
+  // const [products, setProducts] = useLocalStorage('products', [])
+  // useEffect(() => {  
+  //   Client.getEntries()
+  //   .then(res=>{
+  //     setProducts(res.items);
+  //   })
+  //   .catch(err=>console.log(err))
 
-  }, []);
+  // }, []);
 
-  const handleFilter = (category)=>{
-    console.log(category.target);
-  }
+  // const handleFilter = (category)=>{
+  //   console.log(category.target);
+  // }
 
 
 
   return (
     <div className="App">
-      <Nav products={products} />
+      {/* <Nav products={products} />
       <Route path="/products" exact><CategoryCarousel onFilter={handleFilter} products={products} /></Route>
       <Main products={products} />
       
       <Switch>
-        {/* <Route path="/products" component={Main } /> */}
         <Route path="/register/signup" component={Register}  />
         <Route path="/register/login" component={Register}  />
         <Route to="/" exact><HomePage products={products} /></Route>
-      </Switch>
+      </Switch> */}
     </div>
   );
 }
