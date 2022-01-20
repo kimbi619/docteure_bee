@@ -35,7 +35,7 @@ function App() {
   return (
     <div className="App">
       <Nav products={products} />
-      <Route path="/products" exact><CategoryCarousel onFilter={handleFilter} products={products} /></Route>
+      {/* <Route path="/products" exact><CategoryCarousel onFilter={handleFilter} products={products} /></Route> */}
       <Main products={products} />
       
       <Switch>
