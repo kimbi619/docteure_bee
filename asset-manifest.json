@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/docteure_bee/static/css/main.e8fceed1.chunk.css",
+    "main.js": "/docteure_bee/static/js/main.a859934a.chunk.js",
+    "main.js.map": "/docteure_bee/static/js/main.a859934a.chunk.js.map",
+    "runtime-main.js": "/docteure_bee/static/js/runtime-main.49bbe075.js",
+    "runtime-main.js.map": "/docteure_bee/static/js/runtime-main.49bbe075.js.map",
+    "static/js/2.f8ffdaf9.chunk.js": "/docteure_bee/static/js/2.f8ffdaf9.chunk.js",
+    "static/js/2.f8ffdaf9.chunk.js.map": "/docteure_bee/static/js/2.f8ffdaf9.chunk.js.map",
+    "static/js/3.0e22e749.chunk.js": "/docteure_bee/static/js/3.0e22e749.chunk.js",
+    "static/js/3.0e22e749.chunk.js.map": "/docteure_bee/static/js/3.0e22e749.chunk.js.map",
+    "index.html": "/docteure_bee/index.html",
+    "static/css/main.e8fceed1.chunk.css.map": "/docteure_bee/static/css/main.e8fceed1.chunk.css.map",
+    "static/js/2.f8ffdaf9.chunk.js.LICENSE.txt": "/docteure_bee/static/js/2.f8ffdaf9.chunk.js.LICENSE.txt",
+    "static/media/googleLogo.221f782d.png": "/docteure_bee/static/media/googleLogo.221f782d.png",
+    "static/media/App.css": "/docteure_bee/static/media/loader.e55a1721.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.49bbe075.js",
+    "static/js/2.f8ffdaf9.chunk.js",
+    "static/css/main.e8fceed1.chunk.css",
+    "static/js/main.a859934a.chunk.js"
+  ]
+}
