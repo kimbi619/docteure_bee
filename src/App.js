@@ -39,9 +39,9 @@ function App() {
       <Main products={products} />
       
       <Switch>
+        <Route to="/" exact><HomePage products={products} /></Route>
         <Route path="/register/signup" component={Register}  />
         <Route path="/register/login" component={Register}  />
-        <Route to="/" exact><HomePage products={products} /></Route>
       </Switch>
     </div>
   );

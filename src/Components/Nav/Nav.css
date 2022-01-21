@@ -9,9 +9,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  /* width: 100%; */
   padding-block: 1rem 0.7rem;
-  width: 100%;
+  background: crimson;
 }
 
 .search {
@@ -100,7 +100,7 @@ nav {
   z-index: 10;
   color: white;
   text-align: center;
-  font-family: "quicksand", sans-serif;
+  font-family: 'quicksand', sans-serif;
   padding-top: 4rem;
   transform: scale(0, 1);
   transition: all 0.2s ease-in-out;
@@ -167,7 +167,7 @@ nav .caption {
   overflow: hidden;
   font-size: var(--fs-xs);
   text-transform: capitalize;
-  font-family: "quicksand", sans-serif;
+  font-family: 'quicksand', sans-serif;
   overflow: hidden;
   position: relative;
   margin-bottom: 2rem;
@@ -213,6 +213,9 @@ nav .caption {
 /* ====================================================================================== */
 /* ====================================================================================== */
 /* ====================================================================================== */
+.desktopSearch {
+  display: none;
+}
 @media (min-width: 37.5rem) {
   nav {
     height: auto;
@@ -243,9 +246,16 @@ nav .caption {
   }
 }
 @media (min-width: 50rem) {
+  .search {
+    display: none;
+  }
+  .desktopSearch {
+    display: block;
+    margin-right: auto;
+  }
   .nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 95%;
     margin: auto;
@@ -254,9 +264,11 @@ nav .caption {
     color: var(--primaryColor);
   }
   nav {
-    background: transparent;
+    width: 100%;
+    background: blue;
     padding: 1.3rem 0rem;
     margin-left: 2rem;
+    display: flex;
   }
 
   .navLink a {
