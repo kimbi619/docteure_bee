@@ -11,7 +11,6 @@
   align-items: center;
   width: 100%;
   padding-block: 1rem 0.7rem;
-  width: 100%;
 }
 
 .search {
@@ -83,6 +82,7 @@
 } */
 .logo {
   color: white;
+  display: inline;
 }
 .searchLinks {
   padding-block: 1rem;
@@ -100,7 +100,7 @@ nav {
   z-index: 10;
   color: white;
   text-align: center;
-  font-family: "quicksand", sans-serif;
+  font-family: 'quicksand', sans-serif;
   padding-top: 4rem;
   transform: scale(0, 1);
   transition: all 0.2s ease-in-out;
@@ -167,7 +167,7 @@ nav .caption {
   overflow: hidden;
   font-size: var(--fs-xs);
   text-transform: capitalize;
-  font-family: "quicksand", sans-serif;
+  font-family: 'quicksand', sans-serif;
   overflow: hidden;
   position: relative;
   margin-bottom: 2rem;
@@ -213,6 +213,9 @@ nav .caption {
 /* ====================================================================================== */
 /* ====================================================================================== */
 /* ====================================================================================== */
+.desktopSearch {
+  display: none;
+}
 @media (min-width: 37.5rem) {
   nav {
     height: auto;
@@ -229,23 +232,31 @@ nav .caption {
   .navList {
     display: flex;
     justify-content: space-between;
-    width: 95%;
-    margin: auto;
+    align-items: center;
   }
   .logo {
     color: var(--primaryColor);
   }
   .navLink {
     margin-top: 0;
+    margin-inline: 1.7rem;
   }
   .logout {
     display: none;
   }
 }
 @media (min-width: 50rem) {
+  .search {
+    display: none;
+  }
+  .desktopSearch {
+    display: block;
+    margin-left: 1rem;
+    max-width: 15rem;
+  }
   .nav {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: center; */
     align-items: center;
     width: 95%;
     margin: auto;
@@ -254,9 +265,34 @@ nav .caption {
     color: var(--primaryColor);
   }
   nav {
+    width: 100%;
     background: transparent;
-    padding: 1.3rem 0rem;
+    padding: 1rem 0rem;
     margin-left: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navHeader {
+    width: 100%;
+  }
+  .headerWrapper .container {
+    width: auto;
+  }
+  .push {
+    margin-right: auto;
+  }
+  .shiftRight {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    /* justify-content: flex-end; */
+    /* width: 40%; */
+  }
+  nav {
+    margin-right: auto;
   }
 
   .navLink a {
@@ -265,4 +301,48 @@ nav .caption {
   .burgerMenu {
     display: none;
   }
+}
+
+.dropDownWrapper {
+  position: relative;
+}
+.dropDown {
+  padding: 0.5rem;
+  /* border-radius: 6px 6px 0rem 0rem; */
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  cursor: pointer;
+  pointer-events: none;
+}
+.dropDownIndicator {
+  border-left: 1px solid gray;
+  margin-left: 0.5rem;
+  padding-left: 0.5rem;
+  color: black;
+  pointer-events: none;
+}
+.dropDownList {
+  box-shadow: 2px 3px 6px 2px rgba(0, 0, 0, 0.178);
+  padding: 0rem 0.5rem 0.3rem 0.5rem;
+  position: absolute;
+  top: 80%;
+  right: 0;
+  width: 10%;
+  background: white;
+  z-index: 1;
+  display: none;
+}
+.dropDownItem {
+  padding-block: 0.5rem;
+  font-size: var(--fs-xs);
+  border-bottom: 1px solid rgb(218, 218, 218);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  cursor: pointer;
+}
+
+.toggleDropDown {
+  display: block;
 }

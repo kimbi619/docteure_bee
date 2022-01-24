@@ -3,6 +3,7 @@ import { FcMenu } from 'react-icons/fc'
 import './Nav.css';
 import { FaSearch } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { IoIosArrowDown } from 'react-icons/io'
 
 
 const Nav = ({ products }) => {
@@ -54,8 +55,16 @@ const Nav = ({ products }) => {
         searchField.current.value=""
     }
 
+    const showDropDown = (e)=>{
+        const dropDownList = e.target.nextElementSibling;
+        if(dropDownList === null){
+            return
+        }
+        dropDownList.classList.toggle('toggleDropDown');
+    }
+
     return (
-        <div>
+        <div className='headerWrapper'>
             <div onClick={removeSearch} ref={background} className="searchBackground"></div>
             <div className="nav">
                 <div className="container">
@@ -63,13 +72,13 @@ const Nav = ({ products }) => {
                         <Link to="/" exact ><div className="logo">
                             <h2>Logo</ h2>
                         </div></Link>
-
                         <div className="search">
                             <form>
                                 <input ref={searchField} onChange={event=>searchProducts(event)} type="text" className="searchInput" placeholder="search" />
                                 <button type="submit" className="icon searchIcon"><FaSearch /></button>
                             </form>
                         </div>
+                       
 
                         <div className="burgerMenu" onClick={toggleNav}>
                             <div className="menu"><FcMenu /></div>
@@ -90,18 +99,42 @@ const Nav = ({ products }) => {
                     </ul>
                 </div>
                 <nav onClick={removeNav}>
+                    <div className="push"></div>
                     <div className="logoCaption">
                         <Link to= "/" exact><div className="logo">logo</div></Link>
-                        <div className="caption">Fill with Caption</div>
                     </div>
                     <ul className="navList">
+                        {/* <Link to="/" exact><li className="navLink">Home</li></Link> */}
                         <Link to="/products" exact><li className="navLink">Products</li></Link>
-                        <Link to="/contact-us"><li className="navLink">Contact us</li></Link>
+                        <Link to="/winery" exact><li className="navLink">Winery</li></Link>
+                        <Link to="/contact-us"><li className="navLink">Contact</li></Link>
                         <Link to="/about"><li className="navLink">About</li></Link>
-                        <Link to="/register/signup"><li className="navLink">Account</li></Link>
-                        <Link to="/cart"><li className="navLink">Cart</li></Link>
                     </ul>
-                    <div className="logout">Log out</div>
+                    <div className="desktopSearch search">
+                        <form>
+                            <input ref={searchField} onChange={event=>searchProducts(event)} type="text" className="searchInput" placeholder="search" />
+                            <button type="submit" className="icon searchIcon"><FaSearch /></button>
+                        </form>
+                    </div>
+                    <ul className="shiftRight">
+                        <Link to="/cart"><li className="navLink">Cart</li></Link>
+                        <div className="lang" id='lang'>
+                            <div onClick={showDropDown}  className="cont">
+                                <div className="dropDown">
+                                    <p>lang</p>
+                                    <span className="dropDownIndicator"><IoIosArrowDown  /></span>
+                                </div>
+                            </div>
+                            <div className="dropDownList">
+                                <p className="dropDownItem english">
+                                    <span>English</span>
+                                </p>
+                                <p className="dropDownItem french">
+                                    <span>Francais</span>
+                                </p>
+                            </div>
+                        </div>
+                    </ul>
                 </nav>
             </div>
         </div>
