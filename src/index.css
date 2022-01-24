@@ -1,13 +1,131 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.heroSection {
+  font-family: poppins;
+  font-weight: 900;
+  background: linear-gradient(to right, #0a305b50, #0a305b50),
+    url('./img/miel.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+h1 {
+  width: 80%;
+  max-width: 700px;
+  font-size: var(--fs-av);
+}
+.hyperLink {
+  color: #086bfe;
+  text-align: center;
+  text-decoration: underline;
+}
+.seeAll {
+  text-transform: lowercase;
+  text-align: right;
+  margin-block: 0.7rem;
+}
+.callToAction {
+  color: white;
+  font-size: var(--fs-xs);
+  font-family: poppins;
+  font-weight: 700;
+  background: #1d4c80;
+  width: 15rem;
+  margin-top: 2rem;
+  text-transform: capitalize;
+  height: 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.siteDesc {
+  font-family: montserrat;
+  text-align: center;
+  margin-block: 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.descTitle {
+  font-weight: bold;
+  font-size: var(--fs-sm);
+  margin: 1rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+.descText {
+  font-size: var(--fs-xs);
+  width: 85%;
+  line-height: 1.5rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.desc {
+  text-transform: uppercase;
+}
+
+@media (min-width: 37rem) {
+  .descText {
+    max-width: 1500px;
+    line-height: 30px;
+    width: 65%;
+  }
+  .featuredProducts {
+    width: 60%;
+  }
+  /* .gridWrapper {
+    grid-template-columns: repeat(3, 1fr);
+  } */
+  .gridItem .imgWrapper {
+    height: 13rem;
+  }
+  .featuredProducts .gridWrapper {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  }
+}
+
+/* ==========================================================
+==========================================================
+========================================================== */
+.featuredProducts {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  text-transform: uppercase;
+}
+.gridWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  grid-gap: 1rem;
+}
+.gridItem {
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s ease-in;
+}
+.gridItem:hover {
+  opacity: 0.4;
+}
+.gridItem .imgWrapper {
+  height: 10rem;
+  width: 100%;
+  position: relative;
+  z-index: -2;
+  overflow: hidden;
+}
+.gridItem .gridImage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+}
+
+/* =====================================================================
+=====================================================================
+===================================================================== */
+.characteristics {
+  margin: 2rem 0rem;
 }

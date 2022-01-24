@@ -9,9 +9,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* width: 100%; */
+  width: 100%;
   padding-block: 1rem 0.7rem;
-  background: crimson;
 }
 
 .search {
@@ -83,6 +82,7 @@
 } */
 .logo {
   color: white;
+  display: inline;
 }
 .searchLinks {
   padding-block: 1rem;
@@ -232,14 +232,14 @@ nav .caption {
   .navList {
     display: flex;
     justify-content: space-between;
-    width: 95%;
-    margin: auto;
+    align-items: center;
   }
   .logo {
     color: var(--primaryColor);
   }
   .navLink {
     margin-top: 0;
+    margin-inline: 1.7rem;
   }
   .logout {
     display: none;
@@ -251,11 +251,12 @@ nav .caption {
   }
   .desktopSearch {
     display: block;
-    margin-right: auto;
+    margin-left: 1rem;
+    max-width: 15rem;
   }
   .nav {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     width: 95%;
     margin: auto;
@@ -265,10 +266,33 @@ nav .caption {
   }
   nav {
     width: 100%;
-    background: blue;
-    padding: 1.3rem 0rem;
+    background: transparent;
+    padding: 1rem 0rem;
     margin-left: 2rem;
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navHeader {
+    width: 100%;
+  }
+  .headerWrapper .container {
+    width: auto;
+  }
+  .push {
+    margin-right: auto;
+  }
+  .shiftRight {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    /* justify-content: flex-end; */
+    /* width: 40%; */
+  }
+  nav {
+    margin-right: auto;
   }
 
   .navLink a {
@@ -277,4 +301,48 @@ nav .caption {
   .burgerMenu {
     display: none;
   }
+}
+
+.dropDownWrapper {
+  position: relative;
+}
+.dropDown {
+  padding: 0.5rem;
+  /* border-radius: 6px 6px 0rem 0rem; */
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  cursor: pointer;
+  pointer-events: none;
+}
+.dropDownIndicator {
+  border-left: 1px solid gray;
+  margin-left: 0.5rem;
+  padding-left: 0.5rem;
+  color: black;
+  pointer-events: none;
+}
+.dropDownList {
+  box-shadow: 2px 3px 6px 2px rgba(0, 0, 0, 0.178);
+  padding: 0rem 0.5rem 0.3rem 0.5rem;
+  position: absolute;
+  top: 80%;
+  right: 0;
+  width: 10%;
+  background: white;
+  z-index: 1;
+  display: none;
+}
+.dropDownItem {
+  padding-block: 0.5rem;
+  font-size: var(--fs-xs);
+  border-bottom: 1px solid rgb(218, 218, 218);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  cursor: pointer;
+}
+
+.toggleDropDown {
+  display: block;
 }
