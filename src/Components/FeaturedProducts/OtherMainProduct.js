@@ -1,7 +1,5 @@
 import React, {useState} from 'react';
 import pollen from '../../img/pollen.jpg'
-import honey from '../../img/honey.jpg'
-import miel from '../../img/miel.jpg'
 import propolis from '../../img/propolis.jpg'
 
 const OtherMainProduct = (props) => {
@@ -46,9 +44,6 @@ const OtherMainProduct = (props) => {
   const item = mainProducts.filter(mainProduct=>mainProduct.name == route)
   return (
   <div>
-    {
-      console.log(item)
-    }
     <div className="container">
     <div className="descCap titleLeft descTitle">{item[0].name}</div>
         <div className="featuredProductTopGrid">
@@ -62,8 +57,8 @@ const OtherMainProduct = (props) => {
                 <div className="descText">
                     {item[0].desc}
                 </div>
-                <div className="place-oder">
-                  <a href='#featuredHoneyProduct'><p className="callToAction">add to cart</p></a>
+                <div className="place-oder ">
+                  <a href='#featuredHoneyProduct'><p className="addToCart callToAction">add to cart</p></a>
                   <a href='#featuredHoneyProduct'><p className="callToAction">Buy</p></a>
                 </div>
             </div>

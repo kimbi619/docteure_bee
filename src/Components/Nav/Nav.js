@@ -23,6 +23,7 @@ const Nav = ({ products }) => {
     const background = useRef('')
     const searchItemList = useRef('')
     const searchField = useRef('');
+
     // search function to find particular item using regular expressions
     const searchProducts=(e)=>{
         const searchValue = e.target.value.toLowerCase();
@@ -39,22 +40,19 @@ const Nav = ({ products }) => {
                 return "";
 
             })
-        }
-        // console.log(filteredProducts())
+        } 
+
         setSearchItems(filteredProducts())
     }
 
 
-    // remove filtered list on link select 
-    const removeList = (e)=>{
-        // background.current.style.display="none";
-    }
     const removeSearch = (e)=>{
         background.current.style.display="none";
         searchItemList.current.style.display="none";
         searchField.current.value=""
     }
-
+    const lang = useRef('lang');
+    console.log(lang)
     const showDropDown = (e)=>{
         const dropDownList = e.target.nextElementSibling;
         if(dropDownList === null){
@@ -118,7 +116,7 @@ const Nav = ({ products }) => {
                     </div>
                     <ul className="shiftRight">
                         <Link to="/cart"><li className="navLink">Cart</li></Link>
-                        <div className="lang" id='lang'>
+                        <div ref={lang} className="lang" id='lang'>
                             <div onClick={showDropDown}  className="cont">
                                 <div className="dropDown">
                                     <p>lang</p>

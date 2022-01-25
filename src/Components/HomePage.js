@@ -4,7 +4,22 @@ import honey from '../img/honey.jpg'
 import pollen from '../img/pollen.jpg'
 import propolis from '../img/propolis.jpg'
 
+
+import YouTube from 'react-youtube';
+
+
 const HomePage = ({ products }) => {
+
+    const opts = {
+        // height: '390',
+        // width: '640',
+        playerVars: {
+          // https://developers.google.com/youtube/player_parameters
+          autoplay: 1,
+        },
+      };
+
+
     return (
         <div className='homepage'>
             <div className="heroSection">
@@ -84,8 +99,23 @@ const HomePage = ({ products }) => {
                 </div>
             </div>
 
-            <div className="characteristics">
+            <div className="container characteristics">
                 <div className="descTitle">Our amazing features</div>
+            </div>
+            <div className="container characteristics">
+                <div className="featuredProductTopGrid">
+                    <div className="imgSection">
+                        <div className="imgWrapper">
+                    <YouTube className='youtube' videoId="zXSrG0zu348" opts={opts} />
+                        </div>
+                    </div>
+                    <div className="featuredProductTopDesc">
+                        <div className="descTitle titleLeft">ABOUT ME</div>
+                        <div className="descText">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, aliquam quibusdam. Excepturi animi atque, corporis debitis sequi deleniti natus consequuntur molestias facilis quasi quo blanditiis architecto totam aliquid! Dolorum totam accusantium voluptatum. Cumque nemo quidem hic saepe expedita minima neque rerum perferendis sequi, similique quod reprehenderit. Nobis ut neque id.
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )

@@ -42,7 +42,9 @@ a {
   margin: auto;
   /* background-color: crimson; */
 }
-
+.descTitle .descText {
+  font-family: 'Montserrat', sans-serif;
+}
 input[type='checkbox'] {
   appearance: none;
   -webkit-appearance: none;

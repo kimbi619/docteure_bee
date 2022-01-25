@@ -1,7 +1,3 @@
-import React from 'react'
-import { IoIosArrowDown } from 'react-icons/io'
-import { IoCartOutline } from 'react-icons/io5'
-import { FiBookmark } from 'react-icons/fi'
 
 const Product = ({ product, onAdd }) => {
 
