@@ -32,7 +32,7 @@ const CartItem = ({ product, onRemove }) => {
                     <img src={medias[0]} alt={name} />
                 </div>
                 <div className="cartFlexItem cartDescription">
-                    <h3 className="cartItemName">Product category</h3>
+                    <h3 className="cartItemName">{name}</h3>
                     <div className="rating remove">
                         {stars.map((_, index)=>(
                             <IoStarSharp key = {index} color={(productRatings) > index ? colors.blue: colors.gray}/>

@@ -23,7 +23,7 @@ import Opened from './Opened';
             setLoading(true);
             let data = await Client.getEntry(match.params.id)
             console.log(data);
-            setProduct(data.fields);
+            setProduct(data);
             setLoading(false);
         }
            

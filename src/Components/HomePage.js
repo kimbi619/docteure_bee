@@ -8,7 +8,7 @@ import propolis from '../img/propolis.jpg'
 import YouTube from 'react-youtube';
 
 
-const HomePage = ({ products }) => {
+const HomePage = ({ t }) => {
 
     const opts = {
         // height: '390',
@@ -18,7 +18,6 @@ const HomePage = ({ products }) => {
           autoplay: 1,
         },
       };
-
 
     return (
         <div className='homepage'>
@@ -106,7 +105,7 @@ const HomePage = ({ products }) => {
                 <div className="featuredProductTopGrid">
                     <div className="imgSection">
                         <div className="imgWrapper">
-                    <YouTube className='youtube' videoId="zXSrG0zu348" opts={opts} />
+                            <YouTube className='youtube' videoId="zXSrG0zu348" opts={opts} />
                         </div>
                     </div>
                     <div className="featuredProductTopDesc">

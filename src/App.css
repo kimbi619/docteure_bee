@@ -14,6 +14,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'montserrat light';
 }
 p {
   color: var(--primaryColor);
@@ -43,7 +44,7 @@ a {
   /* background-color: crimson; */
 }
 .descTitle .descText {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'montserrat light';
 }
 input[type='checkbox'] {
   appearance: none;

@@ -139,3 +139,21 @@ h1 {
 .featuredProductTopDesc .descText {
   width: 100%;
 }
+
+.featuredProductTopDesc {
+  width: 100%;
+  max-width: 500px;
+}
+.controlLinkWrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.controlLinks {
+  display: block;
+  margin-right: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}

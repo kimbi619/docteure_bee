@@ -57,9 +57,9 @@ const OtherMainProduct = (props) => {
                 <div className="descText">
                     {item[0].desc}
                 </div>
-                <div className="place-oder ">
-                  <a href='#featuredHoneyProduct'><p className="addToCart callToAction">add to cart</p></a>
-                  <a href='#featuredHoneyProduct'><p className="callToAction">Buy</p></a>
+                <div className="place-oder controlLinkWrapper ">
+                  <a className='controlLinks' href='#featuredHoneyProduct'><p className="addToCart callToAction">add to cart</p></a>
+                  <a className='controlLinks' href='#featuredHoneyProduct'><p className="callToAction">Buy</p></a>
                 </div>
             </div>
         </div>

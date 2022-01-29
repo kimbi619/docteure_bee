@@ -1,6 +1,28 @@
 /* ====================================================================================== */
 /* =========================styling for cart items======================================= */
 /* ====================================================================================== */
+
+.cartPageWrapper {
+  display: grid;
+  grid-template-columns: 3fr, 1fr;
+}
+.carts {
+  width: 100%;
+  margin: 0;
+}
+.cartCheckOutSection {
+  max-width: 500px;
+  width: 100%;
+}
+.cartCheckOutSection .checkout {
+  border-radius: 0px;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+.cartCheckOutSection .payDisable {
+  background: #20bf6aa9;
+  cursor: not-allowed;
+}
 .cartItemWrapper {
   margin-bottom: 1rem;
   display: flex;
@@ -10,28 +32,39 @@
   padding-block: 0.625rem;
   padding-right: 10px;
 }
+
 .cartImageWrapper {
   padding-inline: 0.625rem;
+  position: relative;
+  overflow: hidden;
 }
 .cartImageWrapper img {
   width: 100%;
   height: 100%;
+  /* position: absolute;
+  height: auto;
+  top: 0;
+  left: 0;
+  margin: 0rem 0.6rem; */
 }
 .cartFlexItem {
   flex-basis: 100%;
+  position: relative;
+  overflow: hidden;
 }
+
 .cartDescription {
   flex-basis: 200%;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   font-size: 0.95rem;
-  font-family: "quicksand";
+  font-family: 'quicksand';
   color: var(--secondaryColor);
 }
 .cartItemName,
 .totalPrice {
-  font-family: "quicksand", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'quicksand', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--secondaryColor);
 }
 .cartControl {
@@ -53,20 +86,6 @@
 }
 .remove {
   display: none;
-}
-
-.cartCheckOutSection {
-  min-width: 300px;
-  max-width: 500px;
-}
-.cartCheckOutSection .checkout {
-  border-radius: 0px;
-  margin: 1rem 0;
-  cursor: pointer;
-}
-.cartCheckOutSection .payDisable {
-  background: #20bf6aa9;
-  cursor: not-allowed;
 }
 
 /* ====================================================================================== */

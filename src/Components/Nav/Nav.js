@@ -3,17 +3,37 @@ import { FcMenu } from 'react-icons/fc'
 import './Nav.css';
 import { FaSearch } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import { IoIosArrowDown } from 'react-icons/io'
+import { IoIosArrowDown, IoIosGlobe } from 'react-icons/io'
 
+
+import 'flag-icon-css/css/flag-icon.min.css'
 
 const Nav = ({ products }) => {
 
+    const lang = useRef('lang');
+    let l = lang.current;
     const [searchItems, setSearchItems] = useState([])
+    const [showLang, setShowLang] = useState(false);
+    
+
     // toggle navigation for mobile view 
     const toggleNav = (e)=>{
         const navigation = e.target.parentElement.parentElement.nextElementSibling.nextElementSibling;
        navigation.classList.toggle('showNav');
     }
+
+    const [languages, setLanguages] = useState([
+        {
+            name: "English",
+            code: 'en',
+            flag: 'gb'
+        },
+        {
+            name: "Francais",
+            code: 'fr',
+            flag: 'fr'
+        }
+    ]);
 
     const removeNav = (e)=>{
         if(e.target.className === 'navLink'){
@@ -51,18 +71,27 @@ const Nav = ({ products }) => {
         searchItemList.current.style.display="none";
         searchField.current.value=""
     }
-    const lang = useRef('lang');
-    console.log(lang)
-    const showDropDown = (e)=>{
-        const dropDownList = e.target.nextElementSibling;
-        if(dropDownList === null){
-            return
-        }
-        dropDownList.classList.toggle('toggleDropDown');
-    }
 
+    const showDropDown = (e)=>{
+        // const dropDownList = e.target.nextElementSibling;
+        // if(dropDownList === null){
+        //     return
+        // }
+        // dropDownList.classList.toggle('toggleDropDown');
+        
+        setShowLang(!showLang)
+        
+    }
+    const removeLangDropDown  = ()=>{
+        setShowLang(false)
+    }
+    const changeLanguage = (code) =>{
+        setShowLang(false);
+
+    }
     return (
         <div className='headerWrapper'>
+            <div onClick={removeLangDropDown} className={`langRemover ${showLang? 'displayShowLang': ''}`}></div>
             <div onClick={removeSearch} ref={background} className="searchBackground"></div>
             <div className="nav">
                 <div className="container">
@@ -115,23 +144,37 @@ const Nav = ({ products }) => {
                         </form>
                     </div>
                     <ul className="shiftRight">
-                        <Link to="/cart"><li className="navLink">Cart</li></Link>
-                        <div ref={lang} className="lang" id='lang'>
-                            <div onClick={showDropDown}  className="cont">
+                        <Link to="/cart"><li className="cartLink navLink">Cart</li></Link>
+
+
+
+
+
+                        <div className="lang" id='lang'>
+                            <div onClick={showDropDown} className="cont">
                                 <div className="dropDown">
-                                    <p>lang</p>
-                                    <span className="dropDownIndicator"><IoIosArrowDown  /></span>
+                                        <div className="languageMobile">Language</div>
+                                        <p className=""><IoIosGlobe /></p>
+                                        <span className=" dropDownIndicator"><IoIosArrowDown  /></span>
+                                    {/* <div className="languageDesktop">
+                                    </div> */}
                                 </div>
                             </div>
-                            <div className="dropDownList">
-                                <p className="dropDownItem english">
-                                    <span>English</span>
-                                </p>
-                                <p className="dropDownItem french">
-                                    <span>Francais</span>
-                                </p>
+                            <div ref={lang}  className={`dropDownList ${showLang?"toggleDropDown": ""}`}>
+                                {
+                                    languages.map(language =>(
+                                        <>
+                                            <p onClick={()=>{changeLanguage(language.code)}} className="dropDownItem">
+                                                <span className={`flag-icon flag-icon-${language.flag}`}></span>
+                                                <span className='blacktext'>{language.name}</span>
+                                            </p>
+                                        </>
+                                    ))
+                                }
+                                
                             </div>
                         </div>
+
                     </ul>
                 </nav>
             </div>

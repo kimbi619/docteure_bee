@@ -1,5 +1,5 @@
 import './App.css';
-import { useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import { Client } from './Client';
 import Main from './Components/Main/Main';
 import Nav from './Components/Nav/Nav';
@@ -15,7 +15,11 @@ import Winery from './Components/Winery';
 
 
 
+import { useTranslation } from "react-i18next";
+
+
 function App() {
+
 
   const [products, setProducts] = useLocalStorage('products', [])
   useEffect(() => {  
@@ -33,8 +37,11 @@ function App() {
 
 
 
+  const { t } = useTranslation();
+  const appWrap = useRef('appWrap');
   return (
     <div className="App">
+      {/* <h1>{t("welcome_text")}</h1> */}
       <Nav products={products} />
       {/* <Route path="/products" exact><CategoryCarousel onFilter={handleFilter} products={products} /></Route> */}
       
@@ -52,6 +59,7 @@ function App() {
         <Route path="/immune-booster" component={OtherMainProduct} />
         <Route path="/honey" exact component={Honey} />
         <Route path="/" exact component={HomePage} />
+        {/* <Route path="/" exact component={HomePage} /> */}
       </Switch>
       <Footer />
     </div>

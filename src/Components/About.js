@@ -1,4 +1,3 @@
-import React from 'react';
 import beegirl from '../img/beegirl.png'
 
 const About = () => {

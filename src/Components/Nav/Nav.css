@@ -12,7 +12,10 @@
   width: 100%;
   padding-block: 1rem 0.7rem;
 }
-
+.headerWrapper {
+  background: rgb(243, 253, 255);
+  margin-bottom: 2rem;
+}
 .search {
   width: 60%;
   max-width: 22.5rem;
@@ -302,18 +305,33 @@ nav .caption {
     display: none;
   }
 }
-
+/* =================================================================== */
+/* =================================================================== */
+/* =================================================================== */
+.cartLink {
+  color: white;
+}
 .dropDownWrapper {
   position: relative;
 }
+.cont {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.languageDesktop {
+  display: none;
+}
 .dropDown {
   padding: 0.5rem;
-  /* border-radius: 6px 6px 0rem 0rem; */
+  background-color: transparent;
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
   cursor: pointer;
   pointer-events: none;
+  margin-top: 2rem;
 }
 .dropDownIndicator {
   border-left: 1px solid gray;
@@ -323,26 +341,97 @@ nav .caption {
   pointer-events: none;
 }
 .dropDownList {
-  box-shadow: 2px 3px 6px 2px rgba(0, 0, 0, 0.178);
-  padding: 0rem 0.5rem 0.3rem 0.5rem;
-  position: absolute;
-  top: 80%;
-  right: 0;
-  width: 10%;
-  background: white;
+  box-shadow: none;
+  padding: 0rem 0rem 0.3rem 0rem;
+  position: static;
+  /* top: 80%;
+  right: 0; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: transparent;
   z-index: 1;
   display: none;
+  min-width: 7rem;
 }
 .dropDownItem {
-  padding-block: 0.5rem;
+  padding: 0.5rem;
   font-size: var(--fs-xs);
-  border-bottom: 1px solid rgb(218, 218, 218);
+  border-bottom: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: nowrap;
   cursor: pointer;
+  transition: all 0.3s ease-in;
+  color: white;
+}
+.dropDownItem:hover {
+  background: #ebebeb;
 }
 
 .toggleDropDown {
   display: block;
+}
+.blacktext {
+  margin-left: 1rem;
+}
+.langRemover {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  position: absolute;
+  display: none;
+}
+
+.displayShowLang {
+  display: block;
+}
+
+/* .languageDesktop {
+  display: none;
+} */
+
+@media (min-width: 37rem) {
+  nav .dropDown {
+    background-color: #f3f3f3;
+    justify-content: center;
+    background: transparent;
+    position: relative;
+    margin-top: 0rem;
+  }
+
+  .dropDownItem {
+    color: black;
+  }
+  .dropDownList {
+    box-shadow: 2px 3px 6px 2px rgba(0, 0, 0, 0.178);
+    padding: 0rem 0rem 0.3rem 0rem;
+    position: absolute;
+    top: 80%;
+    right: 0;
+    width: 10%;
+    background: white;
+    z-index: 1;
+    /* display: none; */
+    min-width: 7rem;
+  }
+  .dropDownItem {
+    padding: 0.5rem;
+    font-size: var(--fs-xs);
+    border-bottom: 1px solid rgb(218, 218, 218);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    color: black;
+  }
+  .cartLink {
+    color: black;
+  }
+  .languageMobile {
+    display: none;
+  }
 }

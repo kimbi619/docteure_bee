@@ -1,6 +1,8 @@
 import Carousel from 'react-elastic-carousel';
 import OpenProductItem from './OpenProductItem';
 import { IoStarSharp } from 'react-icons/io5'
+import React, { useContext } from 'react'
+import { CartContext } from '../../CartContext';
 
 const breakPoints = [
     { width: 1, itemsToShow: 1 },
@@ -13,17 +15,22 @@ const breakPoints = [
 
 
   const Opened = ({ isLoading, product }) => {
-      
+    const [cart, setCart] = useContext(CartContext)
     
+    const addToCart = (product, e)=>{
+        setCart([...cart, {product:product}]);
+        // ==============display popup when add to chart is clicked=============
+        // popupRef.current.style.display="block";
+    }
     
       if (isLoading){
           return <div className="preloader"></div>
         }
         
-        const {name, description, price, productRatings} = product;
+        const {name, description, price, productRatings} = product.fields;
         let medias = [];
-        if(product.productImage){
-            product.productImage.forEach(elt => {
+        if(product.fields.productImage){
+            product.fields.productImage.forEach(elt => {
                 medias.push(elt.fields.file.url);
             });
         }
@@ -36,65 +43,49 @@ const breakPoints = [
     
 
     return (
-        <div>
-            <div className="productFlexWrapper">
-            <div className="flexItem">
-            <div className="imgWrapper">
-                    <Carousel 
-                        enableAutoPlay autoPlaySpeed={2500} 
-                        breakPoints={breakPoints} 
-                        alternate
-                        renderPagination={({ pages, activePage, onClick }) => {
-                            return (
-                                <>
-                                </>
-                            )
-                        }}
-                        className="carouselWrapper"
-                        >
-                        {
-                            medias.map(media=>(
-                                <OpenProductItem>
-                                <div className="productPageImgWrapper">
-                                    <img src={media} alt={name} />
-                                </div>
-                                </OpenProductItem>
-                            ))
-                        }
-                    </Carousel>
-                </div>
-                        
-                <div className="productDesc">
-                    <div className="price-rate">
-                        <div className="name">{name}</div>
-                        <p className="price">${price}</p> 
-                        <div className="rating">
-                            {stars.map((_, index)=>(
-                                <IoStarSharp 
-                                    key = {index} 
-                                    color={(productRatings) > index ? colors.blue: colors.gray}
-                                />
-                            ))}
 
-                        </div>
+    <div className='openProductPage'>
+    <div className="descCap titleLeft descTitle">{name}</div>
+            <div className="featuredProductTopGrid">
+                <div className="imgSection">
+                    <div className="imgWrapper">
+                            <Carousel 
+                            enableAutoPlay autoPlaySpeed={2500} 
+                            breakPoints={breakPoints} 
+                            alternate
+                            renderPagination={({ pages, activePage, onClick }) => {
+                                return (
+                                    <>
+                                    </>
+                                )
+                            }}
+                            className="carouselWrapper"
+                            >
+                            {
+                                medias.map(media=>(
+                                    <OpenProductItem>
+                                    <div className="productPageImgWrapper">
+                                        <img className='gridImage' src={media} alt={name} />
+                                    </div>
+                                    </OpenProductItem>
+                                ))
+                            }
+                        </Carousel>
                     </div>
-                    
                 </div>
-           
-                    <div className="itemDescription">
-                        <h4 className="title">Description</h4>
-                        <p>{description} </p>
+                <div className="featuredProductTopDesc">
+                    <div className="descTitle titleLeft">Description</div>
+                    <div className="descText">
+                        {description}
                     </div>
-
-                </div>
-                <div className="flexItem">
-                    <h2 className="desktopTitle">{name}</h2>
-                    <button className="buyBtn addToCart">Add to cart</button>
-                    <button className="buyBtn productPlaceOrder">Place order</button>
+                    <div className="place-oder controlLinkWrapper ">
+                        <p onClick={(e)=>{addToCart(product,e)}} className="controlLinks addToCart callToAction">add to cart</p>
+                        <p className="controlLinks callToAction">Buy</p>
+                    </div>
                 </div>
             </div>
-            
         </div>
+
     )
 }
 

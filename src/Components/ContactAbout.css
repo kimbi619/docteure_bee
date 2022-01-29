@@ -10,8 +10,10 @@ textarea {
   margin-inline: 0px;
   margin-top: 2rem;
 }
-.contact-page {
-  min-height: 100vh;
+.contact-page,
+.cartPageWrapper,
+.openProductPage {
+  min-height: 80vh;
 }
 
 .socialLink {
@@ -34,6 +36,15 @@ textarea {
 .contactSocialLinks {
   display: flex;
 }
+.linkItemWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.socialLinkText {
+  color: black;
+  display: none;
+}
 .contactSocialLinks a {
   color: white;
 }
@@ -41,7 +52,7 @@ textarea {
 .sendMessage form {
   width: 90%;
   max-width: 400px;
-  padding: 1rem 0rem;
+  padding: 0rem 0rem;
   padding-left: 0.5rem;
 }
 .sendMessage form .formItem {
@@ -59,6 +70,10 @@ textarea {
   width: 95%;
 }
 
+.contactGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
 /* ==========================================================
 ==========================================================
 ========================================================== */
@@ -97,5 +112,16 @@ textarea {
   .aboutFlexContainer .descText {
     width: 90%;
     max-width: 700px;
+  }
+
+  .socialLinkText {
+    display: block;
+  }
+  .contactSocialLinks {
+    flex-direction: column;
+    max-width: 100px;
+  }
+  .socialLink {
+    margin: 0.45rem;
   }
 }

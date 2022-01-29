@@ -8,7 +8,6 @@ const Products = ({ products }) => {
     const [cart, setCart] = useContext(CartContext)
     const popupRef  = useRef()
     const addToCart = (product, e)=>{
-
         setCart([...cart, {product:product}]);
         // ==============display popup when add to chart is clicked=============
         popupRef.current.style.display="block";
@@ -26,17 +25,17 @@ const Products = ({ products }) => {
                 products.map((product, index)=>(
                     // <Product product={product} key={product.sys.id} />
                     <div  key={product.sys.id}>
-                        <Link to={`/product/${product.sys.id}`}> 
                             <div className="productItemWrapper">
-                                <div className="productImgWrapper">
-                                    {product.fields.productImage &&
-                                    <img className="productImg skeleton"
-                                    src={product.fields.productImage[0].fields.file.url} alt="sdfwe" />}
-                                </div>
+                                <Link to={`/product/${product.sys.id}`}> 
+                                    <div className="productImgWrapper">
+                                        {product.fields.productImage &&
+                                        <img className="productImg skeleton"
+                                        src={product.fields.productImage[0].fields.file.url} alt="sdfwe" />}
+                                    </div>
+                                 </Link>
                                 <Product onAdd={addToCart} product={product} />
-
+                                {console.log(product)}
                             </div>
-                        </Link>
                     </div>
                     ))  
                 }
