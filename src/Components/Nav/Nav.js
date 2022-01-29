@@ -4,7 +4,7 @@ import './Nav.css';
 import { FaSearch } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { IoIosArrowDown, IoIosGlobe } from 'react-icons/io'
-
+import logo from '../../img/logo.jpg'
 
 import 'flag-icon-css/css/flag-icon.min.css'
 
@@ -96,9 +96,11 @@ const Nav = ({ products }) => {
             <div className="nav">
                 <div className="container">
                     <div className="mobile navHeader">
-                        <Link to="/" exact ><div className="logo">
-                            <h2>Logo</ h2>
-                        </div></Link>
+                        <Link to="/" exact >
+                            <div className="logo">
+                                {/* <h2>Logo</ h2> */}
+                            <img className='logoImg' src={logo} alt="logo" />
+                            </div></Link>
                         <div className="search">
                             <form>
                                 <input ref={searchField} onChange={event=>searchProducts(event)} type="text" className="searchInput" placeholder="search" />

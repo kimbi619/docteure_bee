@@ -10,7 +10,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding-block: 1rem 0.7rem;
+  padding-block: 0rem 0.7rem;
 }
 .headerWrapper {
   background: rgb(243, 253, 255);
@@ -84,8 +84,13 @@
   height: 100%;
 } */
 .logo {
-  color: white;
-  display: inline;
+  /* display: inline; */
+  width: 4rem;
+  height: 3.5rem;
+}
+.logoImg {
+  width: 100%;
+  height: 100%;
 }
 .searchLinks {
   padding-block: 1rem;
