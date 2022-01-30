@@ -15,7 +15,7 @@ const Contact = (props) => {
               <p>Email:<a href='mailto:docteurebee@gmail.com'>docteurebee@gmail.com</a></p>
               <p>You can locate us at: <span className='locate'>
                 <p>157, Montee Renaud</p>  
-                <p>st-Eushache, QC J7R 4K3 Canada</p>  
+                <p>St-Eushache, QC J7R 4K3 Québec Canada</p>  
               </span></p>
             </div>
           </div>

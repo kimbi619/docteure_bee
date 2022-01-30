@@ -111,7 +111,9 @@ const HomePage = ({ t }) => {
                     <div className="featuredProductTopDesc">
                         <div className="descTitle titleLeft">ABOUT ME</div>
                         <div className="descText">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, aliquam quibusdam. Excepturi animi atque, corporis debitis sequi deleniti natus consequuntur molestias facilis quasi quo blanditiis architecto totam aliquid! Dolorum totam accusantium voluptatum. Cumque nemo quidem hic saepe expedita minima neque rerum perferendis sequi, similique quod reprehenderit. Nobis ut neque id.
+                            Our bee-keeping farm exists since 2019 and
+                            has 18 hives. We are backyard beekeepers (hobbists) with a successful honey
+                            production and bee-colonies development. We do all different kind of honey
                         </div>
                     </div>
                 </div>

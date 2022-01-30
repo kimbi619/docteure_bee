@@ -14,7 +14,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'montserrat light';
+  font-family: 'montserrat medium';
 }
 p {
   color: var(--primaryColor);
@@ -38,7 +38,7 @@ a {
 }
 .logo {
   text-transform: uppercase;
-  font-family: 'montserrat light';
+  font-family: 'montserrat';
   font-size: var(--fs-xs);
 }
 .container {
