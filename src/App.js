@@ -45,6 +45,7 @@ function App() {
       <Nav products={products} />
       {/* <Route path="/products" exact><CategoryCarousel onFilter={handleFilter} products={products} /></Route> */}
       
+      <div className='mainAppWrapper'>
       <Main products={products} />
       
       <Switch>
@@ -61,6 +62,7 @@ function App() {
         <Route path="/" exact component={HomePage} />
         {/* <Route path="/" exact component={HomePage} /> */}
       </Switch>
+      </div>
       <Footer />
     </div>
   );

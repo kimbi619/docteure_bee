@@ -105,7 +105,7 @@ const HomePage = ({ t }) => {
                 <div className="featuredProductTopGrid">
                     <div className="imgSection">
                         <div className="imgWrapper">
-                            <YouTube className='youtube' videoId="zXSrG0zu348" opts={opts} />
+                            <YouTube className='youtube' videoId="VyL8QfQBHFw" opts={opts} />
                         </div>
                     </div>
                     <div className="featuredProductTopDesc">

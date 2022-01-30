@@ -13,7 +13,7 @@
   padding-block: 0rem 0.7rem;
 }
 .headerWrapper {
-  background: rgb(243, 253, 255);
+  border-bottom: 1px solid #f3f3f3;
   margin-bottom: 2rem;
 }
 .search {
