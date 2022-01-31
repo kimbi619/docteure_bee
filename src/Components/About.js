@@ -25,15 +25,16 @@ const About = () => {
 
         <div className="aboutFlexContainer">
             <div className="aboutTextSection">
-                <div className="descText">keep a reasonable number of healthy 
-                hives, have a bee-friendly approach, develop new products as 
-                ''Energyn'' (Immune Booster) and be accessible
-                 to our clients are the main goals of having quality beekeeping.
+                <div className="descText">
+                    skeep a reasonable number of healthy 
+                    hives, have a bee-friendly approach, develop new products as 
+                    ''Energyn'' (Immune Booster) and be accessible
+                    to our clients are the main goals of having quality beekeeping.
                 </div >
                 <div className="descText">
-                Our bee-keeping farm exists since 2019 and has 18 hives. We are backyard 
-                beekeepers (hobbists) with a successful honey 
-                production and bee-colonies development. We do all different kind of honey
+                    Our bee-keeping farm exists since 2019 and has 18 hives. We are backyard 
+                    beekeepers (hobbists) with a successful honey 
+                    production and bee-colonies development. We do all different kind of honey
                 </div>
             </div>
             <div className="imgSection">

@@ -1,7 +1,6 @@
 .footerWrapper {
   color: white;
   background: #080430;
-  font-family: poppins;
   padding: 2rem 0rem;
   /* position: sticky;
   bottom: 0; */
@@ -13,6 +12,7 @@
 .footerWrapper .descTitle {
   margin: 0;
   text-align: left;
+  margin-bottom: 1.3rem;
 }
 
 .footerContent {
