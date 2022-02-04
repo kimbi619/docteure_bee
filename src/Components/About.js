@@ -1,4 +1,17 @@
-import beegirl from '../img/beegirl.png'
+import victoriaFarming from '../img/victoriaFarming.jpg'
+
+
+import YouTube from 'react-youtube';
+
+const opts = {
+    // height: '390',
+    // width: '640',
+    playerVars: {
+      // https://developers.google.com/youtube/player_parameters
+      autoplay: 1,
+    },
+  };
+
 
 const About = () => {
   return (
@@ -6,8 +19,8 @@ const About = () => {
     <div className="container">
         <div className="aboutFlexContainer">
             <div className="imgSection">
-                <div className="imgWrapper">
-                    <img className='gridImage' src={beegirl} alt="Honey" />
+                <div className="imgWrapper victoriaImgWrapper">
+                    <img className='gridImage victoriaImg' src={victoriaFarming} alt="Honey" />
                 </div>
             </div>
             <div className="aboutTextSection">
@@ -19,12 +32,8 @@ const About = () => {
                  hives. Beekeeping studies, 
                 constant education and bee-friendly approach are VERY MUCH APPRECIATED BY OUR CLIENTS.
                 </div>
-            </div>
-        </div>
 
-
-        <div className="aboutFlexContainer">
-            <div className="aboutTextSection">
+                {/* <div className="aboutTextSection"> */}
                 <div className="descText">
                     skeep a reasonable number of healthy 
                     hives, have a bee-friendly approach, develop new products as 
@@ -36,10 +45,16 @@ const About = () => {
                     beekeepers (hobbists) with a successful honey 
                     production and bee-colonies development. We do all different kind of honey
                 </div>
+            {/* </div> */}
             </div>
+        </div>
+
+
+        <div className="aboutFlexContainer">
+            
             <div className="imgSection">
                 <div className="imgWrapper">
-                    <img className='gridImage' src={beegirl} alt="Honey" />
+                    <YouTube className='youtube' videoId="3QQ3vz0eiL0" opts={opts} />
                 </div>
             </div>
         </div>

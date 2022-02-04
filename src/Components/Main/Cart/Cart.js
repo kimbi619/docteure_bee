@@ -33,7 +33,9 @@ const Cart = () => {
                 {
                     
                     cart.length < 1?
-                    <h2 className="emptyCart">cart is empty</h2>
+                    <div className='notAvailable'>
+                        <h1>cart is empty</h1>
+                    </div>
                     :cart.map(cartItem=>(
                         // <h3 key={cartItem.product.sys.id}>{cartItem.product.fields.name}</h3>
                         <div key={cartItem.product.sys.id}>
