@@ -1,34 +1,34 @@
 {
   "files": {
-    "main.css": "/docteure_bee/static/css/main.01117385.chunk.css",
-    "main.js": "/docteure_bee/static/js/main.eb19cbc5.chunk.js",
-    "main.js.map": "/docteure_bee/static/js/main.eb19cbc5.chunk.js.map",
+    "main.css": "/docteure_bee/static/css/main.9365afe5.chunk.css",
+    "main.js": "/docteure_bee/static/js/main.dadfeec5.chunk.js",
+    "main.js.map": "/docteure_bee/static/js/main.dadfeec5.chunk.js.map",
     "runtime-main.js": "/docteure_bee/static/js/runtime-main.004ad587.js",
     "runtime-main.js.map": "/docteure_bee/static/js/runtime-main.004ad587.js.map",
     "static/css/2.479054b7.chunk.css": "/docteure_bee/static/css/2.479054b7.chunk.css",
-    "static/js/2.46475797.chunk.js": "/docteure_bee/static/js/2.46475797.chunk.js",
-    "static/js/2.46475797.chunk.js.map": "/docteure_bee/static/js/2.46475797.chunk.js.map",
+    "static/js/2.86240ecd.chunk.js": "/docteure_bee/static/js/2.86240ecd.chunk.js",
+    "static/js/2.86240ecd.chunk.js.map": "/docteure_bee/static/js/2.86240ecd.chunk.js.map",
     "static/js/3.1c228040.chunk.js": "/docteure_bee/static/js/3.1c228040.chunk.js",
     "static/js/3.1c228040.chunk.js.map": "/docteure_bee/static/js/3.1c228040.chunk.js.map",
     "index.html": "/docteure_bee/index.html",
     "static/css/2.479054b7.chunk.css.map": "/docteure_bee/static/css/2.479054b7.chunk.css.map",
-    "static/css/main.01117385.chunk.css.map": "/docteure_bee/static/css/main.01117385.chunk.css.map",
-    "static/js/2.46475797.chunk.js.LICENSE.txt": "/docteure_bee/static/js/2.46475797.chunk.js.LICENSE.txt",
+    "static/css/main.9365afe5.chunk.css.map": "/docteure_bee/static/css/main.9365afe5.chunk.css.map",
+    "static/js/2.86240ecd.chunk.js.LICENSE.txt": "/docteure_bee/static/js/2.86240ecd.chunk.js.LICENSE.txt",
     "static/media/flag-icon.min.css": "/docteure_bee/static/media/zw.f5ceeff7.svg",
-    "static/media/beegirl.402d5925.png": "/docteure_bee/static/media/beegirl.402d5925.png",
     "static/media/getFetch.cjs": "/docteure_bee/static/media/getFetch.582d29c4.cjs",
     "static/media/honey.b415e79a.jpg": "/docteure_bee/static/media/honey.b415e79a.jpg",
     "static/media/App.css": "/docteure_bee/static/media/loader.e55a1721.gif",
     "static/media/logo.2a2e628a.jpg": "/docteure_bee/static/media/logo.2a2e628a.jpg",
     "static/media/index.css": "/docteure_bee/static/media/miel.b17c5c74.jpg",
     "static/media/pollen.7c862159.jpg": "/docteure_bee/static/media/pollen.7c862159.jpg",
-    "static/media/propolis.95d8d211.jpg": "/docteure_bee/static/media/propolis.95d8d211.jpg"
+    "static/media/propolis.95d8d211.jpg": "/docteure_bee/static/media/propolis.95d8d211.jpg",
+    "static/media/victoriaFarming.af0c5d9c.jpg": "/docteure_bee/static/media/victoriaFarming.af0c5d9c.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.004ad587.js",
     "static/css/2.479054b7.chunk.css",
-    "static/js/2.46475797.chunk.js",
-    "static/css/main.01117385.chunk.css",
-    "static/js/main.eb19cbc5.chunk.js"
+    "static/js/2.86240ecd.chunk.js",
+    "static/css/main.9365afe5.chunk.css",
+    "static/js/main.dadfeec5.chunk.js"
   ]
 }
