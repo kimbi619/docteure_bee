@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/docteure_bee/static/css/main.653e5bb1.chunk.css",
-    "main.js": "/docteure_bee/static/js/main.3987eaed.chunk.js",
-    "main.js.map": "/docteure_bee/static/js/main.3987eaed.chunk.js.map",
+    "main.js": "/docteure_bee/static/js/main.80efe578.chunk.js",
+    "main.js.map": "/docteure_bee/static/js/main.80efe578.chunk.js.map",
     "runtime-main.js": "/docteure_bee/static/js/runtime-main.85746187.js",
     "runtime-main.js.map": "/docteure_bee/static/js/runtime-main.85746187.js.map",
     "static/css/2.479054b7.chunk.css": "/docteure_bee/static/css/2.479054b7.chunk.css",
@@ -29,6 +29,6 @@
     "static/css/2.479054b7.chunk.css",
     "static/js/2.317f24c7.chunk.js",
     "static/css/main.653e5bb1.chunk.css",
-    "static/js/main.3987eaed.chunk.js"
+    "static/js/main.80efe578.chunk.js"
   ]
 }
