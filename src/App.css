@@ -4,11 +4,13 @@
   --light-gray: #f5f5f5;
   --mainRed: #fc5c65;
   --mainGreen: #20bf6b;
-  --fs-xs: 0.875rem;
-  --fs-md: 1.3125rem;
+  --fs-xs: 1.1rem;
+  --fs-xxs: 0.9rem;
+  --fs-md: 1.4525rem;
   --fs-av: 1.7rem;
   --fs-lg: 2rem;
-  --fs-xl: 2.5rem;
+  --fs-xl: 2.6rem;
+  --fs-sm: 1.2rem;
 }
 * {
   margin: 0;
@@ -46,9 +48,7 @@ a {
   margin: auto;
   /* background-color: crimson; */
 }
-.descTitle .descText {
-  font-family: 'montserrat light';
-}
+
 input[type='checkbox'] {
   appearance: none;
   -webkit-appearance: none;

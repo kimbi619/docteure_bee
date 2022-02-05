@@ -157,3 +157,11 @@ h1 {
   align-items: center;
   cursor: pointer;
 }
+
+.legendImageWrapper {
+  width: 100%;
+  height: 70vh;
+}
+.legendImage {
+  width: 100%;
+}

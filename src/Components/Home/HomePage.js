@@ -1,8 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import honey from '../img/honey.jpg'
-import pollen from '../img/pollen.jpg'
-import propolis from '../img/propolis.jpg'
+import honey from '../../img/honey.jpg'
+import pollen from '../../img/pollen.jpg'
+import propolis from '../../img/propolis.jpg'
+import Legend from './Legend'
 
 
 import YouTube from 'react-youtube';
@@ -25,9 +26,10 @@ const HomePage = ({ t }) => {
                 <div className="container">
                     <h1>We are backyard beekeepers (hobbists) with a 
                     successful honey production and bee-colonies development</h1>
-                    <Link to='/products'><p className="callToAction">Checkout our products</p></Link>
+                    <Link to='/products'><p className="callToAction">Checkout our products</p></Link>                 
                 </div>
             </div>
+            {/* <Legend /> */}
             <div className="siteDesc">
                 <h2 className="descTitle">Description</h2>
                 <p className="descText">
@@ -105,7 +107,7 @@ const HomePage = ({ t }) => {
                 <div className="featuredProductTopGrid">
                     <div className="imgSection">
                         <div className="imgWrapper">
-                            <YouTube className='youtube' videoId="VyL8QfQBHFw" opts={opts} />
+                            {/* <YouTube className='youtube' videoId="VyL8QfQBHFw" opts={opts} /> */}
                         </div>
                     </div>
                     <div className="featuredProductTopDesc">

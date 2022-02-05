@@ -5,7 +5,7 @@ import Main from './Components/Main/Main';
 import Nav from './Components/Nav/Nav';
 import { Route, Switch } from 'react-router';
 import useLocalStorage from './UseLocalStorage';
-import HomePage from './Components/HomePage';
+import HomePage from './Components/Home/HomePage';
 import Contact from './Components/Contact';
 import About from './Components/About';
 import Footer from './Components/Footer/Footer';
