@@ -3,43 +3,45 @@ import honey from '../../img/honey.jpg'
 import './featuredItems.css'
 import HoneyGridItem from './HoneyGridItem';
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next';
 
 const Honey = () => {
+    const { t } = useTranslation();
     const [honeyTypes, setHoneyTypes] = useState([
         {
             id: 1,
-            name: 'Spring honey',
-            price: 523400,
+            name: t("honey.variety.spring.title"),
+            price: 13,
             img: pollen,
-            desc: 'it is the First harvest of the season in May. Very pale tiny slightly-yellow coloured honey, verydelicate and tender. Available format(s) : 500 g (7 $) and 1 kg (13 $)'
+            desc: t("honey.variety.spring.text")
         },
         {
             id: 2,
-            name: 'Summer honey',
+            name: t("honey.variety.summer.title"),
             price: 20,
             img: honey,
-            desc: 'it is the First harvest of the season in May. Very pale tiny slightly-yellow coloured honey, verydelicate and tender. Available format(s) : 500 g (7 $) and 1 kg (13 $)'
+            desc:t("honey.variety.summer.text")
         },
         {
             id: 3,
-            name: 'Churned honey',
+            name: t("honey.variety.churned.title"),
             price: 20,
             img: honey,
-            desc: 'it is the First harvest of the season in May. Very pale tiny slightly-yellow coloured honey, verydelicate and tender. Available format(s) : 500 g (7 $) and 1 kg (13 $)'
+            desc: t("honey.variety.churned.text")
         },
         {
             id: 4,
-            name: 'fall honey',
+            name: t("honey.variety.fall.title"),
             price: 17,
             img: pollen,
-            desc: 'Liquid Fall honey : last honey of the season, fall honey, rich in minerals and more dense and intensive flavor.Available format(s) : 500 g (7 $) and 1 kg (13 $)'
+            desc: t("honey.variety.fall.text")
         },
         {
             id: 5,
-            name: 'honey comb',
+            name: t("honey.variety.comb.title"),
             price: 13,
             img: honey,
-            desc: 'Available format(s) : 500 g (7 $) and 1 kg (13 $)'
+            desc: t("honey.variety.comb.text")
         },
     ]);
   return (
@@ -53,16 +55,9 @@ const Honey = () => {
                 </div>
             </div>
             <div className="featuredProductTopDesc">
-                <div className="descTitle titleLeft">Description</div>
-                <div className="descText">
-                    By definition, honey only comes from honey bees. Honey is basically
-                    a sugar solution of two simple sugars, glucose (dextrose) and fructose 
-                    (levulose). Honey is produced from nectar, a sugary plant secretion high 
-                    in moisture content, collected and converted by bees into honey. Contrary to 
-                    what many people believe, honey os not a mixture of nectar and pollen. Both a physical 
-                    and a chemical change occur in conversion of nectar to honey.
-                </div>
-                <a href='#featuredHoneyProduct'><p className="callToAction">Checkout our variety</p></a>
+                <div className="descTitle titleLeft">{ t("honey.main.title") }</div>
+                <div className="descText">{ t("honey.main.text") }</div>
+                <a href='#featuredHoneyProduct'><p className="callToAction">{ t("honey.main.call_to_action") }</p></a>
             </div>
         </div>
         <div id= "featuredHoneyProduct">

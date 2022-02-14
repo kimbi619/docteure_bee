@@ -1,10 +1,12 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 // import pollen from '../../img/pollen.jpg'
 // import honey from '../../img/honey.jpg'
 // import propolis from '../../img/propolis.jpg'
 
 const HoneyGridItem = ({ att }) => {
     console.log(att)
+    const { t } = useTranslation(); 
   return (
     <div className="gridItem">
         <div className="featuredHoneyItem">
@@ -19,7 +21,7 @@ const HoneyGridItem = ({ att }) => {
         <div className="desc">
             <div className="descText">{att.desc}</div>
             <a href='#featuredHoneyProduct'>
-                <p className="honeyItemLink callToAction">Place an order</p>
+                <p className="honeyItemLink callToAction">{ t("honey.place_order") }</p>
             </a>
         </div>
     </div>

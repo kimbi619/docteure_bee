@@ -3,6 +3,7 @@ import OpenProductItem from './OpenProductItem';
 import { IoStarSharp } from 'react-icons/io5'
 import React, { useContext } from 'react'
 import { CartContext } from '../../CartContext';
+import { useTranslation } from 'react-i18next';
 
 const breakPoints = [
     { width: 1, itemsToShow: 1 },
@@ -16,6 +17,7 @@ const breakPoints = [
 
   const Opened = ({ isLoading, product }) => {
     const [cart, setCart] = useContext(CartContext)
+    const { t } = useTranslation();
     
     const addToCart = (product, e)=>{
         setCart([...cart, {product:product}]);
@@ -28,6 +30,7 @@ const breakPoints = [
         }
         
         const {name, description, price, productRatings} = product.fields;
+        console.log(product)
         let medias = [];
         if(product.fields.productImage){
             product.fields.productImage.forEach(elt => {
@@ -79,8 +82,8 @@ const breakPoints = [
                         {description}
                     </div>
                     <div className="place-oder controlLinkWrapper ">
-                        <p onClick={(e)=>{addToCart(product,e)}} className="controlLinks addToCart callToAction">add to cart</p>
-                        <p className="controlLinks callToAction">Buy</p>
+                        <p onClick={(e)=>{addToCart(product,e)}} className="controlLinks addToCart callToAction">{ t("other_products.add_to_cart") }</p>
+                        <p className="controlLinks callToAction">{ t("other_products.buy") }</p>
                     </div>
                 </div>
             </div>

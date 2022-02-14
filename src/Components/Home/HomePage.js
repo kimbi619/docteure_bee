@@ -25,27 +25,21 @@ const HomePage = () => {
         <div className='homepage'>
             <div className="heroSection">
                 <div className="container">
-                    <h1>We are backyard beekeepers (hobbists) with a 
-                    successful honey production and bee-colonies development</h1>
+                    <h1>{t("homepage.heroSection.heroText")}</h1>
                     <Link to='/products'><p className="callToAction">{t("homepage.heroSection.callToAction")}</p></Link>                 
                 </div>
             </div>
             {/* <Legend /> */}
             <div className="siteDesc">
-                <h2 className="descTitle">Description</h2>
-                <p className="descText">
-                We do all different kind of honey (spring, summer, fall, artisanal and churned). Also, our
-                 bees produce pollen, propolis and royal jelly. We develop nuclei in early spring to provide other 
-                 bee-keepers. Also, we are in urge to develop a new product ''Energyn'' 
-                that boost an immune system and fight many diseases including Covid.
-                </p>
+                <h2 className="descTitle">{t("description")}</h2>
+                <p className="descText">{t("homepage.site_description.text")}</p>
                 <div className="descText">
-                    <Link to="/contact-us"><p className='hyperLink'>connect with us to learn more</p></Link>
+                    <Link to="/contact-us"><p className='hyperLink'>{t("homepage.site_description.connect")}</p></Link>
                 </div>
             </div>
 
             <div className="featuredProducts">
-                <h2 className="descTitle">Featured Products</h2>
+                <h2 className="descTitle">{ t("featuredProduct.title") }</h2>
                 <div className="container">
                     <div className="gridWrapper">
                         <div className="gridItem">
@@ -53,7 +47,7 @@ const HomePage = () => {
                                 <div className="imgWrapper">
                                     <img className='gridImage' src={honey} alt="Honey" />
                                 </div>
-                                <div className="desc descTitle">Honey</div>
+                                <div className="desc descTitle">{ t("homepage.featuredProduct.name.honey") }</div>
                             </Link>
                         </div>
                         <div className="gridItem">
@@ -61,7 +55,7 @@ const HomePage = () => {
                                 <div className="imgWrapper">
                                     <img className='gridImage' src={pollen} alt="Honey" />
                                 </div>
-                                <div className="desc descTitle">Pollen</div>
+                                <div className="desc descTitle">{ t("homepage.featuredProduct.name.pollen") }</div>
                             </Link>
                         </div>
                         <div className="gridItem">
@@ -69,7 +63,7 @@ const HomePage = () => {
                                 <div className="imgWrapper">
                                     <img className='gridImage' src={pollen} alt="Honey" />
                                 </div>
-                                <div className="desc descTitle">royal jelly</div>
+                                <div className="desc descTitle">{ t("homepage.featuredProduct.name.royal_jelly") }</div>
                             </Link>
                         </div>
                         <div className="gridItem">
@@ -77,7 +71,7 @@ const HomePage = () => {
                                 <div className="imgWrapper">
                                     <img className='gridImage' src={propolis} alt="Honey" />
                                 </div>
-                                <div className="desc descTitle">propolis</div>
+                                <div className="desc descTitle">{ t("homepage.featuredProduct.name.propolis") }</div>
                             </Link>
                         </div>
                         <div className="gridItem">
@@ -85,7 +79,7 @@ const HomePage = () => {
                                 <div className="imgWrapper">
                                     <img className='gridImage' src={pollen} alt="Honey" />
                                 </div>
-                                <div className="desc descTitle">immune booster</div>
+                                <div className="desc descTitle">{ t("homepage.featuredProduct.name.immune_booster") }</div>
                             </Link>
                         </div>
                         <div className="gridItem">
@@ -93,17 +87,15 @@ const HomePage = () => {
                                 <div className="imgWrapper">
                                     <img className='gridImage' src={pollen} alt="Honey" />
                                 </div>
-                                <div className="desc descTitle">hydromel</div>
+                                <div className="desc descTitle">{ t("homepage.featuredProduct.name.hydromel") }</div>
                             </Link>
                         </div>
                     </div>
-                    <Link to="/products"><p className='seeAll hyperLink'>See full product list</p></Link>
+                    <Link to="/products"><p className='seeAll hyperLink'>{ t("homepage.featuredProduct.see_product_list") }</p></Link>
                 </div>
             </div>
 
-            <div className="container characteristics">
-                <div className="descTitle">Our amazing features</div>
-            </div>
+            
             <div className="container characteristics">
                 <div className="featuredProductTopGrid">
                     <div className="imgSection">
@@ -112,12 +104,8 @@ const HomePage = () => {
                         </div>
                     </div>
                     <div className="featuredProductTopDesc">
-                        <div className="descTitle titleLeft">ABOUT ME</div>
-                        <div className="descText">
-                            Our bee-keeping farm exists since 2019 and
-                            has 18 hives. We are backyard beekeepers (hobbists) with a successful honey
-                            production and bee-colonies development. We do all different kind of honey
-                        </div>
+                        <div className="descTitle titleLeft">{t("homepage.video.title")}</div>
+                        <div className="descText">{t("homepage.video.text")}</div>
                     </div>
                 </div>
             </div>

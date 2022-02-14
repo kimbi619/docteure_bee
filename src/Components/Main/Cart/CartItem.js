@@ -1,6 +1,7 @@
 import React from 'react'
 import './Cart.css'
 import { IoStarSharp } from 'react-icons/io5'
+import { useTranslation } from 'react-i18next';
 
 const CartItem = ({ product, onRemove }) => {
     let medias = [];
@@ -24,7 +25,7 @@ const CartItem = ({ product, onRemove }) => {
     }
     
 
-
+    const { t } = useTranslation();
     return (
         <div>
             <div className="cartItemWrapper">
@@ -44,8 +45,8 @@ const CartItem = ({ product, onRemove }) => {
                 <div className="cartFlexItem cartControl">
                     <div className="cartPrice">${price}</div>
                     <div className="cartBtnControl">
-                        <span onClick={removeItem} className="cartBtn">remove</span>
-                        <span className="cartBtn cartSaveToLater remove">save to later</span>
+                        <span onClick={removeItem} className="cartBtn">{ t("cart.remove") }</span>
+                        <span className="cartBtn cartSaveToLater remove">{ t("cart.save") }</span>
                     </div>
                 </div>
             </div>

@@ -2,35 +2,38 @@ import React from 'react';
 import './ContactAbout.css'
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter, FaYoutube } from 'react-icons/fa';
 
+import { useTranslation } from 'react-i18next';
+
 const Contact = (props) => {
+  const { t } = useTranslation();
   return (
   <div className='contact-page'>
       <div className="container">
         <div className='contactGrid'>
           <div>
-            <div className="descTitle">Get in contact with us</div>
+            <div className="descTitle">{ t("contactpage.grid_one.title") }</div>
             <div className="descText">
-              <p>Cell:<a href="tel:+1-438-992-2004">+1-438-992-2004</a></p>
-              <p>Cell:<a href="tel:+1-514-238-1059">+1-514-238-1059</a></p>
+              <p>{ t("contactpage.grid_one.cell") }:<a href="tel:+1-438-992-2004">+1-438-992-2004</a></p>
+              <p>{ t("contactpage.grid_one.cell") }:<a href="tel:+1-514-238-1059">+1-514-238-1059</a></p>
               <p>Email:<a href='mailto:docteurebee@gmail.com'>docteurebee@gmail.com</a></p>
-              <p>You can locate us at: <span className='locate'>
+              <p>{ t("contactpage.grid_one.locate_us") }: <span className='locate'>
                 <p>157, Montee Renaud</p>  
                 <p>St-Eustache, QC J7R 4K3 Québec Canada</p>  
               </span></p>
             </div>
           </div>
           <div>
-            <div className="descTitle">Write to us directly from here</div>
+            <div className="descTitle">{ t("contactpage.grid_two.title") }</div>
             <div className="sendMessage">
               <form>
-                <input className='formItem' type="text" placeholder='Enter email...' />
-                <textarea className='formItem' name="message" id="msg" cols="30" rows="5" placeholder='write your message here...'></textarea>
-                <div className="callToAction honeyItemLink redBackground">Send</div>
+                <input className='formItem' type="text" placeholder={ t("contactpage.grid_two.enter_email") } />
+                <textarea className='formItem' name="message" id="msg" cols="30" rows="5" placeholder={ t("contactpage.grid_two.message") } ></textarea>
+                <div className="callToAction honeyItemLink redBackground">{ t("contactpage.grid_two.send") }</div>
               </form>
             </div>
           </div>
           <div>
-            <div className="descTitle">Our social network</div>
+            <div className="descTitle">{ t("contactpage.grid_three.title") }</div>
             <div className="contactSocialLinks">
                 <div className="linkItemWrapper">
                   <a href='https://facebook.com/docteurebee'>

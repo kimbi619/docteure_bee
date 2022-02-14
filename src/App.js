@@ -22,8 +22,9 @@ function App() {
 
 
   const [products, setProducts] = useLocalStorage('products', [])
-  useEffect(() => {  
+  useEffect((locale = 'en-US') => {  
     Client.getEntries()
+    locale = locale
     .then(res=>{
       setProducts(res.items);
     })
@@ -59,7 +60,7 @@ function App() {
         <Route path="/royal-jelly" component={OtherMainProduct} />
         <Route path="/immune-booster" component={OtherMainProduct} />
         <Route path="/honey" component={Honey} />
-        <Route path="/" component={HomePage} />
+        <Route path="/" exact component={HomePage} />
       </Switch>
       </div>
       <Footer />

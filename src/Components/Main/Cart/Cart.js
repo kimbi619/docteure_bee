@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { useTranslation } from 'react-i18next';
 import { CartContext } from '../CartContext'
 import CartItem from './CartItem';
 
@@ -26,7 +27,7 @@ const Cart = () => {
     });
 
 
-
+    const { t } = useTranslation();
     return (
         <div className="cartPageWrapper">
             <div className="carts">
@@ -34,7 +35,7 @@ const Cart = () => {
                     
                     cart.length < 1?
                     <div className='notAvailable'>
-                        <h1>cart is empty</h1>
+                        <h1>{ t("cart.cart_empty") }</h1>
                     </div>
                     :cart.map(cartItem=>(
                         // <h3 key={cartItem.product.sys.id}>{cartItem.product.fields.name}</h3>
@@ -45,9 +46,9 @@ const Cart = () => {
                 }
             </div>
             <div className="cartCheckOutSection">
-                <h3 className="cartItemName">Total</h3>
+                <h3 className="cartItemName">{ t("cart.total") }</h3>
                 <h1 className="totalPrice">${totalPrice.toFixed(2)}</h1>
-                <button className={`buyBtn productPlaceOrder checkout ${cart.length < 1?"payDisable": ""}`}>Checkout</button>
+                <button className={`buyBtn productPlaceOrder checkout ${cart.length < 1?"payDisable": ""}`}>{ t("cart.checkout") }</button>
             </div>
         </div>
     )

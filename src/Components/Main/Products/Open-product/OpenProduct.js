@@ -22,7 +22,6 @@ import Opened from './Opened';
         const fetchPost = async ()=>{
             setLoading(true);
             let data = await Client.getEntry(match.params.id)
-            console.log(data);
             setProduct(data);
             setLoading(false);
         }
@@ -34,7 +33,7 @@ import Opened from './Opened';
 
     
 
-
+        console.log(product)
 
     return (
         <div>

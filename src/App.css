@@ -82,7 +82,7 @@ input[type='checkbox']:checked::after {
 .preloader {
   background: linear-gradient(to right, #95d5ff50, #95d5ff50, #95d5ff50),
     url('./loader.gif') no-repeat center;
-  background-size: 90%;
+  background-size: 50%;
   height: 100vh;
   width: 100%;
   position: fixed;

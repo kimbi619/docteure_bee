@@ -4,6 +4,8 @@ import Product from './Product'
 import { FaTimes } from 'react-icons/fa'
 import { CartContext } from '../CartContext';
 
+import i18next from 'i18next';
+
 const Products = ({ products }) => {
     const [cart, setCart] = useContext(CartContext)
     const popupRef  = useRef()
@@ -18,6 +20,7 @@ const Products = ({ products }) => {
         e.target.parentElement.style.display="none";
     }
 
+    console.log(i18next.language)
 
     return (
         <div className="productGridWrapper">
@@ -34,7 +37,6 @@ const Products = ({ products }) => {
                                     </div>
                                  </Link>
                                 <Product onAdd={addToCart} product={product} />
-                                {console.log(product)}
                             </div>
                     </div>
                     ))  

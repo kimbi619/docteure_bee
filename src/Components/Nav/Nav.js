@@ -98,7 +98,7 @@ const Nav = ({ products }) => {
             <div className="nav">
                 <div className="container">
                     <div className="mobile navHeader">
-                        <Link to="/"  >
+                        <Link to="/" >
                             <div className="logo">
                                 {/* <h2>Logo</ h2> */}
                             <img className='logoImg' src={logo} alt="logo" />
@@ -132,7 +132,7 @@ const Nav = ({ products }) => {
                 <nav onClick={removeNav}>
                     <div className="push"></div>
                     <div className="logoCaption">
-                        <Link to= "/" ><div className="logo">logo</div></Link>
+                        <Link to= "/"  ><div className="logo">logo</div></Link>
                     </div>
                     <ul className="navList">
                         <Link to="/products"><li className="navLink">{t("navigation.products")}</li></Link>

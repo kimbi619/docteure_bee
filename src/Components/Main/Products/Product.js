@@ -1,6 +1,7 @@
+import { useTranslation } from "react-i18next";
 
 const Product = ({ product, onAdd }) => {
-
+    const { t } = useTranslation();
     const {name,price} = product.fields;
 
 
@@ -21,7 +22,7 @@ const Product = ({ product, onAdd }) => {
                     
                     <div className="dropDownWrapper">
                         <button className="placeOrder">
-                            <span className="mainAddToCartButton" onClick={(e)=>addProductToCart(product, e)}>Buy</span>
+                            <span className="mainAddToCartButton" onClick={(e)=>addProductToCart(product, e)}>{ t("other_products.buy") }</span>
                         </button>
                     </div>
                 </div>
