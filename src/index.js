@@ -10,10 +10,10 @@ import { BrowserRouter as Router} from 'react-router-dom';
 
 
 import i18n from "i18next";
-import { useTranslation, initReactI18next } from "react-i18next";
+import { initReactI18next } from "react-i18next";
 import LanguageDetector from 'i18next-browser-languagedetector';
 import HttpApi from 'i18next-http-backend';
-import Backend from 'i18next-http-backend';
+// import Backend from 'i18next-http-backend';
 import translationEN from '../src/assets/locales/en/translationEN.json'
 import translationFR from '../src/assets/locales/fr/translationFR.json'
 
@@ -37,7 +37,7 @@ i18n
 .init({
   supportedLngs: ['en', 'fr'],
   detection: {
-    order: ['cookie', 'htmlTag', 'localStorage', 'sessionStorage', 'navigator', 'htmlTag', 'path', 'subdomain'],
+    order: ['cookie', 'htmlTag', 'localStorage', 'path', 'subdomain'],
     caches: ['cookie'],
   },  
   resources,

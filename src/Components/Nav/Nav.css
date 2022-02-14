@@ -380,7 +380,8 @@ nav .caption {
   display: block;
 }
 .blacktext {
-  margin-left: 1rem;
+  margin-left: 0rem;
+  font-size: 0.9rem;
 }
 .langRemover {
   width: 100%;

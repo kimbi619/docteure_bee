@@ -1,3 +1,17 @@
 {
-    "welcome_to_react": "LOREM IPSUM LOREM IPSUM LOREM BABY"
-}
+    "navigation": {
+      "home": "d'accueil",
+      "products": "produits",
+      "winery": "vignoble",
+      "contact": "prendre",
+      "about": "propos",
+      "cart": "achats"
+    },
+    "homepage": {
+      "heroSection": {
+        "heroText": "We are backyard beekeepers (hobbists) with a successful honey production and bee-colonies development",
+        "callToAction": "consultez nos produits"
+      }
+    }
+  }
+  

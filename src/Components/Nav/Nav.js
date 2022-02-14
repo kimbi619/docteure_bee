@@ -6,12 +6,14 @@ import { Link } from 'react-router-dom';
 import { IoIosArrowDown, IoIosGlobe } from 'react-icons/io'
 import logo from '../../img/logo.jpg'
 
+
+
+import i18next from "i18next";
+import { useTranslation } from "react-i18next";
 import 'flag-icon-css/css/flag-icon.min.css'
 
 const Nav = ({ products }) => {
 
-    const lang = useRef('lang');
-    let l = lang.current;
     const [searchItems, setSearchItems] = useState([])
     const [showLang, setShowLang] = useState(false);
     
@@ -29,7 +31,7 @@ const Nav = ({ products }) => {
             flag: 'gb'
         },
         {
-            name: "Francais",
+            name: "Français",
             code: 'fr',
             flag: 'fr'
         }
@@ -85,10 +87,10 @@ const Nav = ({ products }) => {
     const removeLangDropDown  = ()=>{
         setShowLang(false)
     }
-    const changeLanguage = (code) =>{
-        setShowLang(false);
 
-    }
+
+    const { t } = useTranslation();
+    
     return (
         <div className='headerWrapper'>
             <div onClick={removeLangDropDown} className={`langRemover ${showLang? 'displayShowLang': ''}`}></div>
@@ -96,7 +98,7 @@ const Nav = ({ products }) => {
             <div className="nav">
                 <div className="container">
                     <div className="mobile navHeader">
-                        <Link to="/" exact >
+                        <Link to="/"  >
                             <div className="logo">
                                 {/* <h2>Logo</ h2> */}
                             <img className='logoImg' src={logo} alt="logo" />
@@ -130,14 +132,13 @@ const Nav = ({ products }) => {
                 <nav onClick={removeNav}>
                     <div className="push"></div>
                     <div className="logoCaption">
-                        <Link to= "/" exact><div className="logo">logo</div></Link>
+                        <Link to= "/" ><div className="logo">logo</div></Link>
                     </div>
                     <ul className="navList">
-                        {/* <Link to="/" exact><li className="navLink">Home</li></Link> */}
-                        <Link to="/products" exact><li className="navLink">Products</li></Link>
-                        <Link to="/winery" exact><li className="navLink">Winery</li></Link>
-                        <Link to="/contact-us"><li className="navLink">Contact</li></Link>
-                        <Link to="/about"><li className="navLink">About</li></Link>
+                        <Link to="/products"><li className="navLink">{t("navigation.products")}</li></Link>
+                        <Link to="/winery"><li className="navLink">{t("navigation.winery")}</li></Link>
+                        <Link to="/contact-us"><li className="navLink">{t("navigation.contact")}</li></Link>
+                        <Link to="/about"><li className="navLink">{t("navigation.about")}</li></Link>
                     </ul>
                     <div className="desktopSearch search">
                         <form>
@@ -146,7 +147,7 @@ const Nav = ({ products }) => {
                         </form>
                     </div>
                     <ul className="shiftRight">
-                        <Link to="/cart"><li className="cartLink navLink">Cart</li></Link>
+                        <Link to="/cart"><li className="cartLink navLink">{t("navigation.cart")}</li></Link>
 
 
 
@@ -162,11 +163,11 @@ const Nav = ({ products }) => {
                                     </div> */}
                                 </div>
                             </div>
-                            <div ref={lang}  className={`dropDownList ${showLang?"toggleDropDown": ""}`}>
+                            <div className={`dropDownList ${showLang?"toggleDropDown": ""}`}>
                                 {
                                     languages.map(language =>(
                                         <>
-                                            <p onClick={()=>{changeLanguage(language.code)}} className="dropDownItem">
+                                            <p onClick={()=> i18next.changeLanguage(language.code)} key={language.code} className="dropDownItem">
                                                 <span className={`flag-icon flag-icon-${language.flag}`}></span>
                                                 <span className='blacktext'>{language.name}</span>
                                             </p>

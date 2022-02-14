@@ -1,7 +1,7 @@
 import React from 'react';
-import pollen from '../../img/pollen.jpg'
-import honey from '../../img/honey.jpg'
-import propolis from '../../img/propolis.jpg'
+// import pollen from '../../img/pollen.jpg'
+// import honey from '../../img/honey.jpg'
+// import propolis from '../../img/propolis.jpg'
 
 const HoneyGridItem = ({ att }) => {
     console.log(att)

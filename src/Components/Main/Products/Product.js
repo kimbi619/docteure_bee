@@ -1,8 +1,8 @@
 
 const Product = ({ product, onAdd }) => {
 
-    const {name,price, productRatings} = product.fields;
-    const stars = Array(5).fill(0);
+    const {name,price} = product.fields;
+
 
     const addProductToCart = (product,e)=>{
         console.log("product")

@@ -1,38 +1,41 @@
 import pollen from '../../img/pollen.jpg'
 import honey from '../../img/honey.jpg'
-import propolis from '../../img/propolis.jpg'
 import './featuredItems.css'
-import { Link } from 'react-router-dom';
 import HoneyGridItem from './HoneyGridItem';
 import { useState } from 'react'
 
 const Honey = () => {
     const [honeyTypes, setHoneyTypes] = useState([
         {
+            id: 1,
             name: 'Spring honey',
             price: 523400,
             img: pollen,
             desc: 'it is the First harvest of the season in May. Very pale tiny slightly-yellow coloured honey, verydelicate and tender. Available format(s) : 500 g (7 $) and 1 kg (13 $)'
         },
         {
+            id: 2,
             name: 'Summer honey',
             price: 20,
             img: honey,
             desc: 'it is the First harvest of the season in May. Very pale tiny slightly-yellow coloured honey, verydelicate and tender. Available format(s) : 500 g (7 $) and 1 kg (13 $)'
         },
         {
+            id: 3,
             name: 'Churned honey',
             price: 20,
             img: honey,
             desc: 'it is the First harvest of the season in May. Very pale tiny slightly-yellow coloured honey, verydelicate and tender. Available format(s) : 500 g (7 $) and 1 kg (13 $)'
         },
         {
+            id: 4,
             name: 'fall honey',
             price: 17,
             img: pollen,
             desc: 'Liquid Fall honey : last honey of the season, fall honey, rich in minerals and more dense and intensive flavor.Available format(s) : 500 g (7 $) and 1 kg (13 $)'
         },
         {
+            id: 5,
             name: 'honey comb',
             price: 13,
             img: honey,
@@ -62,14 +65,14 @@ const Honey = () => {
                 <a href='#featuredHoneyProduct'><p className="callToAction">Checkout our variety</p></a>
             </div>
         </div>
-        <div id="featuredHoneyProduct">
+        <div id= "featuredHoneyProduct">
             <div className="descTitle"> Featured Honey</div>
             <div className="featuredProducts">
                 <div className="container">
                     <div className="gridWrapper">
                         {
                             honeyTypes.map(honeyType=>(
-                                <HoneyGridItem att={honeyType} />
+                                <HoneyGridItem key={honeyType.id} att={honeyType} />
                             ))
                         }
                         {/* <HoneyGridItem att = {honeyType} /> */}

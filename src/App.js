@@ -1,5 +1,5 @@
 import './App.css';
-import { useRef, useEffect } from 'react';
+import { useEffect } from 'react';
 import { Client } from './Client';
 import Main from './Components/Main/Main';
 import Nav from './Components/Nav/Nav';
@@ -38,13 +38,13 @@ function App() {
 
 
   const { t } = useTranslation();
-  const appWrap = useRef('appWrap');
+  console.log(t("nagivation.products"))
+
+
+
   return (
     <div className="App">
-      {/* <h1>{t("welcome_text")}</h1> */}
       <Nav products={products} />
-      {/* <Route path="/products" exact><CategoryCarousel onFilter={handleFilter} products={products} /></Route> */}
-      
       <div className='mainAppWrapper'>
       <Main products={products} />
       
@@ -58,9 +58,8 @@ function App() {
         <Route path="/propolis" component={OtherMainProduct} />
         <Route path="/royal-jelly" component={OtherMainProduct} />
         <Route path="/immune-booster" component={OtherMainProduct} />
-        <Route path="/honey" exact component={Honey} />
-        <Route path="/" exact component={HomePage} />
-        {/* <Route path="/" exact component={HomePage} /> */}
+        <Route path="/honey" component={Honey} />
+        <Route path="/" component={HomePage} />
       </Switch>
       </div>
       <Footer />

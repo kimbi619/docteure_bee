@@ -1,6 +1,16 @@
 {
-    "welcome_text": {
-        "first": "We are backyard beekeepers (hobbists) with a successful honey production and bee-colonies development",
-        "second": "we love you"
+  "navigation": {
+    "home": "home",
+    "products": "products",
+    "winery": "winery",
+    "contact": "contact",
+    "about": "about",
+    "cart": "cart"
+  },
+  "homepage": {
+    "heroSection": {
+      "heroText": "We are backyard beekeepers (hobbists) with a successful honey production and bee-colonies development",
+      "callToAction": "checkout our products"
     }
+  }
 }

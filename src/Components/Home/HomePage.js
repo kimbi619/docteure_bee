@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom'
 import honey from '../../img/honey.jpg'
 import pollen from '../../img/pollen.jpg'
 import propolis from '../../img/propolis.jpg'
-import Legend from './Legend'
+// import Legend from './Legend'
 
-
+import { useTranslation } from 'react-i18next'
 import YouTube from 'react-youtube';
 
 
-const HomePage = ({ t }) => {
+const HomePage = () => {
 
     const opts = {
         // height: '390',
@@ -20,13 +20,14 @@ const HomePage = ({ t }) => {
         },
       };
 
+      const { t } = useTranslation();
     return (
         <div className='homepage'>
             <div className="heroSection">
                 <div className="container">
                     <h1>We are backyard beekeepers (hobbists) with a 
                     successful honey production and bee-colonies development</h1>
-                    <Link to='/products'><p className="callToAction">Checkout our products</p></Link>                 
+                    <Link to='/products'><p className="callToAction">{t("homepage.heroSection.callToAction")}</p></Link>                 
                 </div>
             </div>
             {/* <Legend /> */}
@@ -107,7 +108,7 @@ const HomePage = ({ t }) => {
                 <div className="featuredProductTopGrid">
                     <div className="imgSection">
                         <div className="imgWrapper">
-                            {/* <YouTube className='youtube' videoId="VyL8QfQBHFw" opts={opts} /> */}
+                            <YouTube className='youtube' videoId="VyL8QfQBHFw" opts={opts} />
                         </div>
                     </div>
                     <div className="featuredProductTopDesc">
