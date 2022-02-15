@@ -24,7 +24,7 @@ function App() {
   const [products, setProducts] = useLocalStorage('products', [])
   useEffect((locale = 'en-US') => {  
     Client.getEntries()
-    locale = locale
+    // locale = locale
     .then(res=>{
       setProducts(res.items);
     })
