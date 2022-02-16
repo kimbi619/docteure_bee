@@ -22,8 +22,6 @@ const Products = ({ products }) => {
         e.target.parentElement.style.display="none";
     }
 
-    
-    console.log(12)  
     const { t } = useTranslation();
     return (
         <div className="productGridWrapper">

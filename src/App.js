@@ -25,22 +25,22 @@ function App() {
   }
   const [products, setProducts] = useLocalStorage('products', [])
   
-  
+  const fetchData = async()=>{
+    let currentLang = i18next.language
+    const res = await Client.getEntries({locale: currentLang === 'fr' ? 'fr': 'en-US'})
+    
+    setProducts(res.items);
+    // .catch(err=>console.log(err))
+  }
   useEffect(() => {  
     
-    const fetchData = async()=>{
-      let currentLang = i18next.language
-      const res = await Client.getEntries({locale: currentLang === 'fr' ? 'fr': 'en-US'})
-      
-      setProducts(res.items);
-      // .catch(err=>console.log(err))
-    }
-
     fetchData();
     
   }, []);
   
-  
+// i18next.on('languageChanged', ()=>{
+//   fetchData();
+// })
   
 
 
