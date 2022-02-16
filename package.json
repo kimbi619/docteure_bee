@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://kimbi619.github.io/docteure_bee",
   "dependencies": {
+    "@emailjs/browser": "^3.4.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",

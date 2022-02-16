@@ -1,9 +1,12 @@
 import Carousel from 'react-elastic-carousel';
 import OpenProductItem from './OpenProductItem';
-import { IoStarSharp } from 'react-icons/io5'
-import React, { useContext } from 'react'
+import React, { useContext, useRef } from 'react'
 import { CartContext } from '../../CartContext';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
+import { FaTimes } from 'react-icons/fa';
+import Overlay from './Overlay';
+
 
 const breakPoints = [
     { width: 1, itemsToShow: 1 },
@@ -17,31 +20,30 @@ const breakPoints = [
 
   const Opened = ({ isLoading, product }) => {
     const [cart, setCart] = useContext(CartContext)
+    const {name, description, price, productRatings} = product.fields;
+    let medias = [];
+    const popupRef  = useRef()
     const { t } = useTranslation();
     
     const addToCart = (product, e)=>{
         setCart([...cart, {product:product}]);
         // ==============display popup when add to chart is clicked=============
-        // popupRef.current.style.display="block";
+        popupRef.current.style.display="block";
     }
-    
-      if (isLoading){
-          return <div className="preloader"></div>
-        }
+
+    const removePopup = (e)=>{
+        e.target.parentElement.style.display="none";
+    }
+
+    if (isLoading){
+        return <div className="preloader"></div>
+    }
         
-        const {name, description, price, productRatings} = product.fields;
-        console.log(product)
-        let medias = [];
-        if(product.fields.productImage){
-            product.fields.productImage.forEach(elt => {
-                medias.push(elt.fields.file.url);
-            });
-        }
-          const stars = Array(5).fill(0);
-              const colors={
-                  blue: "blue",
-                  gray: "#a9a9a9"
-              }
+    if(product.fields.productImage){
+        product.fields.productImage.forEach(elt => {
+            medias.push(elt.fields.file.url);
+        });
+    }
           
     
 
@@ -65,8 +67,8 @@ const breakPoints = [
                             className="carouselWrapper"
                             >
                             {
-                                medias.map(media=>(
-                                    <OpenProductItem>
+                                medias.map((media, index)=>(
+                                    <OpenProductItem key={index}>
                                     <div className="productPageImgWrapper">
                                         <img className='gridImage' src={media} alt={name} />
                                     </div>
@@ -87,6 +89,12 @@ const breakPoints = [
                     </div>
                 </div>
             </div>
+
+            <div ref={popupRef} className="popup">{t("product_added")}... 
+                <Link to="/cart"><div> { t("go_to_cart") } </div></Link>
+                <span className="closePopup" onClick={removePopup}><FaTimes /></span>
+            </div>
+            <Overlay product={product.fields} />
         </div>
 
     )

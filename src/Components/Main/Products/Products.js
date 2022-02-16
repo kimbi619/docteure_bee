@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import Product from './Product'
 import { FaTimes } from 'react-icons/fa'
 import { CartContext } from '../CartContext';
+import { useTranslation } from 'react-i18next';
 
-import i18next from 'i18next';
 
 const Products = ({ products }) => {
     const [cart, setCart] = useContext(CartContext)
@@ -20,8 +20,8 @@ const Products = ({ products }) => {
         e.target.parentElement.style.display="none";
     }
 
-    console.log(i18next.language)
 
+    const { t } = useTranslation();
     return (
         <div className="productGridWrapper">
             {
@@ -42,8 +42,8 @@ const Products = ({ products }) => {
                     ))  
                 }
                 
-                <div ref={popupRef} className="popup">Product added... 
-                    <Link to="/cart"><div>go to cart</div></Link>
+                <div ref={popupRef} className="popup">{t("product_added")}... 
+                    <Link to="/cart"><div> { t("go_to_cart") } </div></Link>
                     <span className="closePopup" onClick={removePopup}><FaTimes /></span>
                 </div>
         </div>

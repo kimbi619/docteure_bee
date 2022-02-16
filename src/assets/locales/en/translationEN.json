@@ -1,5 +1,7 @@
 {
   "description": "description",
+  "go_to_cart": "go to cart",
+  "product_added": "Product added",
   "navigation": {
     "home": "home",
     "products": "products",
@@ -134,6 +136,30 @@
     "hydromel": {
       "title": "hydromel",
       "text": "It is a mixture of Honey and water that becomes mead when fermented. In English, Hydromel is generally assumed to be 10% alcohol or below, but Hydromels made and sold in Quebec can be as high as 15% alcohol. Fermented Hydromel is called “hydromel vineux” in French.A place where Hydromel is made is called a “hydromellerie” in French."
+    }
+  },
+
+
+  "footer": {
+    "about": {
+      "title": "about",
+      "who_we_are": "who we are",
+      "what_we_do": "what we do",
+      "Tell": "Tell",
+      "email_us": "Reach out via email"
+    },
+    "buy":{
+      "title": "buy",
+      "store": "store",
+      "privacy": "privacy policy",
+      "stories": "stories",
+      "help": "get help"
+    },
+    "others":{
+      "title": "others",
+      "faq": "FAQs",
+      "report_errors": "report Error",
+      "language": "language"
     }
   }
 }

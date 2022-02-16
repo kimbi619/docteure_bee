@@ -6,7 +6,6 @@ const Product = ({ product, onAdd }) => {
 
 
     const addProductToCart = (product,e)=>{
-        console.log("product")
         onAdd(product, e)
     }
 
@@ -20,11 +19,9 @@ const Product = ({ product, onAdd }) => {
                         <p className="price">${price}</p>
                     </div>
                     
-                    <div className="dropDownWrapper">
-                        <button className="placeOrder">
-                            <span className="mainAddToCartButton" onClick={(e)=>addProductToCart(product, e)}>{ t("other_products.buy") }</span>
-                        </button>
-                    </div>
+                    <button className="placeOrder">
+                        <span className="mainAddToCartButton" onClick={(e)=>addProductToCart(product, e)}>{ t("other_products.buy") }</span>
+                    </button>
                 </div>
             </div>
 

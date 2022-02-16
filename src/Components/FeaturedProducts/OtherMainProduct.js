@@ -47,7 +47,7 @@ const OtherMainProduct = (props) => {
 
   const path = props.match.path
   const route =  path.replace('/', '')
-  const item = mainProducts.filter(mainProduct=>mainProduct.route == route)
+  const item = mainProducts.filter(mainProduct=>mainProduct.route === route)
   return (
   <div>
     <div className="container">

@@ -5,7 +5,6 @@ import { useTranslation } from 'react-i18next';
 // import propolis from '../../img/propolis.jpg'
 
 const HoneyGridItem = ({ att }) => {
-    console.log(att)
     const { t } = useTranslation(); 
   return (
     <div className="gridItem">

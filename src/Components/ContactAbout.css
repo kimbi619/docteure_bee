@@ -67,6 +67,8 @@ textarea {
   border: 1.4rem solid #f5f5f5;
 }
 .sendMessage .callToAction {
+  outline: none;
+  border: none;
   width: 95%;
 }
 

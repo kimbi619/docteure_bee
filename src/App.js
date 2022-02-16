@@ -15,37 +15,34 @@ import Winery from './Components/Winery';
 
 
 
-import { useTranslation } from "react-i18next";
+import i18next from 'i18next';
 
 
 function App() {
 
 
+
+  const changeLanguage = (lang)=>{
+    i18next.changeLanguage(lang)
+    console.log('success')
+  }
   const [products, setProducts] = useLocalStorage('products', [])
-  useEffect((locale = 'en-US') => {  
-    Client.getEntries()
-    // locale = locale 
+  useEffect(() => {  
+    let currentLang = i18next.language
+    Client.getEntries({locale: currentLang === 'fr' ? 'fr': 'en-US'})
     .then(res=>{
       setProducts(res.items);
     })
     .catch(err=>console.log(err))
-
-  }, []);
-
-  const handleFilter = (category)=>{
-    console.log(category.target);
-  }
-
-
-
-  const { t } = useTranslation();
-  console.log(t("nagivation.products"))
-
+    
+  }, [changeLanguage]);
+  
+  
 
 
   return (
     <div className="App">
-      <Nav products={products} />
+      <Nav handleChangeLanguage = {changeLanguage} products={products} />
       <div className='mainAppWrapper'>
       <Main products={products} />
       

@@ -39,7 +39,7 @@ const HomePage = () => {
             </div>
 
             <div className="featuredProducts">
-                <h2 className="descTitle">{ t("featuredProduct.title") }</h2>
+                <h2 className="descTitle">{ t("homepage.featuredProduct.title") }</h2>
                 <div className="container">
                     <div className="gridWrapper">
                         <div className="gridItem">

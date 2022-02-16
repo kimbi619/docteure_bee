@@ -1,5 +1,7 @@
 {  
   "description": "description",
+  "go_to_cart": "aller au panier",
+  "product_added": "Produit ajouté",
     "navigation": {
       "home": "d'accueil",
       "products": "produits",
@@ -135,8 +137,31 @@
             "text": "C'est un mélange de miel et d'eau qui devient de l'hydromel lorsqu'il est fermenté. En anglais, Hydromel est généralement supposé contenir 10 % d'alcool ou moins, mais les Hydromels fabriqués et vendus au Québec peuvent contenir jusqu'à 15 % d'alcool. L'hydromel fermenté est appelé 'hydromel vineux' en français. Un endroit où l'hydromel est fabriqué s'appelle une 'hydromellerie' en français."
         }
 
-      }
+      },
     
+
+      "footer": {
+        "about": {
+          "title": "sur",
+          "who_we_are": "qui nous sommes",
+          "what_we_do": "ce que nous faisons",
+          "Tell": "Tell",
+          "email_us": "Contactez-nous par e-mail"
+        },
+        "buy":{
+          "title": "acheter",
+          "store": "magasin",
+          "privacy": "politique confidentialité",
+          "stories": "histoires",
+          "help": "Rétroaction"
+        },
+        "others":{
+          "title": "autres",
+          "faq": "FAQs",
+          "report_errors": "signaler erreur",
+          "language": "Langue"
+        }
+      }
 
 
 

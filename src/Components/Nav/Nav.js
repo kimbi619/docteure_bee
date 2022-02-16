@@ -8,11 +8,10 @@ import logo from '../../img/logo.jpg'
 
 
 
-import i18next from "i18next";
 import { useTranslation } from "react-i18next";
 import 'flag-icon-css/css/flag-icon.min.css'
 
-const Nav = ({ products }) => {
+const Nav = ({ products, handleChangeLanguage }) => {
 
     const [searchItems, setSearchItems] = useState([])
     const [showLang, setShowLang] = useState(false);
@@ -165,13 +164,11 @@ const Nav = ({ products }) => {
                             </div>
                             <div className={`dropDownList ${showLang?"toggleDropDown": ""}`}>
                                 {
-                                    languages.map(language =>(
-                                        <>
-                                            <p onClick={()=> i18next.changeLanguage(language.code)} key={language.code} className="dropDownItem">
-                                                <span className={`flag-icon flag-icon-${language.flag}`}></span>
-                                                <span className='blacktext'>{language.name}</span>
-                                            </p>
-                                        </>
+                                    languages.map((language, index) =>(
+                                        <p onClick={()=> handleChangeLanguage(language.code)} key={index} className="dropDownItem">
+                                            <span className={`flag-icon flag-icon-${language.flag}`}></span>
+                                            <span className='blacktext'>{language.name}</span>
+                                        </p>
                                     ))
                                 }
                                 

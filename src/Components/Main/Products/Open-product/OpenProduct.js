@@ -1,11 +1,9 @@
 import React, {useEffect, useState } from 'react'
-import * as contentful from 'contentful';
 import './OpenProduct.css';
 import UseLocalStorage from '../../../../UseLocalStorage'
 import { Client } from '../../../../Client';
 import Opened from './Opened';
-
-
+import i18next from 'i18next';
 
 
 
@@ -17,23 +15,21 @@ import Opened from './Opened';
       const [product, setProduct] = UseLocalStorage('product', {})
 
 
-      useEffect(() => {
 
-        const fetchPost = async ()=>{
-            setLoading(true);
-            let data = await Client.getEntry(match.params.id)
-            setProduct(data);
+        useEffect( () => { 
+          setLoading(true); 
+          let currentLang = i18next.language
+          Client.getEntry(match.params.id, {locale: currentLang === 'fr' ? 'fr': 'en-US'})
+          .then(res=>{
+            setProduct(res);
             setLoading(false);
-        }
-           
-        fetchPost();
-        }, [])
-        
-
+          })
+          .catch(err=>console.log(err))
+          
+        }, []);
 
     
 
-        console.log(product)
 
     return (
         <div>

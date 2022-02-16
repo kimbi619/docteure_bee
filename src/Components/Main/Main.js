@@ -6,7 +6,7 @@ import OpenProduct from './Products/Open-product/OpenProduct';
 import Products from './Products/Products'
 import { CartContextProvider } from './CartContext';
 
-const Main = ({ products })=> {
+const Main = ({ products,  handleChangeLanguage })=> {
     
     return (
         <div>
