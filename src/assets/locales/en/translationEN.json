@@ -52,9 +52,9 @@
 
   "contactpage": {
     "grid_one": {
-      "title": "get in contact with us",
+      "title": "contact with us",
       "cell": "cell",
-      "locate_us": "you can locate us at"
+      "locate_us": "Address"
     },
     "grid_two":{
       "title": "contact us directly",

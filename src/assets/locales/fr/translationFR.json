@@ -6,7 +6,7 @@
       "home": "d'accueil",
       "products": "produits",
       "winery": "vignoble",
-      "contact": "prendre",
+      "contact": "contact",
       "about": "propos",
       "cart": "achats"
     },
@@ -52,9 +52,9 @@
 
     "contactpage": {
         "grid_one": {
-          "title": "Prenez contact avec nous",
+          "title": "contacter avec nous",
           "cell": "Tell",
-          "locate_us": "vous pouvez nous localiser à"
+          "locate_us": "Addresse"
         },
         "grid_two":{
             "title": "contactez-nous directement",
