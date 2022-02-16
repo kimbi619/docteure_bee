@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 
 const Product = ({ product, onAdd }) => {
     const { t } = useTranslation();
-    const {name,price} = product.fields;
+    const {name,priceBig} = product.fields;
 
 
     const addProductToCart = (product,e)=>{
@@ -16,7 +16,7 @@ const Product = ({ product, onAdd }) => {
                 <div className="productDesc">
                     <div className="price-rate">
                         <div className="name">{name}</div>
-                        <p className="price">${price}</p>
+                        <p className="price">${priceBig}</p>
                     </div>
                     
                     <button className="placeOrder">

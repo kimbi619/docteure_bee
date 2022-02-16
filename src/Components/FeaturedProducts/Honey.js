@@ -11,35 +11,40 @@ const Honey = () => {
         {
             id: 1,
             name: t("honey.variety.spring.title"),
-            price: 13,
+            priceSmall: 7,
+            priceBig: 13,
             img: pollen,
             desc: t("honey.variety.spring.text")
         },
         {
             id: 2,
             name: t("honey.variety.summer.title"),
-            price: 20,
+            priceSmall: 7,
+            priceBig: 13,
             img: honey,
             desc:t("honey.variety.summer.text")
         },
         {
             id: 3,
             name: t("honey.variety.churned.title"),
-            price: 20,
+            priceSmall: 7,
+            priceBig: 13,
             img: honey,
             desc: t("honey.variety.churned.text")
         },
         {
             id: 4,
             name: t("honey.variety.fall.title"),
-            price: 17,
+            priceSmall: 7,
+            priceBig: 13,
             img: pollen,
             desc: t("honey.variety.fall.text")
         },
         {
             id: 5,
             name: t("honey.variety.comb.title"),
-            price: 13,
+            priceSmall: 7,
+            priceBig: 13,
             img: honey,
             desc: t("honey.variety.comb.text")
         },

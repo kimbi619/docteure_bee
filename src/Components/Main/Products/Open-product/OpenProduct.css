@@ -84,3 +84,36 @@
   max-width: 600px;
   position: absolute;
 }
+.overlay .heading {
+  display: flex;
+  align-items: flex-end;
+  font-size: 0.8rem;
+}
+.overlay .headingOne {
+  color: crimson;
+  margin: 0.2rem;
+}
+.overlay .headingOne:nth-child(1) {
+  text-decoration: underline;
+  margin-right: 0.4rem;
+  text-transform: capitalize;
+}
+.overlay .size {
+  border-bottom: 2px solid #eeeeee;
+  padding: 0.7rem 0rem 0.4rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 0.2rem 0rem;
+}
+.overlay .size .name {
+  font-size: 0.9rem;
+}
+.overlay p {
+  margin: 2rem auto;
+}
+.overlayWrapper {
+  display: none;
+}
+.whow {
+  display: block;
+}

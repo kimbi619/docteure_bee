@@ -23,9 +23,13 @@ const breakPoints = [
     const {name, description, price, productRatings} = product.fields;
     let medias = [];
     const popupRef  = useRef()
+    const overlay  = useRef()
     const { t } = useTranslation();
+
     
     const addToCart = (product, e)=>{
+        product.fields.priceSmall = null
+        product.fields.price= product.fields.priceBig
         setCart([...cart, {product:product}]);
         // ==============display popup when add to chart is clicked=============
         popupRef.current.style.display="block";
@@ -33,6 +37,11 @@ const breakPoints = [
 
     const removePopup = (e)=>{
         e.target.parentElement.style.display="none";
+    }
+
+    const showOverlay = () => {
+        // overlay.current.style.display = "block"
+        overlay.current.classList.add('whow')
     }
 
     if (isLoading){
@@ -84,8 +93,8 @@ const breakPoints = [
                         {description}
                     </div>
                     <div className="place-oder controlLinkWrapper ">
-                        <p onClick={(e)=>{addToCart(product,e)}} className="controlLinks addToCart callToAction">{ t("other_products.add_to_cart") }</p>
-                        <p className="controlLinks callToAction">{ t("other_products.buy") }</p>
+                        <p onClick={showOverlay} className="controlLinks addToCart callToAction">{ t("other_products.add_to_cart") }</p>
+                        <p onClick={(e)=>{addToCart(product,e)}} className="controlLinks callToAction">{ t("other_products.buy") }</p>
                     </div>
                 </div>
             </div>
@@ -94,7 +103,9 @@ const breakPoints = [
                 <Link to="/cart"><div> { t("go_to_cart") } </div></Link>
                 <span className="closePopup" onClick={removePopup}><FaTimes /></span>
             </div>
-            <Overlay product={product.fields} />
+            <div ref={overlay} className="overlayWrapper">
+                <Overlay product={product} />
+            </div>
         </div>
 
     )

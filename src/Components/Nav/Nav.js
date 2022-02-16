@@ -99,7 +99,6 @@ const Nav = ({ products, handleChangeLanguage }) => {
                     <div className="mobile navHeader">
                         <Link to="/" >
                             <div className="logo">
-                                {/* <h2>Logo</ h2> */}
                             <img className='logoImg' src={logo} alt="logo" />
                             </div></Link>
                         <div className="search">
@@ -116,7 +115,6 @@ const Nav = ({ products, handleChangeLanguage }) => {
                     </div> 
                 </div>
             
-                {/* Search form to filter user input and route to product page */}
                 <div ref={searchItemList} className="searchFilter">
                     <ul>
                         {
@@ -158,14 +156,12 @@ const Nav = ({ products, handleChangeLanguage }) => {
                                         <div className="languageMobile">Language</div>
                                         <p className=""><IoIosGlobe /></p>
                                         <span className=" dropDownIndicator"><IoIosArrowDown  /></span>
-                                    {/* <div className="languageDesktop">
-                                    </div> */}
                                 </div>
                             </div>
                             <div className={`dropDownList ${showLang?"toggleDropDown": ""}`}>
                                 {
                                     languages.map((language, index) =>(
-                                        <p onClick={()=> handleChangeLanguage(language.code)} key={index} className="dropDownItem">
+                                        <p onClick={(e)=> handleChangeLanguage(language.code, e)} key={index} className="dropDownItem">
                                             <span className={`flag-icon flag-icon-${language.flag}`}></span>
                                             <span className='blacktext'>{language.name}</span>
                                         </p>

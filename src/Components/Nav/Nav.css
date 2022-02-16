@@ -372,6 +372,9 @@ nav .caption {
   transition: all 0.3s ease-in;
   color: white;
 }
+.dropDownItem * {
+  pointer-events: none;
+}
 .dropDownItem:hover {
   background: #ebebeb;
 }
@@ -440,4 +443,7 @@ nav .caption {
   .languageMobile {
     display: none;
   }
+}
+.hideLang {
+  display: none;
 }

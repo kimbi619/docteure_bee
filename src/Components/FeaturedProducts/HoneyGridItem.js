@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 
 const HoneyGridItem = ({ att }) => {
     const { t } = useTranslation(); 
+    console.log(att)
   return (
     <div className="gridItem">
         <div className="featuredHoneyItem">
@@ -14,7 +15,7 @@ const HoneyGridItem = ({ att }) => {
             </div>
             <div className="name-title">
                 <div className="honey-name descText">{att.name}</div>
-                <div className="honey-price descText">${att.price}</div>
+                <div className="honey-price descText">${att.priceBig}</div>
             </div>
         </div>
         <div className="desc">

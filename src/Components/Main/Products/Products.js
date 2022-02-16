@@ -10,6 +10,8 @@ const Products = ({ products }) => {
     const [cart, setCart] = useContext(CartContext)
     const popupRef  = useRef()
     const addToCart = (product, e)=>{
+        product.fields.priceSmall = null
+        product.fields.price= product.fields.priceBig
         setCart([...cart, {product:product}]);
         // ==============display popup when add to chart is clicked=============
         popupRef.current.style.display="block";
@@ -20,7 +22,8 @@ const Products = ({ products }) => {
         e.target.parentElement.style.display="none";
     }
 
-
+    
+    console.log(12)  
     const { t } = useTranslation();
     return (
         <div className="productGridWrapper">

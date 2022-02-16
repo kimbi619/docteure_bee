@@ -13,29 +13,33 @@ import Honey from './Components/FeaturedProducts/Honey';
 import OtherMainProduct from './Components/FeaturedProducts/OtherMainProduct';
 import Winery from './Components/Winery';
 
-
-
 import i18next from 'i18next';
 
 
 function App() {
 
 
-
-  const changeLanguage = (lang)=>{
+  const changeLanguage = (lang, e)=>{
     i18next.changeLanguage(lang)
-    console.log('success')
+    e.target.parentElement.classList.add('hideLang')
   }
   const [products, setProducts] = useLocalStorage('products', [])
+  
+  
   useEffect(() => {  
-    let currentLang = i18next.language
-    Client.getEntries({locale: currentLang === 'fr' ? 'fr': 'en-US'})
-    .then(res=>{
-      setProducts(res.items);
-    })
-    .catch(err=>console.log(err))
     
-  }, [changeLanguage]);
+    const fetchData = async()=>{
+      let currentLang = i18next.language
+      const res = await Client.getEntries({locale: currentLang === 'fr' ? 'fr': 'en-US'})
+      
+      setProducts(res.items);
+      // .catch(err=>console.log(err))
+    }
+
+    fetchData();
+    
+  }, []);
+  
   
   
 

@@ -13,7 +13,7 @@ const Main = ({ products,  handleChangeLanguage })=> {
             <CartContextProvider>
             <div className="container">
                 <Switch>
-                    <Route path="/product/:id" component={OpenProduct}/>
+                    <Route path='/product/:id' component={OpenProduct} />
                     <Route path="/products">
                         <Products products={products}  />
                     </Route>

@@ -9,33 +9,28 @@ import i18next from 'i18next';
 
 
   
-  const OpenedProduct = ({ match }) => {
+const OpenedProduct = ({ match }) => {
+    useEffect( () => { 
+      setLoading(true); 
+      let currentLang = i18next.language
+      Client.getEntry(match.params.id, {locale: currentLang === 'fr' ? 'fr': 'en-US'})
+      .then(res=>{
+        setProduct(res);
+        setLoading(false);
+      })
+      .catch(err=>console.log(err))
       
+    }, []);
+    
     const [loading, setLoading] = useState(false)
-      const [product, setProduct] = UseLocalStorage('product', {})
+    const [product, setProduct] = UseLocalStorage('product', {})
+    
 
-
-
-        useEffect( () => { 
-          setLoading(true); 
-          let currentLang = i18next.language
-          Client.getEntry(match.params.id, {locale: currentLang === 'fr' ? 'fr': 'en-US'})
-          .then(res=>{
-            setProduct(res);
-            setLoading(false);
-          })
-          .catch(err=>console.log(err))
-          
-        }, []);
 
     
 
 
-    return (
-        <div>
-            <Opened isLoading={loading} product={product} />
-        </div>
-    )
+    return <Opened isLoading={loading} product={product} />
 }
 
 export default OpenedProduct
