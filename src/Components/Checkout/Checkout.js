@@ -8,6 +8,7 @@ import { ReactComponent as Paypal } from "../../img/paypal.svg";
 import PayPal from './PayPal';
 import MasterCard from './MasterCard';
 import { CartContext } from '../Main/CartContext';
+import { tabTitle } from '../..';
 
 
 const Checkout = () => {
@@ -44,6 +45,7 @@ const Checkout = () => {
   }
 
   const { t } = useTranslation();
+  tabTitle(`${t("titleBar.checkout")} - docteure bee`)
   console.log(cart)
   return (
     <div className='checkout'>

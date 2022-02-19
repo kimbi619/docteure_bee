@@ -1,6 +1,7 @@
 import React, {useState, useContext} from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import { tabTitle } from '../..';
 import pollen from '../../img/pollen.jpg'
 import propolis from '../../img/propolis.jpg'
 import useLocalStorage from '../../UseLocalStorage';
@@ -64,22 +65,9 @@ const OtherMainProduct = (props) => {
   const route =  path.replace('/', '')
   const item = mainProducts.filter(mainProduct=>mainProduct.route === route)
 
+  tabTitle(`${t("titleBar.products")} - ${item[0].name} - docteure bee`)
 
-  let thisProduct = products[0];
-  thisProduct.fields.description = item[0].desc
-  thisProduct.fields.name = item[0].name
-  thisProduct.fields.price = 13
-  thisProduct.fields.productImage = item[0].img
-  const addToCart = (product, e)=>{
-    // product.fields.priceSmall = null
-    // product.fields.price= product.fields.priceBig
-    // ==============display popup when add to chart is clicked=============
-    // popupRef.current.style.display="block";
-    console.log(products)
-    console.log(thisProduct)
-    setCart([...cart, {product:thisProduct}]);
-    console.log(cart)
-}
+
   return (
   <div>
     <div className="container">

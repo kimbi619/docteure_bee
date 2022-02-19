@@ -2,6 +2,20 @@
   "description": "description",
   "go_to_cart": "go to cart",
   "product_added": "Product added",
+  "titleBar": {
+    "products": "products",
+    "winery": "winery",
+    "contact": "contact us",
+    "about": "about",
+    "cart": "cart",
+    "checkout": "checkout",
+    "honey": "honey",
+    "pollen": "pollen",
+    "hydromel": "hydromel",
+    "royal_jelly":"royal jelly",
+    "propolis": "propolis",
+    "immune_booster":"immune booster"
+  },
   "navigation": {
     "home": "home",
     "products": "products",

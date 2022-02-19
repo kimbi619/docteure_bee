@@ -3,6 +3,7 @@ import victoriaFarming from '../img/victoriaFarming.jpg'
 
 import YouTube from 'react-youtube';
 import { useTranslation } from 'react-i18next';
+import { tabTitle } from '..';
 
 const opts = {
     // height: '390',
@@ -16,6 +17,7 @@ const opts = {
 
 const About = () => {
     const { t } = useTranslation();
+    tabTitle(`${t("titleBar.about")} - docteure bee`)
   return (
   <div className='about-page'>
     <div className="container">

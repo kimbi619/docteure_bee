@@ -45,6 +45,9 @@ i18n
   react: {useSuspense: false},
 });
 
+export const tabTitle = (title) => {
+  return (document.title = title)
+}
 
 ReactDOM.render(
   <React.StrictMode>

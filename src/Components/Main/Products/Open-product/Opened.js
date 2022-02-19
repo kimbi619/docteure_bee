@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { FaTimes } from 'react-icons/fa';
 import Overlay from './Overlay';
+import { tabTitle } from '../../../..';
 
 
 const breakPoints = [
@@ -25,7 +26,7 @@ const breakPoints = [
     const popupRef  = useRef()
     const overlay  = useRef()
     const { t } = useTranslation();
-
+    
     
     const addToCart = (product, e)=>{
         product.fields.priceSmall = null
@@ -34,31 +35,33 @@ const breakPoints = [
         // ==============display popup when add to chart is clicked=============
         popupRef.current.style.display="block";
     }
-
+    
     const removePopup = (e)=>{
         e.target.parentElement.style.display="none";
     }
-
+    
     const showOverlay = () => {
         // overlay.current.style.display = "block"
         overlay.current.classList.add('whow')
     }
-
+    
     if (isLoading){
         return <div className="preloader"></div>
     }
-        
+    
     if(product.fields.productImage){
         product.fields.productImage.forEach(elt => {
             medias.push(elt.fields.file.url);
         });
     }
-          
     
-
+    
+    
+ 
+    tabTitle(`${name} - ${t("titleBar.products")} - docteure bee`)
     return (
-
-    <div className='openProductPage'>
+        
+        <div className='openProductPage'>
     <div className="descCap titleLeft descTitle">{name}</div>
             <div className="featuredProductTopGrid">
                 <div className="imgSection">

@@ -1,5 +1,6 @@
 import pollen from '../../img/pollen.jpg'
 import honey from '../../img/honey.jpg'
+import { tabTitle } from '../..';
 import './featuredItems.css'
 import HoneyGridItem from './HoneyGridItem';
 import { useState } from 'react'
@@ -7,6 +8,7 @@ import { useTranslation } from 'react-i18next';
 
 const Honey = () => {
     const { t } = useTranslation();
+    tabTitle(`${t("titleBar.honey")} - docteure bee`)
     const [honeyTypes, setHoneyTypes] = useState([
         {
             id: 1,

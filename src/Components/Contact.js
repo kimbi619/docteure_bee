@@ -4,6 +4,7 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter, FaYoutube } from 're
 
 import { useTranslation } from 'react-i18next';
 import emailjs from '@emailjs/browser';
+import { tabTitle } from '..';
 
 const Contact = () => {
   const sendMail = (form) =>{
@@ -30,6 +31,7 @@ const Contact = () => {
   const [text, setText] = useState('')
 
   const { t } = useTranslation();
+  tabTitle(`${t("titleBar.contact")} - docteure bee`)
   return (
   <div className='contact-page'>
       <div className="container">

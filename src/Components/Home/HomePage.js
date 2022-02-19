@@ -9,6 +9,7 @@ import hydromel from '../../img/hydromel.png'
 
 import { useTranslation } from 'react-i18next'
 import YouTube from 'react-youtube';
+import { tabTitle } from '../..'
 
 
 const HomePage = () => {
@@ -23,6 +24,7 @@ const HomePage = () => {
       };
 
       const { t } = useTranslation();
+      tabTitle('docteure bee')
     return (
         <div className='homepage'>
             <div className="heroSection">

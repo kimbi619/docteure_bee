@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import uuid from 'react-uuid'
+import { tabTitle } from '../../..';
 
 
 import { CartContext } from '../CartContext'
@@ -40,6 +41,7 @@ const Cart = () => {
         totalPrice += elt.product.fields.price 
     });
     const { t } = useTranslation();
+    tabTitle(`${t("titleBar.cart")} - docteure bee`)
     return (
         <div className="cartPageWrapper">
             <div className="carts">

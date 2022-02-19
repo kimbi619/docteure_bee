@@ -2,6 +2,20 @@
   "description": "description",
   "go_to_cart": "aller au panier",
   "product_added": "Produit ajouté",
+  "titleBar": {
+    "products": "produits",
+    "winery": "vignoble",
+    "contact": "Nous contacter",
+    "about": "sur",
+    "cart": "carte",
+    "checkout": "vérifier",
+    "honey": "miel",
+    "pollen": "pollen",
+    "hydromel": "hydromellerie",
+    "royal_jelly":"gelée royale",
+    "propolis": "propolis",
+    "immune_booster":"rappel immunitaire"
+  },
     "navigation": {
       "home": "d'accueil",
       "products": "produits",

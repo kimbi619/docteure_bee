@@ -16,9 +16,11 @@ import Winery from './Components/Winery';
 import i18next from 'i18next';
 import Checkout from './Components/Checkout/Checkout';
 import { CartContextProvider } from './Components/Main/CartContext';
+import { tabTitle } from '.';
 
 
 function App() {
+  tabTitle("docteure bee")
 
   const changeLanguage = (lang, e)=>{
     i18next.changeLanguage(lang)

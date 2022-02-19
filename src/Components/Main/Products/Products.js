@@ -4,6 +4,7 @@ import Product from './Product'
 import { FaTimes } from 'react-icons/fa'
 import { CartContext } from '../CartContext';
 import { useTranslation } from 'react-i18next';
+import { tabTitle } from '../../..';
 
 
 const Products = ({ products }) => {
@@ -26,6 +27,7 @@ const Products = ({ products }) => {
     }
 
     const { t } = useTranslation();
+    tabTitle(`${t("titleBar.products")} - docteure bee`)
     return (
         <div className="productGridWrapper">
             {
