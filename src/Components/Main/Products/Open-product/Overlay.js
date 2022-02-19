@@ -12,7 +12,6 @@ const Overlay = ({ product }) => {
     const removeOverlay = (e) =>{
         // e.target.parentElement.parentElement.style.display = 'none';
         e.classList.remove('whow')
-        console.log(e)
     }
 
 
@@ -20,10 +19,13 @@ const Overlay = ({ product }) => {
         if(amountSmall > 0){
             // product.fields.priceBig = null
             product.fields.price= product.fields.priceSmall * amountSmall
+            product.fields.count = parseInt(amountSmall)
             setCart([...cart, {product:product}]);
         }
         if(amountBig > 0){
             // product.fields.priceSmall = null
+            product.fields.count = parseInt(amountBig)
+            product.fields.count = amountBig;
             product.fields.price= product.fields.priceBig * amountBig
             setCart([...cart, {product:product}]);
         }

@@ -161,5 +161,19 @@
       "report_errors": "report Error",
       "language": "language"
     }
+  },
+
+  "checkout": {
+    "title": "checkout",
+    "firstName" : "first name",
+    "lastName": "last Name",
+    "master": {
+      "button": "credit/debit",
+      "card_name": "name on card",
+      "card_number": "card number",
+      "security_code": "security code",
+      "zip_code": "zip/postal code"
+    },
+    "paypal": "proceed with PayPal"
   }
 }

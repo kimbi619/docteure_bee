@@ -6,9 +6,6 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router} from 'react-router-dom';
 
 
-// import 'bootstrap/dist/css/bootstrap.min.css';
-
-
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from 'i18next-browser-languagedetector';

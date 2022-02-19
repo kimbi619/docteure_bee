@@ -1,10 +1,12 @@
 import React, { useContext } from 'react'
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import { CartContext } from '../CartContext'
 import CartItem from './CartItem';
 
 const Cart = () => {
     const [cart, setCart] = useContext(CartContext);
+    // const [itemCount, setItemCount] = useState(1)
 
     const onRemove=(id)=>{
         function filteredCart(){
@@ -20,13 +22,20 @@ const Cart = () => {
         
         setCart(filteredCart())
     }
-
+    
     let totalPrice = 0;
+    let cartTotalPrice = 0;
+    const handleCartChange = (id, count) => {
+        // cart.map(cartI =>{
+        //     if(cartI.product.sys.id === id){
+        //         cartI.product.count = count;
+        //     }
+        // })
+    }
+    
     cart.forEach(elt => {
-        totalPrice += elt.product.fields.price
+        totalPrice += elt.product.fields.price 
     });
-
-
     const { t } = useTranslation();
     return (
         <div className="cartPageWrapper">
@@ -39,8 +48,8 @@ const Cart = () => {
                     </div>
                     :cart.map(cartItem=>(
                         // <h3 key={cartItem.product.sys.id}>{cartItem.product.fields.name}</h3>
-                        <div key={cartItem.product.sys.id}>
-                            <CartItem onRemove = {onRemove} product={cartItem.product} />
+                        <div className='cartItemAvailable' key={cartItem.product.sys.id}>
+                            <CartItem onCartChange={handleCartChange} onRemove = {onRemove} product={cartItem.product} />
                         </div>
                     ))
                 }
@@ -48,7 +57,7 @@ const Cart = () => {
             <div className="cartCheckOutSection">
                 <h3 className="cartItemName">{ t("cart.total") }</h3>
                 <h1 className="totalPrice">${totalPrice.toFixed(2)}</h1>
-                <button className={`buyBtn productPlaceOrder checkout ${cart.length < 1?"payDisable": ""}`}>{ t("cart.checkout") }</button>
+                <Link to={`${cart.length < 1? "/cart" :"/cart/checkout"}`}  className={`buyBtn productPlaceOrder checkout ${cart.length < 1?"payDisable": ""}`}>{ t("cart.checkout") }</Link>
             </div>
         </div>
     )

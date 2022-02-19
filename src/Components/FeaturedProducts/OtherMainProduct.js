@@ -1,10 +1,15 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import { useTranslation } from 'react-i18next';
 import pollen from '../../img/pollen.jpg'
 import propolis from '../../img/propolis.jpg'
+import useLocalStorage from '../../UseLocalStorage';
+import { CartContext } from '../Main/CartContext';
+
 
 const OtherMainProduct = (props) => {
  const { t } = useTranslation(); 
+ const [cart, setCart] = useContext(CartContext)
+ const [products, setProducts] = useLocalStorage('products', [])
   const [mainProducts, setMainProducts] = useState(
     [
       {
@@ -53,6 +58,16 @@ const OtherMainProduct = (props) => {
   const path = props.match.path
   const route =  path.replace('/', '')
   const item = mainProducts.filter(mainProduct=>mainProduct.route === route)
+
+
+  const addToCart = (product, e)=>{
+    // product.fields.priceSmall = null
+    // product.fields.price= product.fields.priceBig
+    // ==============display popup when add to chart is clicked=============
+    // popupRef.current.style.display="block";
+    console.log(products)
+    // setCart([...cart, {product:product}]);
+}
   return (
   <div>
     <div className="container">
@@ -70,7 +85,8 @@ const OtherMainProduct = (props) => {
                 </div>
                 <div className="place-oder controlLinkWrapper ">
                   <a className='controlLinks' href='#featuredHoneyProduct'><p className="addToCart callToAction">{ t("other_products.add_to_cart") }</p></a>
-                  <a className='controlLinks' href='#featuredHoneyProduct'><p className="callToAction">{ t("other_products.buy") }</p></a>
+                  <p onClick={(e)=>{addToCart(e)}} className="controlLinks callToAction">{ t("other_products.buy") }</p>
+                  {/* <a className='controlLinks' href='#featuredHoneyProduct'><p className="callToAction">{ t("other_products.buy") }</p></a> */}
                 </div>
             </div>
         </div>

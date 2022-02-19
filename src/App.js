@@ -14,10 +14,11 @@ import OtherMainProduct from './Components/FeaturedProducts/OtherMainProduct';
 import Winery from './Components/Winery';
 
 import i18next from 'i18next';
+import Checkout from './Components/Checkout/Checkout';
+import { CartContextProvider } from './Components/Main/CartContext';
 
 
 function App() {
-
 
   const changeLanguage = (lang, e)=>{
     i18next.changeLanguage(lang)
@@ -38,33 +39,35 @@ function App() {
     
   }, []);
   
-// i18next.on('languageChanged', ()=>{
-//   fetchData();
-// })
-  
+i18next.on('languageChanged', ()=>{
+  window.location.reload();
+})
 
-
+  console.log(process.env)
   return (
     <div className="App">
-      <Nav handleChangeLanguage = {changeLanguage} products={products} />
-      <div className='mainAppWrapper'>
-      <Main products={products} />
-      
-      <Switch>
-      
-        <Route path="/contact-us" component={Contact}  />
-        <Route path="/about" component={About} />
-        <Route path="/winery" component={Winery} />
-        <Route path="/pollen" component={OtherMainProduct} />
-        <Route path="/hydromel" component={OtherMainProduct} />
-        <Route path="/propolis" component={OtherMainProduct} />
-        <Route path="/royal-jelly" component={OtherMainProduct} />
-        <Route path="/immune-booster" component={OtherMainProduct} />
-        <Route path="/honey" component={Honey} />
-        <Route path="/" exact component={HomePage} />
-      </Switch>
-      </div>
-      <Footer />
+      <CartContextProvider>
+        <Nav handleChangeLanguage = {changeLanguage} products={products} />
+        <div className='mainAppWrapper'>
+        <Main products={products} />
+        
+        <Switch>
+        
+          <Route path="/contact-us" component={Contact}  />
+          <Route path="/about" component={About} />
+          <Route path="/winery" component={Winery} />
+          <Route path="/pollen" component={OtherMainProduct} />
+          <Route path="/hydromel" component={OtherMainProduct} />
+          <Route path="/propolis" component={OtherMainProduct} />
+          <Route path="/royal-jelly" component={OtherMainProduct} />
+          <Route path="/immune-booster" component={OtherMainProduct} />
+          <Route path="/honey" component={Honey} />
+          <Route path="/cart/checkout" component={Checkout} />        
+          <Route path="/" exact component={HomePage} />
+        </Switch>
+        </div>
+        <Footer />
+      </CartContextProvider>
     </div>
   );
 }

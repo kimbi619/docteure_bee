@@ -12,6 +12,9 @@ const Products = ({ products }) => {
     const addToCart = (product, e)=>{
         product.fields.priceSmall = null
         product.fields.price= product.fields.priceBig
+        product.fields.count = 1;
+        let totalPrice = product.fields.price
+        product.fields.totalPrice = totalPrice;
         setCart([...cart, {product:product}]);
         // ==============display popup when add to chart is clicked=============
         popupRef.current.style.display="block";

@@ -79,6 +79,9 @@ input[type='checkbox']:checked::after {
   display: flex;
 }
 
+.success {
+  color: var(--mainGreen);
+}
 .preloader {
   background: linear-gradient(to right, #95d5ff50, #95d5ff50, #95d5ff50),
     url('./loader.gif') no-repeat center;

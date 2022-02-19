@@ -1,9 +1,10 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './Cart.css'
 import { IoStarSharp } from 'react-icons/io5'
 import { useTranslation } from 'react-i18next';
 
-const CartItem = ({ product, onRemove }) => {
+const CartItem = ({ product, onRemove, onCartChange }) => {
+    const [itemCount, setItemCount] = useState(1)
     let medias = [];
     const stars = Array(5).fill(0);
     const colors={
@@ -24,11 +25,18 @@ const CartItem = ({ product, onRemove }) => {
         onRemove(id)
     }
     
-
+    if(itemCount <= 0){
+        setItemCount(1)
+    }
+    product.fields.count = parseInt(itemCount)
+    
+    const getRealCount = (e)=>{
+        onCartChange(e, parseInt(itemCount))
+    }
     const { t } = useTranslation();
     return (
         <div>
-            <div className="cartItemWrapper">
+            <div onChange={(e) => {getRealCount(e)}} className="cartItemWrapper">
                 <div className="cartFlexItem cartImageWrapper">
                     <img src={medias[0]} alt={name} />
                 </div>
@@ -44,6 +52,7 @@ const CartItem = ({ product, onRemove }) => {
                 </div>
                 <div className="cartFlexItem cartControl">
                     <div className="cartPrice">${price}</div>
+                    {/* <input className='cartAmount' type="number" name="amount" id="amount" value={itemCount} onChange={e=>setItemCount(e.target.value)} /> */}
                     <div className="cartBtnControl">
                         <span onClick={removeItem} className="cartBtn">{ t("cart.remove") }</span>
                         <span className="cartBtn cartSaveToLater remove">{ t("cart.save") }</span>

@@ -161,6 +161,23 @@
           "report_errors": "signaler erreur",
           "language": "Langue"
         }
+      },
+
+      
+
+
+      "checkout": {
+        "title": "Payer",
+        "firstName" : "Prénom",
+        "lastName": "nom",
+        "master": {
+          "button": "crédit/débit",
+          "card_name": "Nom sur la carte",
+          "card_number": "numéro de carte",
+          "security_code": "code de sécurité",
+          "zip_code": "Zip / code postal"
+        },
+        "paypal": "continuer avec paypal"
       }
 
 

@@ -5,7 +5,7 @@
 }
 .productImgWrapper {
   width: 100%;
-  height: 12.1875rem;
+  height: 16.1875rem;
   overflow: hidden;
 }
 
@@ -18,15 +18,17 @@
   width: 100%;
 }
 .productDesc {
-  padding: 0.8rem;
+  padding: 0productimgwrapper;
   font-size: var(--fs-xs);
   font-family: montserrat;
+  padding-inline: 1rem;
 }
 
 .price-rate {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 0.7rem;
 }
 .name {
   display: block;
@@ -37,7 +39,7 @@
 }
 .price {
   display: inline;
-  font-size: 0.75rem;
+  font-size: 0.95rem;
   color: var(--secondaryColor);
   color: #33b69e;
 }
@@ -52,6 +54,7 @@
   text-align: center;
   background: #1d4c80;
   font-weight: 900;
+  margin-bottom: 0.7rem;
 }
 .toggleDropDown {
   display: block;
@@ -94,6 +97,9 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
+  }
+  .productImgWrapper {
+    height: 12.1875rem;
   }
 }
 @media (min-width: 50rem) {
