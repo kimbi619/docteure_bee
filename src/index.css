@@ -105,6 +105,9 @@ h1 {
   transition: all 0.3s ease-in;
   border: 1px solid #6eacdf;
 }
+.honey .gridItem {
+  border: none;
+}
 .gridItem:hover {
   opacity: 0.4;
 }

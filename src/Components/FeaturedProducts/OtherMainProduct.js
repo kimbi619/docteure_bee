@@ -2,8 +2,8 @@ import React, {useState, useContext} from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { tabTitle } from '../..';
-import pollen from '../../img/pollen.jpg'
-import propolis from '../../img/propolis.jpg'
+import pollen from '../../img/pollen.png'
+import propolis from '../../img/propolis.png'
 import useLocalStorage from '../../UseLocalStorage';
 import { CartContext } from '../Main/CartContext';
 

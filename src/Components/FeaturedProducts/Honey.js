@@ -1,5 +1,5 @@
-import pollen from '../../img/pollen.jpg'
-import honey from '../../img/honey.jpg'
+import pollen from '../../img/pollen.png'
+import honey from '../../img/honey.png'
 import { tabTitle } from '../..';
 import './featuredItems.css'
 import HoneyGridItem from './HoneyGridItem';
