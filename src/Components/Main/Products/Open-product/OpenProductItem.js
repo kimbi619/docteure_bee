@@ -4,7 +4,6 @@ export default styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 320px;
-    width: 100%;
+    height: 25rem;
     margin: 0px;
 `

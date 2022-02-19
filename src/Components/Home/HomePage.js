@@ -1,8 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import honey from '../../img/honey.jpg'
-import pollen from '../../img/pollen.jpg'
-import propolis from '../../img/propolis.jpg'
+import honey from '../../img/honey.png'
+import pollen from '../../img/pollen.png'
+import propolis from '../../img/propolis.png'
+import royalJelly from '../../img/royalJelly.png'
+import hydromel from '../../img/hydromel.png'
 // import Legend from './Legend'
 
 import { useTranslation } from 'react-i18next'
@@ -61,7 +63,7 @@ const HomePage = () => {
                         <div className="gridItem">
                             <Link to="/royal-jelly">
                                 <div className="imgWrapper">
-                                    <img className='gridImage' src={pollen} alt="Honey" />
+                                    <img className='gridImage' src={royalJelly} alt="Honey" />
                                 </div>
                                 <div className="desc descTitle">{ t("homepage.featuredProduct.name.royal_jelly") }</div>
                             </Link>
@@ -85,7 +87,7 @@ const HomePage = () => {
                         <div className="gridItem">
                             <Link to="/hydromel">
                                 <div className="imgWrapper">
-                                    <img className='gridImage' src={pollen} alt="Honey" />
+                                    <img className='gridImage' src={hydromel} alt="Honey" />
                                 </div>
                                 <div className="desc descTitle">{ t("homepage.featuredProduct.name.hydromel") }</div>
                             </Link>

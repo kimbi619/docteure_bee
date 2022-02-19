@@ -315,6 +315,29 @@ nav .caption {
 /* =================================================================== */
 .cartLink {
   color: white;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.cartLinkIcon {
+  position: relative;
+  font-size: 1.2rem;
+  margin-left: 0.2rem;
+  color: rgb(4, 70, 156);
+}
+.cartLinkItemCount {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 17px;
+  height: 17px;
+  background-color: rgb(255, 152, 172);
+  color: white;
+  border-radius: 50%;
+  transform: translate(50%, -50%);
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .dropDownWrapper {
   position: relative;

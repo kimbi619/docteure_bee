@@ -14,6 +14,7 @@ const Honey = () => {
             priceSmall: 7,
             priceBig: 13,
             img: pollen,
+            linkedId: '6K4Rr7PWhpaIpGLylOgIJG',
             desc: t("honey.variety.spring.text")
         },
         {
@@ -22,6 +23,7 @@ const Honey = () => {
             priceSmall: 7,
             priceBig: 13,
             img: honey,
+            linkedId: '2MdaKn0vsZjTzTvUM9cKUd',
             desc:t("honey.variety.summer.text")
         },
         {
@@ -30,6 +32,7 @@ const Honey = () => {
             priceSmall: 7,
             priceBig: 13,
             img: honey,
+            linkedId: '3Wq76egqHhO5ybWrH9rBcb',
             desc: t("honey.variety.churned.text")
         },
         {
@@ -38,6 +41,7 @@ const Honey = () => {
             priceSmall: 7,
             priceBig: 13,
             img: pollen,
+            linkedId: 'wMFhZWK6vVq8fEQbCL0S1',
             desc: t("honey.variety.fall.text")
         },
         {
@@ -46,6 +50,7 @@ const Honey = () => {
             priceSmall: 7,
             priceBig: 13,
             img: honey,
+            linkedId: '3KnTCHXuksCzCxzYiVQzfC',
             desc: t("honey.variety.comb.text")
         },
     ]);

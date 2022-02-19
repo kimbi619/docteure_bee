@@ -1,6 +1,9 @@
 import React, { useContext } from 'react'
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import uuid from 'react-uuid'
+
+
 import { CartContext } from '../CartContext'
 import CartItem from './CartItem';
 
@@ -48,7 +51,7 @@ const Cart = () => {
                     </div>
                     :cart.map(cartItem=>(
                         // <h3 key={cartItem.product.sys.id}>{cartItem.product.fields.name}</h3>
-                        <div className='cartItemAvailable' key={cartItem.product.sys.id}>
+                        <div className='cartItemAvailable' key={uuid()}>
                             <CartItem onCartChange={handleCartChange} onRemove = {onRemove} product={cartItem.product} />
                         </div>
                     ))

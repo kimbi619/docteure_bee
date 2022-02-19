@@ -1,20 +1,23 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useContext } from 'react'
 import { FcMenu } from 'react-icons/fc'
 import './Nav.css';
-import { FaSearch } from 'react-icons/fa';
+import { FaSearch, FaTimes } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { IoIosArrowDown, IoIosGlobe } from 'react-icons/io'
+import { AiOutlineShoppingCart } from 'react-icons/ai'
 import logo from '../../img/logo.jpg'
 
 
 
 import { useTranslation } from "react-i18next";
 import 'flag-icon-css/css/flag-icon.min.css'
+import { CartContext } from '../Main/CartContext';
 
 const Nav = ({ products, handleChangeLanguage }) => {
 
     const [searchItems, setSearchItems] = useState([])
     const [showLang, setShowLang] = useState(false);
+    const [cart, setCart] = useContext(CartContext)
     
 
     // toggle navigation for mobile view 
@@ -144,7 +147,13 @@ const Nav = ({ products, handleChangeLanguage }) => {
                         </form>
                     </div>
                     <ul className="shiftRight">
-                        <Link to="/cart"><li className="cartLink navLink">{t("navigation.cart")}</li></Link>
+                        <Link to="/cart"><li className="cartLink navLink">
+                            {t("navigation.cart")}
+                            <span className='cartLinkIcon'>
+                                <AiOutlineShoppingCart /><span className='cartLinkItemCount'>{cart.length}</span>
+                            </span>
+                            </li>
+                        </Link>
 
 
 

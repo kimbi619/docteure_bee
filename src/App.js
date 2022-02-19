@@ -43,7 +43,6 @@ i18next.on('languageChanged', ()=>{
   window.location.reload();
 })
 
-  console.log(process.env)
   return (
     <div className="App">
       <CartContextProvider>

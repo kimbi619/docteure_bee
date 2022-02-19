@@ -20,7 +20,7 @@ const HoneyGridItem = ({ att }) => {
         </div>
         <div className="desc">
             <div className="descText">{att.desc}</div>
-            <a href='#featuredHoneyProduct'>
+            <a href={`/product/${att.linkedId}`}>
                 <p className="honeyItemLink callToAction">{ t("honey.place_order") }</p>
             </a>
         </div>

@@ -31,7 +31,7 @@
 }
 .imgSection .gridImage {
   width: 100%;
-  height: 110%;
+  height: 100%;
 }
 
 /* =======================================================================
@@ -90,6 +90,21 @@
   }
   .honey .featuredProductTopGrid .descText {
     width: 100%;
+  }
+
+  .imgWrapper {
+    padding: 0;
+  }
+  .featuredProductTopGrid .carouselWrapper {
+    height: 25rem;
+    overflow: visible;
+  }
+  .rec-carousel {
+    height: 100%;
+  }
+  .featuredProductTopGrid .gridImage {
+    width: 100%;
+    height: 120%;
   }
 }
 

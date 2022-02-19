@@ -1,10 +1,10 @@
 import React, {useState, useContext} from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import pollen from '../../img/pollen.jpg'
 import propolis from '../../img/propolis.jpg'
 import useLocalStorage from '../../UseLocalStorage';
 import { CartContext } from '../Main/CartContext';
-
 
 const OtherMainProduct = (props) => {
  const { t } = useTranslation(); 
@@ -15,58 +15,70 @@ const OtherMainProduct = (props) => {
       {
         route: "royal-jelly",
         name: t("other_products.royal_jelly.title"),
+        desc: t("other_products.royal_jelly.text"),
         priceSmall: 7,
         priceSmall: 7,
         img: pollen,
-        desc: "It is the glandular brood food adult worker bee secrete from head glands. Royal jelly is a pasty, creamy-white substance with a slightly pungent odor and a somewhat bitter taste. It is rich in vitamins and contains substantial amounts of sugars, proteins and certain organic acids."
+        linkId: '2Bbs4UnyPsbSUkU8cLCFFi',
       },
       {
         route: "propolis",
         name: t("other_products.propolis.title"),
+        desc: t("other_products.propolis.text"),
         priceSmall: 7,
         priceSmall: 7,
         img: propolis,
-        desc: "Propolis: is a sticky, resinous gum gathered from pine trees, flower buds and other sources for use as a sealant in the hive. Propolis has antibacterial, antifungal and antimicrobial properties and is key to keeping the bee nest a healthy place to live."
+        linkId: '4hGGV1ScnueFpFk2ffzfjn',
       },
       {
         route: "pollen",
         name: t("other_products.pollen.title"),
+        desc: t("other_products.pollen.text"),
         priceSmall: 7,
         priceSmall: 7,
         img: pollen,
-        desc: "IT Is a source of protein for the bee diet since nectar offers little nourishment other than carbohydrates. It is consumed by humans as a food and dietary supplement (a protein source). Based on varying amounts of research, pollen has been advocated as a treatment for sterility, for prostate gland disorders, cancer and in allergy relief. Athletes have advocated pollen use, particularly for stamina, weight gain and body conditioning."
+        linkId: '58aOxkIkoLMePm9hVHj5zr',
       },
       {
         route: "hydromel",
         name: t("other_products.hydromel.title"),
+        desc: t("other_products.hydromel.text"),
         priceSmall: 7,
         priceSmall: 7,
         img: pollen,
-        desc: "It is a mixture of Honey and water that becomes mead when fermented. In English, Hydromel is generally assumed to be 10% alcohol or below, but Hydromels made and sold in Quebec can be as high as 15% alcohol. Fermented Hydromel is called “hydromel vineux” in French.A place where Hydromel is made is called a “hydromellerie” in French."
+        linkId: '',
       },
       {
         route: "immune-booster",
         name: t("other_products.immune_booster.title"),
+        desc: t("other_products.immune_booster.text"),
         priceSmall: 7,
         priceSmall: 7,
         img: pollen,
-        desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio, reprehenderit quasi unde minima labore quod vero eaque dicta fuga magnam iusto molestiae, atque sint neque eos qui at nihil natus hic libero ut nobis inventore ullam nam! Nulla provident similique maxime beatae non ipsam minus aliquam, eligendi ratione, porro nisi."
+        linkId: '7ODTPuCHn1AAAWAYMiWei',
       },
     ]
-  );
+    );
 
   const path = props.match.path
   const route =  path.replace('/', '')
   const item = mainProducts.filter(mainProduct=>mainProduct.route === route)
 
 
+  let thisProduct = products[0];
+  thisProduct.fields.description = item[0].desc
+  thisProduct.fields.name = item[0].name
+  thisProduct.fields.price = 13
+  thisProduct.fields.productImage = item[0].img
   const addToCart = (product, e)=>{
     // product.fields.priceSmall = null
     // product.fields.price= product.fields.priceBig
     // ==============display popup when add to chart is clicked=============
     // popupRef.current.style.display="block";
     console.log(products)
-    // setCart([...cart, {product:product}]);
+    console.log(thisProduct)
+    setCart([...cart, {product:thisProduct}]);
+    console.log(cart)
 }
   return (
   <div>
@@ -84,9 +96,7 @@ const OtherMainProduct = (props) => {
                     {item[0].desc}
                 </div>
                 <div className="place-oder controlLinkWrapper ">
-                  <a className='controlLinks' href='#featuredHoneyProduct'><p className="addToCart callToAction">{ t("other_products.add_to_cart") }</p></a>
-                  <p onClick={(e)=>{addToCart(e)}} className="controlLinks callToAction">{ t("other_products.buy") }</p>
-                  {/* <a className='controlLinks' href='#featuredHoneyProduct'><p className="callToAction">{ t("other_products.buy") }</p></a> */}
+                  <Link className='controlLinks' to={`product/${item[0].linkId}`}><p className="addToCart callToAction">get this product</p></Link>
                 </div>
             </div>
         </div>

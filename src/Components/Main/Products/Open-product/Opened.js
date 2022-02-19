@@ -78,9 +78,9 @@ const breakPoints = [
                             {
                                 medias.map((media, index)=>(
                                     <OpenProductItem key={index}>
-                                    <div className="productPageImgWrapper">
-                                        <img className='gridImage' src={media} alt={name} />
-                                    </div>
+                                        <div className="productPageImgWrapper">
+                                            <img className='gridImage' src={media} alt={name} />
+                                        </div>
                                     </OpenProductItem>
                                 ))
                             }
