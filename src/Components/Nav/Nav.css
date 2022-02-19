@@ -315,8 +315,6 @@ nav .caption {
 /* =================================================================== */
 .cartLink {
   color: white;
-  display: flex;
-  flex-wrap: nowrap;
 }
 .cartLinkIcon {
   position: relative;
@@ -406,7 +404,7 @@ nav .caption {
   display: block;
 }
 .blacktext {
-  margin-left: 0rem;
+  margin-left: 0.5rem;
   font-size: 0.9rem;
 }
 .langRemover {
