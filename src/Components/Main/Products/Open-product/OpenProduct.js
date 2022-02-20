@@ -10,6 +10,10 @@ import i18next from 'i18next';
 
   
 const OpenedProduct = ({ match }) => {
+  const [loading, setLoading] = useState(true)
+  const [products, setProducts] = UseLocalStorage('products', {})
+  const [product, setProduct] = UseLocalStorage('product', {})
+
     useEffect( () => { 
       setLoading(true); 
       let currentLang = i18next.language
@@ -22,15 +26,19 @@ const OpenedProduct = ({ match }) => {
       
     }, []);
     
-    const [loading, setLoading] = useState(false)
-    const [product, setProduct] = UseLocalStorage('product', {})
+    // const p = products.filter(product => product.sys.id === match.params.id)
+
+
+
     
 
 
-    
-
-
-    return <Opened isLoading={loading} product={product} />
+   
+    return (
+      <>
+        <Opened isLoading={loading} product={product} />
+      </>
+    )
 }
 
 export default OpenedProduct

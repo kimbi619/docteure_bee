@@ -91,3 +91,29 @@
 .payedProduct .imgWrapper img {
   width: 100%;
 }
+.payPalButton {
+  margin-block: 1.5rem;
+}
+
+.hideFormField {
+  display: none;
+}
+.checkoutmessage {
+  font-size: 0.78rem;
+  text-align: center;
+  margin-bottom: 0;
+  width: 100%;
+  display: none;
+}
+.checkoutError {
+  color: crimson;
+  border: 1px solid crimson;
+  background: rgb(255, 175, 191);
+  display: block;
+}
+.checkoutValid {
+  color: green;
+  border: 1px solid green;
+  background: rgb(141, 187, 141);
+  display: block;
+}

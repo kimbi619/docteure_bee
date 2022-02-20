@@ -1,11 +1,11 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 
-const PayPal = () => {
+const PayPal = ({ onValidate }) => {
     const { t } = useTranslation()
   return (
     <div className='paypal'>
-         <button type='submit' className="callToAction honeyItemLink">{ t("checkout.paypal") }</button>
+         <button onClick={onValidate} type='submit' className="callToAction honeyItemLink">{ t("checkout.paypal") }</button>
     </div>
   )
 }

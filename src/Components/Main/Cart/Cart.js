@@ -28,7 +28,6 @@ const Cart = () => {
     }
     
     let totalPrice = 0;
-    let cartTotalPrice = 0;
     const handleCartChange = (id, count) => {
         // cart.map(cartI =>{
         //     if(cartI.product.sys.id === id){

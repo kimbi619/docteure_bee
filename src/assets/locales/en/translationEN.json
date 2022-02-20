@@ -183,6 +183,9 @@
     "title": "checkout",
     "firstName" : "first name",
     "lastName": "last Name",
+    "return_to_store": "return to store",
+    "name_error": "please enter valid name",
+    "name_valid": "valid user name",
     "master": {
       "button": "credit/debit",
       "card_name": "name on card",

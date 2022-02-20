@@ -52,7 +52,7 @@ const Contact = () => {
             <div className="descTitle">{ t("contactpage.grid_two.title") }</div>
             <div className="sendMessage">
               <form onSubmit={checkAndValidate}>
-                <input className='formItem' id='email' type="email"  placeholder={ t("contactpage.grid_two.enter_email") } onChange={e=>{setEmail(e.target.value)}} value={email} />
+                <input className='formItem' id='email' type="email" name="email" placeholder={ t("contactpage.grid_two.enter_email") } onChange={e=>{setEmail(e.target.value)}} value={email} />
                 <textarea className='formItem' id='text' name="message" id="msg" cols="30" rows="5" placeholder={ t("contactpage.grid_two.message") } onChange={e=>{setText(e.target.value)}} value={text} ></textarea>
                 <button type='submit' className="callToAction honeyItemLink redBackground">{ t("contactpage.grid_two.send") }</button>
               </form>
@@ -62,7 +62,7 @@ const Contact = () => {
             <div className="descTitle">{ t("contactpage.grid_three.title") }</div>
             <div className="contactSocialLinks">
                 <div className="linkItemWrapper">
-                  <a href='https://facebook.com/docteurebee'>
+                  <a href='https://web.facebook.com/Docteure-bee-103204822288085'>
                     <div className="socialLink">
                         <FaFacebookF /> 
                     </div>
@@ -86,7 +86,7 @@ const Contact = () => {
                   <span className='socialLinkText'>LinkedIn</span>
                 </div>
                 <div className="linkItemWrapper">
-                <a href='https://youtube.com/titans'>
+                <a href='https://www.youtube.com/channel/UCqxJPZxK66-IDmRFGoXq5sA'>
                   <div className="socialLink">
                     <FaYoutube />
                   </div>
@@ -94,7 +94,7 @@ const Contact = () => {
                 <span className='socialLinkText'>Youtube</span>
                 </div>
                 <div className="linkItemWrapper">
-                <a href='https://twitter.com/docteurebee'>
+                <a href='https://twitter.com/KuzinaVictoria'>
                   <div className="socialLink">
                     <FaTwitter />
                   </div>

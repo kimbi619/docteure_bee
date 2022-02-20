@@ -184,6 +184,9 @@
         "title": "Payer",
         "firstName" : "Prénom",
         "lastName": "nom",
+        "return_to_store": "retour au magasin",
+        "name_error": "veuillez entrer un nom valide",
+        "name_valid": "Nom d'utilisateur valide",
         "master": {
           "button": "crédit/débit",
           "card_name": "Nom sur la carte",
