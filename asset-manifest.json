@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/docteure_bee/static/css/main.4cee6c63.chunk.css",
-    "main.js": "/docteure_bee/static/js/main.744c916b.chunk.js",
-    "main.js.map": "/docteure_bee/static/js/main.744c916b.chunk.js.map",
+    "main.css": "/docteure_bee/static/css/main.7232ff75.chunk.css",
+    "main.js": "/docteure_bee/static/js/main.9fb70b21.chunk.js",
+    "main.js.map": "/docteure_bee/static/js/main.9fb70b21.chunk.js.map",
     "runtime-main.js": "/docteure_bee/static/js/runtime-main.f48c9b88.js",
     "runtime-main.js.map": "/docteure_bee/static/js/runtime-main.f48c9b88.js.map",
     "static/css/2.479054b7.chunk.css": "/docteure_bee/static/css/2.479054b7.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.022c8156.chunk.js.map": "/docteure_bee/static/js/3.022c8156.chunk.js.map",
     "index.html": "/docteure_bee/index.html",
     "static/css/2.479054b7.chunk.css.map": "/docteure_bee/static/css/2.479054b7.chunk.css.map",
-    "static/css/main.4cee6c63.chunk.css.map": "/docteure_bee/static/css/main.4cee6c63.chunk.css.map",
+    "static/css/main.7232ff75.chunk.css.map": "/docteure_bee/static/css/main.7232ff75.chunk.css.map",
     "static/js/2.724fd253.chunk.js.LICENSE.txt": "/docteure_bee/static/js/2.724fd253.chunk.js.LICENSE.txt",
     "static/media/flag-icon.min.css": "/docteure_bee/static/media/zw.f5ceeff7.svg",
     "static/media/getFetch.cjs": "/docteure_bee/static/media/getFetch.582d29c4.cjs",
@@ -32,7 +32,7 @@
     "static/js/runtime-main.f48c9b88.js",
     "static/css/2.479054b7.chunk.css",
     "static/js/2.724fd253.chunk.js",
-    "static/css/main.4cee6c63.chunk.css",
-    "static/js/main.744c916b.chunk.js"
+    "static/css/main.7232ff75.chunk.css",
+    "static/js/main.9fb70b21.chunk.js"
   ]
 }
