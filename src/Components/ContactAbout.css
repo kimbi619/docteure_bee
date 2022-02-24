@@ -13,7 +13,9 @@ textarea {
 .contact-page,
 .cartPageWrapper,
 .openProductPage {
-  min-height: 80vh;
+  min-height: 90vh;
+  max-width: 2000px;
+  margin: auto;
 }
 
 .socialLink {

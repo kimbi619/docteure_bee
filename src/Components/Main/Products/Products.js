@@ -39,7 +39,7 @@ const Products = ({ products }) => {
                                     <div className="productImgWrapper">
                                         {product.fields.productImage &&
                                         <img className="productImg skeleton"
-                                        src={product.fields.productImage[0].fields.file.url} alt="sdfwe" />}
+                                        src={product.fields.productImage[0].fields.file.url} alt={product.fields.name} />}
                                     </div>
                                  </Link>
                                 <Product onAdd={addToCart} product={product} />

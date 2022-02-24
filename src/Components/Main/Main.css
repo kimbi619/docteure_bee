@@ -10,7 +10,7 @@
 }
 
 .productItemWrapper {
-  border: 5px solid #c1c8ce36;
+  border: 5px solid #c1c8ce15;
   margin-bottom: 1.7rem;
 }
 
@@ -32,8 +32,8 @@
 }
 .name {
   display: block;
-  font-size: var(--fs-md);
-  font-weight: 900;
+  font-size: var(--fs-sm);
+  /* font-weight: 900; */
   margin-right: 0.4rem;
   text-transform: capitalize;
 }
@@ -42,19 +42,20 @@
   font-size: 0.95rem;
   color: var(--secondaryColor);
   color: #33b69e;
+  font-family: 'times';
 }
 .placeOrder {
   outline: none;
   border: none;
   width: 100%;
   padding: 0.3rem;
-  margin-block-start: 0.5rem;
-  font-size: var(--fs-md);
+  margin-block: 0.5rem;
+  font-size: var(--fs-sm);
   color: white;
   text-align: center;
   background: #1d4c80;
-  font-weight: 900;
   margin-bottom: 0.7rem;
+  font-family: 'montserrat light';
 }
 .toggleDropDown {
   display: block;
@@ -107,5 +108,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
     grid-gap: 1rem;
+    max-width: 1500px;
+    margin: auto;
   }
 }

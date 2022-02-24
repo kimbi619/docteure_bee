@@ -1,4 +1,6 @@
-   const addToCart = (product, e)=>{
+/////////////// border: 5px solid #c1c8ce15;
+ 
+ const addToCart = (product, e)=>{
         product.fields.priceSmall = null
         product.fields.price= product.fields.priceBig
         setCart([...cart, {product:product}]);

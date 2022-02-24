@@ -59,8 +59,10 @@ const Cart = () => {
                 }
             </div>
             <div className="cartCheckOutSection">
-                <h3 className="cartItemName">{ t("cart.total") }</h3>
-                <h1 className="totalPrice">${totalPrice.toFixed(2)}</h1>
+                <div className="totalWrapper">
+                    <h3 className="cartItemName">{ t("cart.total") }</h3>
+                    <h1 className="totalPrice">${totalPrice.toFixed(2)}</h1>
+                </div>
                 <Link to={`${cart.length < 1? "/cart" :"/cart/checkout"}`}  className={`buyBtn productPlaceOrder checkout ${cart.length < 1?"payDisable": ""}`}>{ t("cart.checkout") }</Link>
             </div>
         </div>

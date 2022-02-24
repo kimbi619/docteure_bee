@@ -50,10 +50,11 @@ h1 {
 }
 .descTitle {
   font-weight: bold;
-  font-size: var(--fs-sm);
+  font-size: var(--fs-md);
   margin: 1rem;
   text-align: center;
   text-transform: capitalize;
+  font-family: 'Cormorant Garamond', serif;
 }
 .descText {
   font-size: var(--fs-xs);
@@ -63,6 +64,7 @@ h1 {
 
 .desc {
   text-transform: uppercase;
+  font-size: 1rem;
 }
 
 @media (min-width: 37rem) {

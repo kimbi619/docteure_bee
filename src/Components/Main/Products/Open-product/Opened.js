@@ -66,7 +66,7 @@ const breakPoints = [
   <div className='openProductPage'>
       <div className="descCap titleLeft descTitle">{name}</div>
           <div className="featuredProductTopGrid">
-              <div className="imgSection">
+              <div className="">
                   <div className="imgWrapper">
                           <Carousel 
                           enableAutoPlay autoPlaySpeed={2500} 
@@ -84,7 +84,7 @@ const breakPoints = [
                               medias.map((media, index)=>(
                                   <OpenProductItem key={index}>
                                       <div className="productPageImgWrapper">
-                                          <img className='gridImage' src={media} alt={name} />
+                                          <img className={`gridImage descImage`} src={media} alt={name} />
                                       </div>
                                   </OpenProductItem>
                               ))

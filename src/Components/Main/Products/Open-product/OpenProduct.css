@@ -5,15 +5,10 @@
 .openedProductPage {
   min-height: 70vh;
 }
-.flexItem {
-  width: 100%;
-}
+
 .productPageImgWrapper {
   width: 100%;
   height: 100%;
-}
-.flexItem img {
-  width: 100%;
 }
 
 .buyBtn {
@@ -116,4 +111,17 @@
 }
 .whow {
   display: block;
+}
+
+.productPageImgWrapper .descImage {
+  width: 100%;
+}
+.productPageImgWrapper {
+  height: auto;
+  margin: 0;
+}
+@media (min-width: 35rem) {
+  .productPageImgWrapper .descImage {
+    margin-top: -50px;
+  }
 }
