@@ -20,7 +20,7 @@ const OtherMainProduct = (props) => {
         priceSmall: 7,
         priceSmall: 7,
         img: pollen,
-        linkId: '2Bbs4UnyPsbSUkU8cLCFFi',
+        linkId: 'vgPQsef3RDDh9Awo3e3GN',
       },
       {
         route: "propolis",
@@ -29,7 +29,7 @@ const OtherMainProduct = (props) => {
         priceSmall: 7,
         priceSmall: 7,
         img: propolis,
-        linkId: '4hGGV1ScnueFpFk2ffzfjn',
+        linkId: '5Nul2VFxFqOo6j328wiLVP',
       },
       {
         route: "pollen",
@@ -38,7 +38,7 @@ const OtherMainProduct = (props) => {
         priceSmall: 7,
         priceSmall: 7,
         img: pollen,
-        linkId: '58aOxkIkoLMePm9hVHj5zr',
+        linkId: '3F4JeaoLFfHd4FteFlVxaG',
       },
       {
         route: "hydromel",
@@ -47,7 +47,7 @@ const OtherMainProduct = (props) => {
         priceSmall: 7,
         priceSmall: 7,
         img: pollen,
-        linkId: '',
+        linkId: 'ZhQLnEEsyWoxMC268Xkgb',
       },
       {
         route: "immune-booster",
@@ -56,7 +56,7 @@ const OtherMainProduct = (props) => {
         priceSmall: 7,
         priceSmall: 7,
         img: pollen,
-        linkId: '7ODTPuCHn1AAAWAYMiWei',
+        linkId: '5QKvRfZwTez5rdNpY7mS4u',
       },
     ]
     );
