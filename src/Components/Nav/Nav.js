@@ -148,7 +148,7 @@ const Nav = ({ products, handleChangeLanguage }) => {
                     </div>
                     <ul className="shiftRight">
                         <Link to="/cart"><li className="cartLink navLink">
-                            {t("navigation.cart")}
+                            <span>{t("navigation.cart")}</span>
                             <span className='cartLinkIcon'>
                                 <AiOutlineShoppingCart /><span className='cartLinkItemCount'>{cart.length}</span>
                             </span>

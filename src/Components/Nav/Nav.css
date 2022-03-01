@@ -33,8 +33,9 @@
   height: 100%;
   padding-inline: 1rem;
   background: transparent;
-  font-size: var(--fs-sm);
+  font-size: 0.8rem;
 }
+
 .searchIcon {
   outline: none;
   border: none;
@@ -44,9 +45,10 @@
   right: 0;
   z-index: 2;
   height: 100%;
-  font-size: var(--fs-sm);
-  padding: 0.4rem 0.8rem;
+  font-size: 1rem;
+  padding: 0.6rem 0.8rem;
   color: var(--secondaryColor);
+  opacity: 0.4;
 }
 
 .burgerMenu {
@@ -315,6 +317,10 @@ nav .caption {
 /* =================================================================== */
 .cartLink {
   color: white;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: nowrap;
 }
 .cartLinkIcon {
   position: relative;

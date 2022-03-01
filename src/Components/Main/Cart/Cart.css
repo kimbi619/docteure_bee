@@ -70,6 +70,7 @@
   font-family: 'quicksand';
   color: var(--secondaryColor);
 }
+
 .cartItemName,
 .totalPrice {
   font-family: 'quicksand', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -83,6 +84,16 @@
 }
 .cartPrice {
   visibility: hidden;
+}
+.cartCheckOutSection .formItem {
+  width: 100%;
+  display: block;
+  border: 1px solid #3131315b;
+  padding: 0.7rem;
+  margin: 1rem 0rem;
+}
+.cartCheckOutSection .checkName {
+  width: 90%;
 }
 .cartBtn {
   color: #a329ff;
@@ -103,6 +114,22 @@
   padding: 0.2rem;
   width: 2.3rem;
   margin-left: auto;
+}
+.successfullPurchase {
+  text-align: center;
+  margin-block: 2rem;
+}
+.successfullPurchase .purchaseTextOne {
+  margin: 1rem 0rem 0.5rem;
+}
+.successfullPurchase span {
+  color: rgb(24, 135, 187);
+}
+.fillAllFields {
+  font-size: 0.7rem;
+  color: crimson;
+  text-align: center;
+  display: block;
 }
 /* ====================================================================================== */
 /* ====================================================================================== */

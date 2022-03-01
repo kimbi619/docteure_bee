@@ -8,7 +8,7 @@ import { tabTitle } from '..';
 
 const Contact = () => {
   const sendMail = (form) =>{
-      emailjs.sendForm('service_h5wzc2p', 'docteure_bee', form, 'user_32oPl5e2EBX4S9r5xcHo9')
+      emailjs.sendForm(process.env.REACT_APP_EMAIL_SERVICE_ID_CONTACT, 'docteure_bee', form, process.env.REACT_APP_EMAIL_SERVICE_ACCESS_TOKEN_CONTACT)
         .then((result) => {
             console.log(result.text);
         }, (error) => {
