@@ -6,7 +6,7 @@ import HoneyGridItem from './HoneyGridItem';
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next';
 
-const Honey = () => {
+const Honey = ({ products }) => {
     const { t } = useTranslation();
     tabTitle(`${t("titleBar.honey")} - docteure bee`)
     const [honeyTypes, setHoneyTypes] = useState([
@@ -56,6 +56,7 @@ const Honey = () => {
             desc: t("honey.variety.comb.text")
         },
     ]);
+
   return (
   <div className='honey'>
       <div className="container">
@@ -79,7 +80,7 @@ const Honey = () => {
                     <div className="gridWrapper">
                         {
                             honeyTypes.map(honeyType=>(
-                                <HoneyGridItem key={honeyType.id} att={honeyType} />
+                                <HoneyGridItem key={honeyType.id} products={products} att={honeyType} />
                             ))
                         }
                         {/* <HoneyGridItem att = {honeyType} /> */}

@@ -1,12 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 // import pollen from '../../img/pollen.jpg'
 // import honey from '../../img/honey.jpg'
 // import propolis from '../../img/propolis.jpg'
 
-const HoneyGridItem = ({ att }) => {
+const HoneyGridItem = ({ att, products }) => {
     const { t } = useTranslation(); 
-    console.log(att)
+    const pID = products.find(product => product.fields.name.toLowerCase() == att.name)
   return (
     <div className="gridItem">
         <div className="featuredHoneyItem">
@@ -20,9 +21,9 @@ const HoneyGridItem = ({ att }) => {
         </div>
         <div className="desc">
             <div className="descText">{att.desc}</div>
-            <a href={`/product/${att.linkedId}`}>
+            <Link to={`/product/${pID.sys.id}`}>
                 <p className="honeyItemLink callToAction">{ t("honey.place_order") }</p>
-            </a>
+            </Link>
         </div>
     </div>
   )

@@ -61,7 +61,7 @@ function App() {
             <Route path='/propolis' component={OtherMainProduct} />
             <Route path='/royal-jelly' component={OtherMainProduct} />
             <Route path='/immune-booster' component={OtherMainProduct} />
-            <Route path='/honey' component={Honey} />
+            <Route path='/honey'><Honey products={products} /></Route>
             <Route path='/cart/checkout' component={Checkout} />
             <Route path='/' exact component={HomePage} />
           </Switch>
