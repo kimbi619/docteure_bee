@@ -83,31 +83,6 @@ const Honey = ({ products }) => {
                                 <HoneyGridItem key={honeyType.id} products={products} att={honeyType} />
                             ))
                         }
-                        {/* <HoneyGridItem att = {honeyType} /> */}
-                        {/* <div className="gridItem">
-                            <div className="imgWrapper">
-                                <img className='gridImage' src={pollen} alt="Honey" />
-                            </div>
-                            <div className="desc descTitle">Pollen</div>
-                        </div>
-                        <div className="gridItem">
-                            <div className="imgWrapper">
-                                <img className='gridImage' src={pollen} alt="Honey" />
-                            </div>
-                            <div className="desc descTitle">royal jelly</div>
-                        </div>
-                        <div className="gridItem">
-                            <div className="imgWrapper">
-                                <img className='gridImage' src={propolis} alt="Honey" />
-                            </div>
-                            <div className="desc descTitle">propolis</div>
-                        </div>
-                        <div className="gridItem">
-                            <div className="imgWrapper">
-                                <img className='gridImage' src={pollen} alt="Honey" />
-                            </div>
-                            <div className="desc descTitle">immune booster</div>
-                        </div> */}
                     </div>
                 </div>
             </div>
